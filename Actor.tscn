@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://5jpo611kaau8"]
+
+[ext_resource type="Texture2D" uid="uid://jb1bkkmi4tvh" path="res://Assets/sprites/gun-guy-temp.png" id="1_vv0ou"]
+[ext_resource type="Script" path="res://Assets/scripts/Actor.gd" id="2_ae1s3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qxq2l"]
+
+[node name="Player" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_qxq2l")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_vv0ou")
+script = ExtResource("2_ae1s3")
