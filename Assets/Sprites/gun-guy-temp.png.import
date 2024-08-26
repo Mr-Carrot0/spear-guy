@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://jb1bkkmi4tvh"
-path="res://.godot/imported/gun-guy-temp.png-b3e91f2f7ec4dfcf285eb44f8e7b7f77.ctex"
+path="res://.godot/imported/gun-guy-temp.png-c3e1a7fa3a786f8f8593f2711bb56068.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/gun-guy-temp.png"
-dest_files=["res://.godot/imported/gun-guy-temp.png-b3e91f2f7ec4dfcf285eb44f8e7b7f77.ctex"]
+source_file="res://Assets/Sprites/gun-guy-temp.png"
+dest_files=["res://.godot/imported/gun-guy-temp.png-c3e1a7fa3a786f8f8593f2711bb56068.ctex"]
 
 [params]
 
