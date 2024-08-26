@@ -5,7 +5,7 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qxq2l"]
 
-[node name="Actor" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D"]
 position = Vector2(290, 109)
 script = ExtResource("1_aasi0")
 metadata/_edit_group_ = true
