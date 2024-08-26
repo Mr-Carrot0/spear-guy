@@ -5,7 +5,10 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qxq2l"]
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Actor" type="CharacterBody2D"]
+position = Vector2(290, 109)
+script = ExtResource("2_ae1s3")
+metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_qxq2l")
@@ -13,4 +16,3 @@ shape = SubResource("RectangleShape2D_qxq2l")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
 texture = ExtResource("1_vv0ou")
-script = ExtResource("2_ae1s3")
