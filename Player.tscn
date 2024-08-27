@@ -1,16 +1,18 @@
 [gd_scene load_steps=4 format=3 uid="uid://5jpo611kaau8"]
 
-[ext_resource type="Script" path="res://Assets/Scripts/Player.gd" id="1_aasi0"]
-[ext_resource type="Texture2D" uid="uid://jb1bkkmi4tvh" path="res://Assets/Sprites/gun-guy-temp.png" id="1_vv0ou"]
+[ext_resource type="Script" path="res://Assets/Scripts/Player.gd" id="1_2d27w"]
+[ext_resource type="Texture2D" uid="uid://jb1bkkmi4tvh" path="res://assets/sprites/gun-guy-temp.png" id="1_vv0ou"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qxq2l"]
+size = Vector2(12, 13)
 
 [node name="Player" type="CharacterBody2D"]
-position = Vector2(290, 109)
-script = ExtResource("1_aasi0")
+scale = Vector2(2, 2)
+script = ExtResource("1_2d27w")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1.5)
 shape = SubResource("RectangleShape2D_qxq2l")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

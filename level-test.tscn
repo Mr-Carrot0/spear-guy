@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://cd1ci8phk4nmd"]
+
+[ext_resource type="PackedScene" uid="uid://5jpo611kaau8" path="res://Player.tscn" id="1_7n1tk"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_7nikd"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_7n1tk")]
+position = Vector2(314, 147)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(348, 248)
+physics_material_override = SubResource("PhysicsMaterial_7nikd")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(-5, -17)
+polygon = PackedVector2Array(63, -5, 154, 48, 55, 47, -106, 46, -74, -7, 31, -5)
+
+[node name="Polygon2D" type="Polygon2D" parent="StaticBody2D"]
+color = Color(1, 0.690196, 0, 1)
+polygon = PackedVector2Array(-78, -24, 58, -22, 141, 28, -105, 25)
