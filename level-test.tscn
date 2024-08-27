@@ -7,7 +7,7 @@
 [node name="Node2D" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_7n1tk")]
-position = Vector2(314, 147)
+position = Vector2(335, 184)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(348, 248)
@@ -19,4 +19,4 @@ polygon = PackedVector2Array(63, -5, 154, 48, 55, 47, -106, 46, -74, -7, 31, -5)
 
 [node name="Polygon2D" type="Polygon2D" parent="StaticBody2D"]
 color = Color(1, 0.690196, 0, 1)
-polygon = PackedVector2Array(-78, -24, 58, -22, 141, 28, -105, 25)
+polygon = PackedVector2Array(-78, -24, 58, -22, 143, 31, -109, 28)
