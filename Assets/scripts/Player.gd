@@ -1,5 +1,4 @@
 extends Actor
-
 const SPEED = 5000.0
 const JUMP_VELOCITY = -130.0
 
