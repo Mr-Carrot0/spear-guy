@@ -2,6 +2,8 @@ extends Actor
 
 @onready var _tree := $AnimationTree
 
+# @onready var _tree2 := $AnimationTree2
+
 const SPEED := 5000.0
 const JUMP_VELOCITY := -150.0
 
@@ -22,7 +24,8 @@ func _physics_process(delta) -> void:
 	var dir = velocity.normalized()
 	_tree["parameters/on_ground/blend_position"] = abs(dir.x)
 	_tree["parameters/in_air/blend_position"] = dir.y
-
+	# _tree2["parameters/test/blend_position"] = abs(dir.x)
+	# _tree2["parameters/test/1/blend_position"] = dir.y
 
 	var direction = Input.get_axis("move_left", "move_right")
 	velocity.x = direction * SPEED * delta if direction else move_toward(velocity.x, 0, SPEED * delta)
