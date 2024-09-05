@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spear Guy Story Outline.md",
+                "file": "items/The Spear Of Destruction.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spear Guy Story Outline.md",
+                "file": "items/The Spear Of Destruction.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spear Guy Story Outline.md",
+                "file": "items/The Spear Of Destruction.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spear Guy Story Outline.md"
+                "file": "items/The Spear Of Destruction.md"
               }
             }
           }
@@ -161,8 +161,8 @@
   },
   "active": "f8dd48f481908596",
   "lastOpenFiles": [
-    "items/The Spear Of Destruction.md",
     "Spear Guy Story Outline.md",
+    "items/The Spear Of Destruction.md",
     "Untitled.md",
     "items",
     "chars/Spear guy.md",
