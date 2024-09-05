@@ -1,20 +1,167 @@
-[gd_scene load_steps=4 format=3 uid="uid://5jpo611kaau8"]
+[gd_scene load_steps=20 format=3 uid="uid://5jpo611kaau8"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/Player.gd" id="1_2d27w"]
-[ext_resource type="Texture2D" uid="uid://jb1bkkmi4tvh" path="res://Assets/Sprites/gun-guy-temp.png" id="1_vv0ou"]
+[ext_resource type="Texture2D" uid="uid://cdmewcfftarud" path="res://Assets/Sprites/stolen/cat_stolen.png" id="2_o2kcy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qxq2l"]
-size = Vector2(12, 13)
+size = Vector2(11, 26)
+
+[sub_resource type="Animation" id="Animation_2te2c"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2i(0, 2)]
+}
+
+[sub_resource type="Animation" id="Animation_m0a4k"]
+resource_name = "idle"
+length = 1.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.333333, 0.666667, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [Vector2i(0, 0), Vector2i(1, 0), Vector2i(2, 0), Vector2i(3, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_7tfy1"]
+resource_name = "jump"
+length = 2.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.333333, 0.666667, 1, 1.33333, 1.66667, 2, 2.33333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2i(0, 2), Vector2i(1, 2), Vector2i(2, 2), Vector2i(3, 2), Vector2i(4, 2), Vector2i(5, 2), Vector2i(6, 2), Vector2i(7, 2)]
+}
+
+[sub_resource type="Animation" id="Animation_cxaxq"]
+resource_name = "walk"
+length = 1.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.333333, 0.666667, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [Vector2i(6, 1), Vector2i(4, 1), Vector2i(2, 1), Vector2i(0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_o7ct5"]
+resource_name = "spin"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333332, 0.366667, 0.7, 1.03333, 1.36667, 1.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2i(2, 3), Vector2i(3, 3), Vector2i(4, 3), Vector2i(5, 3), Vector2i(6, 3), Vector2i(7, 3)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jxlcx"]
+_data = {
+"RESET": SubResource("Animation_2te2c"),
+"idle": SubResource("Animation_m0a4k"),
+"jump": SubResource("Animation_7tfy1"),
+"spin": SubResource("Animation_o7ct5"),
+"walk": SubResource("Animation_cxaxq")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_753xn"]
+animation = &"jump"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_f4s6r"]
+animation = &"spin"
+
+[sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_snxph"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_753xn")
+blend_point_0/pos = 1.0
+blend_point_1/node = SubResource("AnimationNodeAnimation_f4s6r")
+blend_point_1/pos = -1.0
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_8bo60"]
+animation = &"idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_py5fk"]
+animation = &"walk"
+
+[sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_wj3tn"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_8bo60")
+blend_point_0/pos = 0.0
+blend_point_1/node = SubResource("AnimationNodeAnimation_py5fk")
+blend_point_1/pos = 1.0
+min_space = 0.0
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_lgieh"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_t7qxm"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_3ublg"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_delop"]
+states/Start/position = Vector2(220, 157.333)
+states/in_air/node = SubResource("AnimationNodeBlendSpace1D_snxph")
+states/in_air/position = Vector2(640.889, 410)
+states/on_ground/node = SubResource("AnimationNodeBlendSpace1D_wj3tn")
+states/on_ground/position = Vector2(640, 292.667)
+transitions = ["Start", "on_ground", SubResource("AnimationNodeStateMachineTransition_lgieh"), "on_ground", "in_air", SubResource("AnimationNodeStateMachineTransition_t7qxm"), "in_air", "on_ground", SubResource("AnimationNodeStateMachineTransition_3ublg")]
 
 [node name="Player" type="CharacterBody2D"]
-scale = Vector2(2, 2)
 script = ExtResource("1_2d27w")
-metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 1.5)
+position = Vector2(-0.5, 1)
 shape = SubResource("RectangleShape2D_qxq2l")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
-texture = ExtResource("1_vv0ou")
+position = Vector2(1.5, -5.5)
+texture = ExtResource("2_o2kcy")
+hframes = 16
+vframes = 16
+frame = 32
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_jxlcx")
+}
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource("AnimationNodeStateMachine_delop")
+anim_player = NodePath("../AnimationPlayer")
+parameters/in_air/blend_position = 0
+parameters/on_ground/blend_position = -0.000480056
