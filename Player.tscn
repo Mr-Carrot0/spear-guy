@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://5jpo611kaau8"]
+[gd_scene load_steps=18 format=3 uid="uid://5jpo611kaau8"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/Player.gd" id="1_2d27w"]
 [ext_resource type="Texture2D" uid="uid://cdmewcfftarud" path="res://Assets/Sprites/stolen/cat_stolen.png" id="2_o2kcy"]
@@ -98,68 +98,66 @@ _data = {
 "walk": SubResource("Animation_cxaxq")
 }
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_753xn"]
-animation = &"jump"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_f4s6r"]
-animation = &"spin"
-
-[sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_snxph"]
-blend_point_0/node = SubResource("AnimationNodeAnimation_753xn")
-blend_point_0/pos = 1.0
-blend_point_1/node = SubResource("AnimationNodeAnimation_f4s6r")
-blend_point_1/pos = -1.0
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_8bo60"]
-animation = &"idle"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_py5fk"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_htqfk"]
 animation = &"walk"
 
-[sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_wj3tn"]
-blend_point_0/node = SubResource("AnimationNodeAnimation_8bo60")
-blend_point_0/pos = 0.0
-blend_point_1/node = SubResource("AnimationNodeAnimation_py5fk")
-blend_point_1/pos = 1.0
-min_space = 0.0
-
-[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_delop"]
-states/Start/position = Vector2(280, 158.666)
-states/in_air/node = SubResource("AnimationNodeBlendSpace1D_snxph")
-states/in_air/position = Vector2(640.889, 410)
-states/on_ground/node = SubResource("AnimationNodeBlendSpace1D_wj3tn")
-states/on_ground/position = Vector2(640, 292.667)
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_i8cll"]
-animation = &"idle"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_qnfks"]
-animation = &"spin"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ysh7d"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_tdd2p"]
 animation = &"jump"
 
-[sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_8t6vk"]
-blend_point_0/node = SubResource("AnimationNodeAnimation_qnfks")
-blend_point_0/pos = -1.0
-blend_point_1/node = SubResource("AnimationNodeAnimation_ysh7d")
-blend_point_1/pos = 1.0
-value_label = "sign_vel_y"
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_kg3cx"]
+animation = &"spin"
 
-[sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_pg7jy"]
-blend_point_0/node = SubResource("AnimationNodeAnimation_i8cll")
-blend_point_0/pos = 0.0
-blend_point_1/node = SubResource("AnimationNodeBlendSpace1D_8t6vk")
-blend_point_1/pos = 1.0
-min_space = 0.0
-value_label = "abs_x_vel"
-blend_mode = 1
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ecfws"]
+animation = &"idle"
 
-[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_oeigk"]
-nodes/output/position = Vector2(853.333, 80)
-nodes/test/node = SubResource("AnimationNodeBlendSpace1D_pg7jy")
-nodes/test/position = Vector2(376, 182)
-node_connections = [&"output", 0, &"test"]
+[sub_resource type="AnimationNodeTransition" id="AnimationNodeTransition_frqy2"]
+input_0/name = "ground"
+input_0/auto_advance = false
+input_0/break_loop_at_end = false
+input_0/reset = true
+input_1/name = "air"
+input_1/auto_advance = false
+input_1/break_loop_at_end = false
+input_1/reset = true
+
+[sub_resource type="AnimationNodeTransition" id="AnimationNodeTransition_os5rt"]
+input_0/name = "jump"
+input_0/auto_advance = false
+input_0/break_loop_at_end = false
+input_0/reset = true
+input_1/name = "fall"
+input_1/auto_advance = false
+input_1/break_loop_at_end = false
+input_1/reset = true
+
+[sub_resource type="AnimationNodeTransition" id="AnimationNodeTransition_cm00l"]
+input_0/name = "idle"
+input_0/auto_advance = false
+input_0/break_loop_at_end = false
+input_0/reset = true
+input_1/name = "walk"
+input_1/auto_advance = false
+input_1/break_loop_at_end = false
+input_1/reset = true
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_thp2w"]
+graph_offset = Vector2(-57.5986, 40.2586)
+nodes/Animation/node = SubResource("AnimationNodeAnimation_ecfws")
+nodes/Animation/position = Vector2(133.333, 80)
+"nodes/Animation 2/node" = SubResource("AnimationNodeAnimation_htqfk")
+"nodes/Animation 2/position" = Vector2(133.333, 213.333)
+"nodes/Animation 3/node" = SubResource("AnimationNodeAnimation_tdd2p")
+"nodes/Animation 3/position" = Vector2(320, 320)
+"nodes/Animation 4/node" = SubResource("AnimationNodeAnimation_kg3cx")
+"nodes/Animation 4/position" = Vector2(453.333, 400)
+nodes/Transition/node = SubResource("AnimationNodeTransition_cm00l")
+nodes/Transition/position = Vector2(426.667, 80)
+"nodes/Transition 2/node" = SubResource("AnimationNodeTransition_frqy2")
+"nodes/Transition 2/position" = Vector2(906.667, 80)
+"nodes/Transition 3/node" = SubResource("AnimationNodeTransition_os5rt")
+"nodes/Transition 3/position" = Vector2(693.333, 186.667)
+nodes/output/position = Vector2(1120, 80)
+node_connections = [&"Transition", 0, &"Animation", &"Transition", 1, &"Animation 2", &"Transition 2", 0, &"Transition", &"Transition 2", 1, &"Transition 3", &"Transition 3", 0, &"Animation 3", &"Transition 3", 1, &"Animation 4", &"output", 0, &"Transition 2"]
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_2d27w")
@@ -182,14 +180,14 @@ libraries = {
 }
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
-tree_root = SubResource("AnimationNodeStateMachine_delop")
+tree_root = SubResource("AnimationNodeBlendTree_thp2w")
 anim_player = NodePath("../AnimationPlayer")
-parameters/in_air/blend_position = 0
-parameters/on_ground/blend_position = -0.000480056
-
-[node name="AnimationTree2" type="AnimationTree" parent="."]
-root_node = NodePath("../AnimationTree")
-tree_root = SubResource("AnimationNodeBlendTree_oeigk")
-anim_player = NodePath("../AnimationPlayer")
-parameters/test/blend_position = 0.00112486
-parameters/test/1/blend_position = -0.955006
+parameters/Transition/current_state = "idle"
+parameters/Transition/transition_request = ""
+parameters/Transition/current_index = 0
+"parameters/Transition 2/current_state" = "ground"
+"parameters/Transition 2/transition_request" = ""
+"parameters/Transition 2/current_index" = 0
+"parameters/Transition 3/current_state" = ""
+"parameters/Transition 3/transition_request" = ""
+"parameters/Transition 3/current_index" = -1
