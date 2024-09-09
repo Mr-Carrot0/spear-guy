@@ -6,7 +6,8 @@ const SPEED := 5000.0
 const JUMP_VELOCITY := -150.0
 
 var debug = {
-	"main": 1
+	"main": 1, 
+	"phy": 0
 	, "pos": 0
 	, "vel": 1
 	, "dir": 1
@@ -42,11 +43,12 @@ func _physics_process(delta) -> void:
 	
 	
 	if debug.main:
-		if debug.pos:
-			print("pos: ", position)
-		if debug.vel:
-			print("vel: ", velocity)
-		if debug.dir:
-			print("dir: ", dir)
+		if debug.phy:
+			if debug.pos:
+				print("pos: ", position)
+			if debug.vel:
+				print("vel: ", velocity)
+			if debug.dir:
+				print("dir: ", dir)
 	
 	move_and_slide()
