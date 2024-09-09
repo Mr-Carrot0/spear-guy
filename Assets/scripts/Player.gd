@@ -5,6 +5,8 @@ extends Actor
 const SPEED := 5000.0
 const JUMP_VELOCITY := -150.0
 
+var old_dir_x = 1
+
 var debug = {
 	"main": 1,
 	"phy": 0
@@ -25,18 +27,19 @@ func _physics_process(delta) -> void:
 		_tree["parameters/m/transition_request"] = "air"
 		# _tree["parameters/in_air/transition_request"] = "jump"
 
-	var dir = Input.get_axis("move_left", "move_right")
-	velocity.x = dir * SPEED * delta if dir else move_toward(velocity.x, 0, SPEED * delta)
+	var x_dir = Input.get_axis("move_left", "move_right")
+	velocity.x = x_dir * SPEED * delta if x_dir else move_toward(velocity.x, 0, SPEED * delta)
+
+	if x_dir != 0:
+		old_dir_x = x_dir
+	x_dir = velocity.normalized()
 	
-	dir = velocity.normalized()
-	
-	sprite.flip_h = bool(-dir.x+1)
-	if -dir.x+1:
-		sprite.offset
+	sprite.flip_h = 1 - old_dir_x
+	sprite.offset.x = [0, -3][int(bool(1 - old_dir_x))]
 
 	## TREE
 	# animation_tree["parameters/Transition/transition_request"] = "state_2"
-	_tree["parameters/on_ground/transition_request"] = ["idle", "walk"][abs(dir.x)]
+	_tree["parameters/on_ground/transition_request"] = ["idle", "walk"][abs(x_dir.x)]
 
 	if is_on_floor():
 		if !Input.is_action_just_pressed("jump"):
@@ -52,6 +55,6 @@ func _physics_process(delta) -> void:
 			if debug.vel:
 				print("vel: ", velocity)
 			if debug.dir:
-				print("dir: ", dir)
+				print("x_dir: ", x_dir)
 	
 	move_and_slide()
