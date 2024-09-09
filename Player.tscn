@@ -110,22 +110,22 @@ animation = &"spin"
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ecfws"]
 animation = &"idle"
 
-[sub_resource type="AnimationNodeTransition" id="AnimationNodeTransition_frqy2"]
-input_0/name = "ground"
-input_0/auto_advance = false
-input_0/break_loop_at_end = false
-input_0/reset = true
-input_1/name = "air"
-input_1/auto_advance = false
-input_1/break_loop_at_end = false
-input_1/reset = true
-
 [sub_resource type="AnimationNodeTransition" id="AnimationNodeTransition_os5rt"]
 input_0/name = "jump"
 input_0/auto_advance = false
 input_0/break_loop_at_end = false
 input_0/reset = true
 input_1/name = "fall"
+input_1/auto_advance = false
+input_1/break_loop_at_end = false
+input_1/reset = true
+
+[sub_resource type="AnimationNodeTransition" id="AnimationNodeTransition_frqy2"]
+input_0/name = "ground"
+input_0/auto_advance = false
+input_0/break_loop_at_end = false
+input_0/reset = true
+input_1/name = "air"
 input_1/auto_advance = false
 input_1/break_loop_at_end = false
 input_1/reset = true
@@ -141,7 +141,7 @@ input_1/break_loop_at_end = false
 input_1/reset = true
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_thp2w"]
-graph_offset = Vector2(-57.5986, 40.2586)
+graph_offset = Vector2(-57.5985, 40.2586)
 nodes/Animation/node = SubResource("AnimationNodeAnimation_ecfws")
 nodes/Animation/position = Vector2(133.333, 80)
 "nodes/Animation 2/node" = SubResource("AnimationNodeAnimation_htqfk")
@@ -149,15 +149,15 @@ nodes/Animation/position = Vector2(133.333, 80)
 "nodes/Animation 3/node" = SubResource("AnimationNodeAnimation_tdd2p")
 "nodes/Animation 3/position" = Vector2(320, 320)
 "nodes/Animation 4/node" = SubResource("AnimationNodeAnimation_kg3cx")
-"nodes/Animation 4/position" = Vector2(453.333, 400)
-nodes/Transition/node = SubResource("AnimationNodeTransition_cm00l")
-nodes/Transition/position = Vector2(426.667, 80)
-"nodes/Transition 2/node" = SubResource("AnimationNodeTransition_frqy2")
-"nodes/Transition 2/position" = Vector2(906.667, 80)
-"nodes/Transition 3/node" = SubResource("AnimationNodeTransition_os5rt")
-"nodes/Transition 3/position" = Vector2(693.333, 186.667)
+"nodes/Animation 4/position" = Vector2(480, 453.333)
+nodes/in_air/node = SubResource("AnimationNodeTransition_os5rt")
+nodes/in_air/position = Vector2(693.333, 186.667)
+nodes/m/node = SubResource("AnimationNodeTransition_frqy2")
+nodes/m/position = Vector2(906.667, 80)
+nodes/on_ground/node = SubResource("AnimationNodeTransition_cm00l")
+nodes/on_ground/position = Vector2(426.667, 106.667)
 nodes/output/position = Vector2(1120, 80)
-node_connections = [&"Transition", 0, &"Animation", &"Transition", 1, &"Animation 2", &"Transition 2", 0, &"Transition", &"Transition 2", 1, &"Transition 3", &"Transition 3", 0, &"Animation 3", &"Transition 3", 1, &"Animation 4", &"output", 0, &"Transition 2"]
+node_connections = [&"in_air", 0, &"Animation 3", &"in_air", 1, &"Animation 4", &"m", 0, &"on_ground", &"m", 1, &"in_air", &"on_ground", 0, &"Animation", &"on_ground", 1, &"Animation 2", &"output", 0, &"m"]
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_2d27w")
@@ -182,12 +182,12 @@ libraries = {
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource("AnimationNodeBlendTree_thp2w")
 anim_player = NodePath("../AnimationPlayer")
-parameters/Transition/current_state = "idle"
-parameters/Transition/transition_request = ""
-parameters/Transition/current_index = 0
-"parameters/Transition 2/current_state" = "ground"
-"parameters/Transition 2/transition_request" = ""
-"parameters/Transition 2/current_index" = 0
-"parameters/Transition 3/current_state" = ""
-"parameters/Transition 3/transition_request" = ""
-"parameters/Transition 3/current_index" = -1
+parameters/in_air/current_state = ""
+parameters/in_air/transition_request = "fall"
+parameters/in_air/current_index = -1
+parameters/m/current_state = "ground"
+parameters/m/transition_request = ""
+parameters/m/current_index = 0
+parameters/on_ground/current_state = "idle"
+parameters/on_ground/transition_request = ""
+parameters/on_ground/current_index = 0
