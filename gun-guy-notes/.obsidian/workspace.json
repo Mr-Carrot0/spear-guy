@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "chars/Raven Of the Night.md",
+                "file": "Spear Guy Story Outline.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "chars/Raven Of the Night.md",
+                "file": "Spear Guy Story Outline.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "chars/Raven Of the Night.md",
+                "file": "Spear Guy Story Outline.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "chars/Raven Of the Night.md"
+                "file": "Spear Guy Story Outline.md"
               }
             }
           }
@@ -148,10 +148,10 @@
   },
   "active": "c8a77a2868b53f12",
   "lastOpenFiles": [
+    "chars/Raven Of the Night.md",
     "Spear Guy Story Outline.md",
     "Hej Vide!.md",
     "chars/Spear guy.md",
-    "chars/Raven Of the Night.md",
     "items/The Spear Of Destruction.md",
     "Untitled.md",
     "items",
