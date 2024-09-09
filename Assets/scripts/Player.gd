@@ -5,7 +5,7 @@ extends Actor
 const SPEED := 5000.0
 const JUMP_VELOCITY := -150.0
 
-var old_dir_x = 1
+var is_flipped = false
 
 var debug = {
 	"main": 1,
@@ -31,11 +31,11 @@ func _physics_process(delta) -> void:
 	velocity.x = x_dir * SPEED * delta if x_dir else move_toward(velocity.x, 0, SPEED * delta)
 
 	if x_dir != 0:
-		old_dir_x = x_dir
+		is_flipped = bool(1 - x_dir)
 	x_dir = velocity.normalized()
 	
-	sprite.flip_h = 1 - old_dir_x
-	sprite.offset.x = [0, -3][int(bool(1 - old_dir_x))]
+	sprite.flip_h = is_flipped
+	sprite.offset.x = [0, -3][int(is_flipped)]
 
 	## TREE
 	# animation_tree["parameters/Transition/transition_request"] = "state_2"

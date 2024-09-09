@@ -9,6 +9,10 @@
 [node name="Player" parent="." instance=ExtResource("1_7n1tk")]
 position = Vector2(335, 184)
 
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(-2, 8)
+zoom = Vector2(2.365, 2.365)
+
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(348, 248)
 physics_material_override = SubResource("PhysicsMaterial_7nikd")
