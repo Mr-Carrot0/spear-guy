@@ -6,7 +6,7 @@ const SPEED := 5000.0
 const JUMP_VELOCITY := -150.0
 
 var debug = {
-	"main": 1, 
+	"main": 1,
 	"phy": 0
 	, "pos": 0
 	, "vel": 1
@@ -18,7 +18,6 @@ func _ready():
 	
 
 func _physics_process(delta) -> void:
-
 	# Handle jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
@@ -30,6 +29,10 @@ func _physics_process(delta) -> void:
 	velocity.x = dir * SPEED * delta if dir else move_toward(velocity.x, 0, SPEED * delta)
 	
 	dir = velocity.normalized()
+	
+	sprite.flip_h = bool(-dir.x+1)
+	if -dir.x+1:
+		sprite.offset
 
 	## TREE
 	# animation_tree["parameters/Transition/transition_request"] = "state_2"
