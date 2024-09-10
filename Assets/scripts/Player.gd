@@ -2,7 +2,7 @@ extends Actor
 
 @onready var _tree: AnimationTree = $AnimationTree
 
-const SPEED := 5000.0
+const SPEED := 100.0
 const JUMP_VELOCITY := -150.0
 
 var is_flipped = false
@@ -21,7 +21,7 @@ func _ready():
 	_tree.active = true
 	
 
-func _physics_process(delta) -> void:
+func _physics_process(_delta) -> void:
 	# Handle jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
@@ -31,7 +31,7 @@ func _physics_process(delta) -> void:
 		_tree["parameters/spin/request"] = AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE
 
 	var x_dir = Input.get_axis("move_left", "move_right")
-	velocity.x = x_dir * SPEED * delta if x_dir else move_toward(velocity.x, 0, SPEED * delta)
+	velocity.x = x_dir * SPEED if x_dir else move_toward(velocity.x, 0, SPEED)
 
 	if x_dir != 0:
 		is_flipped = bool(1 - x_dir)
@@ -59,5 +59,8 @@ func _physics_process(delta) -> void:
 				print("vel: ", velocity)
 			if debug.dir:
 				print("x_dir: ", x_dir)
+		if debug.ani:
+			if debug.oneshot:
+				print(_tree["parameters/spin/request"] == AnimationNodeOneShot.ONE_SHOT_REQUEST_NONE)
 	
 	move_and_slide()
