@@ -75,7 +75,6 @@ tracks/0/keys = {
 [sub_resource type="Animation" id="Animation_o7ct5"]
 resource_name = "spin"
 length = 2.0
-loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -133,25 +132,28 @@ input_1/break_loop_at_end = false
 input_1/reset = true
 
 [sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_ku8a8"]
+autorestart = true
+autorestart_delay = 0.0
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_thp2w"]
+graph_offset = Vector2(-87.9297, -18.1531)
 nodes/Animation/node = SubResource("AnimationNodeAnimation_ecfws")
-nodes/Animation/position = Vector2(160, 53.3333)
+nodes/Animation/position = Vector2(80, 80)
 "nodes/Animation 2/node" = SubResource("AnimationNodeAnimation_htqfk")
-"nodes/Animation 2/position" = Vector2(133.333, 213.333)
+"nodes/Animation 2/position" = Vector2(80, 213.333)
 "nodes/Animation 3/node" = SubResource("AnimationNodeAnimation_tdd2p")
-"nodes/Animation 3/position" = Vector2(666.667, 240)
+"nodes/Animation 3/position" = Vector2(613.333, 266.667)
 "nodes/Animation 4/node" = SubResource("AnimationNodeAnimation_kg3cx")
-"nodes/Animation 4/position" = Vector2(666.667, 373.333)
+"nodes/Animation 4/position" = Vector2(613.333, 426.667)
 nodes/TimeScale/node = SubResource("AnimationNodeTimeScale_ce1iv")
 nodes/TimeScale/position = Vector2(1520, 186.667)
 nodes/m/node = SubResource("AnimationNodeTransition_frqy2")
 nodes/m/position = Vector2(1680, 80)
 nodes/on_ground/node = SubResource("AnimationNodeTransition_cm00l")
-nodes/on_ground/position = Vector2(426.667, 26.6667)
-nodes/output/position = Vector2(1893.33, 106.667)
+nodes/on_ground/position = Vector2(373.333, 80)
+nodes/output/position = Vector2(1946.67, 53.3333)
 nodes/spin/node = SubResource("AnimationNodeOneShot_ku8a8")
-nodes/spin/position = Vector2(1066.67, 213.333)
+nodes/spin/position = Vector2(853.333, 266.667)
 node_connections = [&"TimeScale", 0, &"spin", &"m", 0, &"on_ground", &"m", 1, &"TimeScale", &"on_ground", 0, &"Animation", &"on_ground", 1, &"Animation 2", &"output", 0, &"m", &"spin", 0, &"Animation 3", &"spin", 1, &"Animation 4"]
 
 [node name="Player" type="CharacterBody2D"]
@@ -176,7 +178,7 @@ libraries = {
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource("AnimationNodeBlendTree_thp2w")
 anim_player = NodePath("../AnimationPlayer")
-parameters/TimeScale/scale = 1.1
+parameters/TimeScale/scale = 1.2
 parameters/m/current_state = "air"
 parameters/m/transition_request = ""
 parameters/m/current_index = 1

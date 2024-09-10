@@ -6,11 +6,15 @@ class_name Actor # sets the class name property so we can more easily refrence i
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
+
 # @export 
-var MAX_HEALTH: float = 100
-var life := MAX_HEALTH
-var weapon = ""
-var weaponHealth := 100
+@export var speed := 100.0
+@export var jmp_vel := -160.0
+
+# @export var MAX_HEALTH: float = 100
+# @export var life := MAX_HEALTH
+# @export var weapon = ""
+# @export var weaponHealth := 100
 
 
 func _process(delta):

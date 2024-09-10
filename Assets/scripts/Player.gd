@@ -1,9 +1,7 @@
 extends Actor
 
 @onready var _tree: AnimationTree = $AnimationTree
-
-const SPEED := 100.0
-const JUMP_VELOCITY := -150.0
+@onready var _ani_player: AnimationPlayer = $AnimationPlayer
 
 var is_flipped = false
 
@@ -14,7 +12,7 @@ var debug = {
 	, "vel": 1
 	, "dir": 1,
 	"ani": 1
-	, "oneshot": 1
+	, "oneshot": 0
 }
 
 func _ready():
@@ -24,18 +22,18 @@ func _ready():
 func _physics_process(_delta) -> void:
 	# Handle jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
+		velocity.y = jmp_vel
 
 		_tree["parameters/m/transition_request"] = "air"
 		# _tree["parameters/[OneShot]/request"] = AnimationNodeOneShot.ONE_SHOT_REQUEST_[Request]
 		_tree["parameters/spin/request"] = AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE
 
 	var x_dir = Input.get_axis("move_left", "move_right")
-	velocity.x = x_dir * SPEED if x_dir else move_toward(velocity.x, 0, SPEED)
+	velocity.x = x_dir * speed if x_dir else move_toward(velocity.x, 0, speed)
 
 	if x_dir != 0:
 		is_flipped = bool(1 - x_dir)
-	# var direction = velocity.normalized()
+	var direction = velocity.normalized()
 	
 	sprite.flip_h = is_flipped
 	sprite.offset.x = [0, -3][int(is_flipped)]
@@ -51,6 +49,9 @@ func _physics_process(_delta) -> void:
 	
 	_tree["parameters/m/transition_request"] = "ground" if is_on_floor() and !Input.is_action_just_pressed("jump") else "air"
 	
+	if _tree["parameters/spin/request"] == AnimationNodeOneShot.ONE_SHOT_REQUEST_NONE and direction.y > 0 and $Sprite2D.frame_coords==Vector2(7,3):
+		_tree["parameters/spin/request"] = AnimationNodeOneShot.ONE_SHOT_REQUEST_ABORT
+
 	if debug.main:
 		if debug.phy:
 			if debug.pos:
