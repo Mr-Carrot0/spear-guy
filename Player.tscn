@@ -114,24 +114,26 @@ animation = &"idle"
 [sub_resource type="AnimationNodeTransition" id="AnimationNodeTransition_frqy2"]
 input_0/name = "ground"
 input_0/auto_advance = false
-input_0/break_loop_at_end = false
+input_0/break_loop_at_end = true
 input_0/reset = true
 input_1/name = "air"
 input_1/auto_advance = false
-input_1/break_loop_at_end = false
+input_1/break_loop_at_end = true
 input_1/reset = true
 
 [sub_resource type="AnimationNodeTransition" id="AnimationNodeTransition_cm00l"]
 input_0/name = "idle"
 input_0/auto_advance = false
-input_0/break_loop_at_end = false
+input_0/break_loop_at_end = true
 input_0/reset = true
 input_1/name = "walk"
 input_1/auto_advance = false
-input_1/break_loop_at_end = false
+input_1/break_loop_at_end = true
 input_1/reset = true
 
 [sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_ku8a8"]
+sync = true
+break_loop_at_end = true
 autorestart_delay = 0.0
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_thp2w"]
@@ -181,9 +183,9 @@ parameters/TimeScale/scale = 1.2
 parameters/m/current_state = "air"
 parameters/m/transition_request = ""
 parameters/m/current_index = 1
-parameters/on_ground/current_state = "idle"
+parameters/on_ground/current_state = "walk"
 parameters/on_ground/transition_request = ""
-parameters/on_ground/current_index = 0
+parameters/on_ground/current_index = 1
 parameters/spin/active = false
 parameters/spin/internal_active = false
 parameters/spin/request = 0

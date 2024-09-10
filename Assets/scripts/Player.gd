@@ -11,7 +11,7 @@ var debug = {
 	, "vel": 1
 	, "dir": 1,
 	"ani": 1
-	, "oneshot": 0
+	, "oneshot": 0, 
 }
 
 func _ready():

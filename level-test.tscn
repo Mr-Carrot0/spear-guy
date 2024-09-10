@@ -11,7 +11,7 @@ position = Vector2(345, 149)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(-2, 8)
-zoom = Vector2(2.365, 2.365)
+zoom = Vector2(2.735, 2.735)
 metadata/_edit_lock_ = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
