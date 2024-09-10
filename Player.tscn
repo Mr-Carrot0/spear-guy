@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://5jpo611kaau8"]
+[gd_scene load_steps=19 format=3 uid="uid://5jpo611kaau8"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/Player.gd" id="1_2d27w"]
 [ext_resource type="Texture2D" uid="uid://cdmewcfftarud" path="res://Assets/Sprites/stolen/cat_stolen.png" id="2_o2kcy"]
@@ -18,7 +18,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [Vector2i(0, 2)]
+"values": [Vector2i(0, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_m0a4k"]
@@ -57,7 +57,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_o7ct5"]
 resource_name = "spin"
-length = 2.0
+length = 1.65
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -66,10 +66,10 @@ tracks/0/path = NodePath("Sprite2D:frame_coords")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.0333332, 0.366667, 0.7, 1.03333, 1.36667, 1.7),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.333333, 0.666667, 1, 1.33333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 1,
-"values": [Vector2i(2, 3), Vector2i(3, 3), Vector2i(4, 3), Vector2i(5, 3), Vector2i(6, 3), Vector2i(7, 3)]
+"values": [Vector2i(2, 3), Vector2i(3, 3), Vector2i(4, 3), Vector2i(5, 3), Vector2i(6, 3)]
 }
 
 [sub_resource type="Animation" id="Animation_cxaxq"]
@@ -110,6 +110,8 @@ animation = &"spin"
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ecfws"]
 animation = &"idle"
 
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_ce1iv"]
+
 [sub_resource type="AnimationNodeTransition" id="AnimationNodeTransition_os5rt"]
 input_0/name = "jump"
 input_0/auto_advance = false
@@ -141,23 +143,24 @@ input_1/break_loop_at_end = false
 input_1/reset = true
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_thp2w"]
-graph_offset = Vector2(-57.5985, 40.2586)
 nodes/Animation/node = SubResource("AnimationNodeAnimation_ecfws")
-nodes/Animation/position = Vector2(133.333, 80)
+nodes/Animation/position = Vector2(160, 53.3333)
 "nodes/Animation 2/node" = SubResource("AnimationNodeAnimation_htqfk")
 "nodes/Animation 2/position" = Vector2(133.333, 213.333)
 "nodes/Animation 3/node" = SubResource("AnimationNodeAnimation_tdd2p")
 "nodes/Animation 3/position" = Vector2(320, 320)
 "nodes/Animation 4/node" = SubResource("AnimationNodeAnimation_kg3cx")
-"nodes/Animation 4/position" = Vector2(480, 453.333)
+"nodes/Animation 4/position" = Vector2(320, 453.333)
+nodes/TimeScale/node = SubResource("AnimationNodeTimeScale_ce1iv")
+nodes/TimeScale/position = Vector2(1280, 320)
 nodes/in_air/node = SubResource("AnimationNodeTransition_os5rt")
-nodes/in_air/position = Vector2(693.333, 186.667)
+nodes/in_air/position = Vector2(1520, 186.667)
 nodes/m/node = SubResource("AnimationNodeTransition_frqy2")
-nodes/m/position = Vector2(906.667, 80)
+nodes/m/position = Vector2(1680, 80)
 nodes/on_ground/node = SubResource("AnimationNodeTransition_cm00l")
-nodes/on_ground/position = Vector2(426.667, 106.667)
-nodes/output/position = Vector2(1120, 80)
-node_connections = [&"in_air", 0, &"Animation 3", &"in_air", 1, &"Animation 4", &"m", 0, &"on_ground", &"m", 1, &"in_air", &"on_ground", 0, &"Animation", &"on_ground", 1, &"Animation 2", &"output", 0, &"m"]
+nodes/on_ground/position = Vector2(426.667, 26.6667)
+nodes/output/position = Vector2(1893.33, 106.667)
+node_connections = [&"TimeScale", 0, &"Animation 4", &"in_air", 0, &"Animation 3", &"in_air", 1, &"TimeScale", &"m", 0, &"on_ground", &"m", 1, &"in_air", &"on_ground", 0, &"Animation", &"on_ground", 1, &"Animation 2", &"output", 0, &"m"]
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_2d27w")
@@ -172,7 +175,6 @@ position = Vector2(1.5, -5.5)
 texture = ExtResource("2_o2kcy")
 hframes = 16
 vframes = 16
-frame = 32
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -182,12 +184,13 @@ libraries = {
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource("AnimationNodeBlendTree_thp2w")
 anim_player = NodePath("../AnimationPlayer")
-parameters/in_air/current_state = ""
-parameters/in_air/transition_request = "fall"
-parameters/in_air/current_index = -1
-parameters/m/current_state = "ground"
+parameters/TimeScale/scale = 1.5
+parameters/in_air/current_state = "fall"
+parameters/in_air/transition_request = ""
+parameters/in_air/current_index = 1
+parameters/m/current_state = "air"
 parameters/m/transition_request = ""
-parameters/m/current_index = 0
+parameters/m/current_index = 1
 parameters/on_ground/current_state = "idle"
 parameters/on_ground/transition_request = ""
 parameters/on_ground/current_index = 0

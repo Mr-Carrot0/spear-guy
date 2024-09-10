@@ -41,10 +41,10 @@ func _physics_process(delta) -> void:
 	# animation_tree["parameters/Transition/transition_request"] = "state_2"
 	_tree["parameters/on_ground/transition_request"] = ["idle", "walk"][abs(x_dir)]
 
-	if is_on_floor():
-		if !Input.is_action_just_pressed("jump"):
-			_tree["parameters/m/transition_request"] = "ground"
-	elif velocity.y > 0:
+	if is_on_floor() and !Input.is_action_just_pressed("jump"):
+		_tree["parameters/m/transition_request"] = "ground"
+	else:
+		_tree["parameters/m/transition_request"] = "air"
 		_tree["parameters/in_air/transition_request"] = "fall"
 	
 	
