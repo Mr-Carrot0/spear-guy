@@ -5,13 +5,14 @@ extends Actor
 var is_flipped = false
 
 var debug = {
-	"main": 1,
+	"main": 0
+	,
 	"phy": 0
 	, "pos": 0
 	, "vel": 1
 	, "dir": 1,
 	"ani": 1
-	, "oneshot": 0, 
+	, "oneshot": 0,
 }
 
 func _ready():

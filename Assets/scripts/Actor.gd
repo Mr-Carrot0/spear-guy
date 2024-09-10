@@ -21,5 +21,5 @@ func _process(delta):
 	if not is_on_floor():
 		velocity.y += gravity * delta
 	
-	if position.y > 400:
-		pass
+	if position.y > ProjectSettings.get_setting("display/window/size/viewport_height")*1.:
+		print("dies of death")
