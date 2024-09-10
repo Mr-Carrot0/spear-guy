@@ -32,14 +32,14 @@ func _physics_process(delta) -> void:
 
 	if x_dir != 0:
 		is_flipped = bool(1 - x_dir)
-	x_dir = velocity.normalized()
+	# var direction = velocity.normalized()
 	
 	sprite.flip_h = is_flipped
 	sprite.offset.x = [0, -3][int(is_flipped)]
 
 	## TREE
 	# animation_tree["parameters/Transition/transition_request"] = "state_2"
-	_tree["parameters/on_ground/transition_request"] = ["idle", "walk"][abs(x_dir.x)]
+	_tree["parameters/on_ground/transition_request"] = ["idle", "walk"][abs(x_dir)]
 
 	if is_on_floor():
 		if !Input.is_action_just_pressed("jump"):
