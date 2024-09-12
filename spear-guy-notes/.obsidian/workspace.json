@@ -20,12 +20,12 @@
             }
           },
           {
-            "id": "b7083fa79ab4eb67",
+            "id": "dd131188703c3324",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Design doc.md",
+                "file": "items/The Spear Of Destruction.md",
                 "mode": "source",
                 "source": false
               }
@@ -160,12 +160,12 @@
   },
   "active": "c8a77a2868b53f12",
   "lastOpenFiles": [
-    "Design doc.md",
+    "chars/Spear guy.md",
     "Spear Guy Story Outline.md",
+    "items/The Spear Of Destruction.md",
+    "Design doc.md",
     "chars/Raven Of the Night.md",
     "Hej Vide!.md",
-    "chars/Spear guy.md",
-    "items/The Spear Of Destruction.md",
     "items",
     "chars",
     "log/2024-08-26.md",
