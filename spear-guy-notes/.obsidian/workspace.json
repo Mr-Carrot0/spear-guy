@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spear Guy Story Outline.md",
+                "file": "Spear-Guy-Story-Outline.md",
                 "mode": "source",
                 "source": false
               }
@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "items/The Spear Of Destruction.md",
+                "file": "items/The-Spear-Of-Destruction.md",
                 "mode": "source",
                 "source": false
               }
@@ -81,7 +81,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 288.5
   },
   "right": {
     "id": "9d627117d7bcc630",
@@ -97,7 +97,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spear Guy Story Outline.md"
+                "file": "Spear-Guy-Story-Outline.md"
               }
             }
           },
@@ -107,7 +107,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spear Guy Story Outline.md",
+                "file": "Spear-Guy-Story-Outline.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -124,7 +124,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spear Guy Story Outline.md",
+                "file": "Spear-Guy-Story-Outline.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -173,12 +173,13 @@
   },
   "active": "c8a77a2868b53f12",
   "lastOpenFiles": [
-    "chars/Raven Of the Night.md",
-    "Spear Guy Story Outline.md",
-    "chars/Spear guy.md",
-    "items/The Spear Of Destruction.md",
-    "Design doc.md",
-    "Hej Vide!.md",
+    "chars/Spear-guy.md",
+    "chars/Raven-Of-the-Night.md",
+    "Spear-Guy-Story-Outline.md",
+    "Raven-Of-the-Night.md",
+    "items/The-Spear-Of-Destruction.md",
+    "Hej-Vide!.md",
+    "Design-doc.md",
     "items",
     "chars",
     "log/2024-08-26.md",
