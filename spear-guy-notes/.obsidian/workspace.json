@@ -92,6 +92,16 @@
         "type": "tabs",
         "children": [
           {
+            "id": "504d951aa6d6a37a",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Spear Guy Story Outline.md"
+              }
+            }
+          },
+          {
             "id": "b1a60d27720f58e5",
             "type": "leaf",
             "state": {
@@ -132,21 +142,23 @@
             }
           },
           {
-            "id": "504d951aa6d6a37a",
+            "id": "b7420c13f22503df",
             "type": "leaf",
             "state": {
-              "type": "outline",
+              "type": "all-properties",
               "state": {
-                "file": "Spear Guy Story Outline.md"
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
               }
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -158,13 +170,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "c8a77a2868b53f12",
+  "active": "b7420c13f22503df",
   "lastOpenFiles": [
-    "chars/Spear guy.md",
+    "chars/Raven Of the Night.md",
     "Spear Guy Story Outline.md",
+    "chars/Spear guy.md",
     "items/The Spear Of Destruction.md",
     "Design doc.md",
-    "chars/Raven Of the Night.md",
     "Hej Vide!.md",
     "items",
     "chars",
