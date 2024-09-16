@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "spear-guy-story-outline.md",
+                "file": "misc/spear-guy-story-outline.md",
                 "mode": "source",
                 "source": false
               }
@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "recommended plugins.md",
+                "file": "-ignore/recommended plugins.md",
                 "mode": "source",
                 "source": false
               }
@@ -110,7 +110,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "recommended plugins.md"
+                "file": "-ignore/recommended plugins.md"
               }
             }
           },
@@ -120,7 +120,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "recommended plugins.md",
+                "file": "-ignore/recommended plugins.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -137,7 +137,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "recommended plugins.md",
+                "file": "-ignore/recommended plugins.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -172,7 +172,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "recommended plugins.md"
+                "file": "-ignore/recommended plugins.md"
               }
             }
           }
@@ -194,17 +194,19 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "c5c5942ab94767d0",
+  "active": "8d37b2395776d501",
   "lastOpenFiles": [
-    "spear-guy-story-outline.md",
-    "recommended plugins.md",
+    "misc",
+    "-ignore",
+    "misc/spear-guy-story-outline.md",
+    "-ignore/recommended plugins.md",
     "items/the-spear-of-destruction.md",
-    "design-doc.md",
+    "misc/design-doc.md",
     "chars/spear-guy.md",
     "chars/raven-of-the-night.md",
     "items/The Spear Of Destruction.md",
     "Raven-Of-the-Night.md",
-    "Hej-Vide!.md",
+    "-ignore/Hej-Vide!.md",
     "items",
     "chars",
     "log/2024-08-26.md",
