@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "design-doc.md",
+                "file": "items/the-spear-of-destruction.md",
                 "mode": "source",
                 "source": false
               }
@@ -31,7 +31,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -97,7 +98,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "design-doc.md"
+                "file": "spear-guy-story-outline.md"
               }
             }
           },
@@ -107,14 +108,14 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "design-doc.md",
+                "file": "spear-guy-story-outline.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
-                "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
+                "backlinkCollapsed": true,
+                "unlinkedCollapsed": false
               }
             }
           },
@@ -124,7 +125,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "design-doc.md",
+                "file": "spear-guy-story-outline.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -152,14 +153,23 @@
                 "searchQuery": ""
               }
             }
+          },
+          {
+            "id": "0607b8c509cdee33",
+            "type": "leaf",
+            "state": {
+              "type": "file-properties",
+              "state": {
+                "file": "spear-guy-story-outline.md"
+              }
+            }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -171,13 +181,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "dd131188703c3324",
+  "active": "0607b8c509cdee33",
   "lastOpenFiles": [
+    "items/the-spear-of-destruction.md",
     "spear-guy-story-outline.md",
     "design-doc.md",
-    "items/the-spear-of-destruction.md",
-    "chars/raven-of-the-night.md",
     "chars/spear-guy.md",
+    "chars/raven-of-the-night.md",
     "items/The Spear Of Destruction.md",
     "Raven-Of-the-Night.md",
     "Hej-Vide!.md",

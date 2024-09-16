@@ -50,5 +50,13 @@
       ],
       "key": "L"
     }
+  ],
+  "markdown:add-metadata-property": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "."
+    }
   ]
 }
