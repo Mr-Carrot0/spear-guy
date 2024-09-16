@@ -32,5 +32,9 @@ tags:
 	- Take the advice of a murderer
 		1. [Spear guy](chars/spear-guy.md) fights a gauntlet of carrot monsters
 		2. He gets help from demons while in a tight spot
-		3. [Spear Guy](chars/spear-guy.md) makes a truce with the demons to ensure equal rights between the species and include demons in his court so they can voice their opinions. 
-5. The ban on non-polearm weaponry is lifted due to the crisis and new rule
+		3. [CHOICE] - Demons offer help
+			1. [Spear Guy](chars/spear-guy.md) makes a truce with the demons to ensure equal rights between the species and include demons in his court so they can voice their opinions. 
+			2. [Spear Guy](chars/spear-guy.md) rejects the offer and the demons leave him to die 
+			3. Same as ignore-him
+1. The ban on non-polearm weaponry is lifted due to the crisis and new rule. 
+

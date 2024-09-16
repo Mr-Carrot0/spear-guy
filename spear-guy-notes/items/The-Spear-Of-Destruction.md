@@ -6,4 +6,4 @@ tags:
   - weapon
 ---
 
-An ancient artifact of the church, designed to obliterate weapons, rather than a direct offence
+An ancient artifact of the church, designed to obliterate weapons, rather than damaging amour or inflicting wounds. 

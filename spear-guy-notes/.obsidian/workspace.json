@@ -8,18 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "dd131188703c3324",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "items/the-spear-of-destruction.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "32662264400bb28e",
             "type": "leaf",
             "state": {
@@ -37,14 +25,34 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "-ignore/recommended plugins.md",
+                "file": "-ignore/notes.md",
                 "mode": "source",
                 "source": false
               }
-            }
+            },
+            "group": "e81111a2d0a478c6"
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
+      },
+      {
+        "id": "67d74ebde670a7c4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "72aab255119946d4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "-ignore/notes.md",
+                "mode": "preview",
+                "source": false
+              }
+            },
+            "group": "e81111a2d0a478c6"
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -110,7 +118,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "-ignore/recommended plugins.md"
+                "file": "-ignore/notes.md"
               }
             }
           },
@@ -120,7 +128,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "-ignore/recommended plugins.md",
+                "file": "-ignore/notes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -137,7 +145,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "-ignore/recommended plugins.md",
+                "file": "-ignore/notes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -172,7 +180,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "-ignore/recommended plugins.md"
+                "file": "-ignore/notes.md"
               }
             }
           }
@@ -194,19 +202,20 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "8d37b2395776d501",
+  "active": "72aab255119946d4",
   "lastOpenFiles": [
+    "chars/spear-guy.md",
+    "-ignore/notes.md",
+    "-ignore/Hej-Vide!.md",
+    "-ignore/Untitled.md",
+    "misc/spear-guy-story-outline.md",
+    "items/the-spear-of-destruction.md",
     "misc",
     "-ignore",
-    "misc/spear-guy-story-outline.md",
-    "-ignore/recommended plugins.md",
-    "items/the-spear-of-destruction.md",
     "misc/design-doc.md",
-    "chars/spear-guy.md",
     "chars/raven-of-the-night.md",
     "items/The Spear Of Destruction.md",
     "Raven-Of-the-Night.md",
-    "-ignore/Hej-Vide!.md",
     "items",
     "chars",
     "log/2024-08-26.md",

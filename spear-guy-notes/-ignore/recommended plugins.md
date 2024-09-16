@@ -1,3 +1,0 @@
-- Git
-- Mononote
-- (Link converter)
