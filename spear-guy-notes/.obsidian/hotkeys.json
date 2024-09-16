@@ -42,6 +42,7 @@
     }
   ],
   "editor:insert-link": [],
+  "editor:toggle-checklist-status": [],
   "editor:insert-wikilink": [
     {
       "modifiers": [
@@ -49,6 +50,5 @@
       ],
       "key": "L"
     }
-  ],
-  "editor:toggle-checklist-status": []
+  ]
 }
