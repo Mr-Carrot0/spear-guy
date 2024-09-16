@@ -82,7 +82,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 288.5
+    "width": 292.5
   },
   "right": {
     "id": "9d627117d7bcc630",
@@ -174,10 +174,10 @@
   },
   "active": "32662264400bb28e",
   "lastOpenFiles": [
+    "chars/spear-guy.md",
+    "Spear-Guy-Story-Outline.md",
     "chars/Raven-Of-the-Night.md",
     "Design-doc.md",
-    "Spear-Guy-Story-Outline.md",
-    "chars/spear-guy.md",
     "items/The Spear Of Destruction.md",
     "Raven-Of-the-Night.md",
     "items/The-Spear-Of-Destruction.md",

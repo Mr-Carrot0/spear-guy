@@ -6,5 +6,5 @@ aliases:
   - the protagonist
   - the prince
   - The prince
-  - He
+  - prince
 ---

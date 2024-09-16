@@ -20,7 +20,13 @@
 2. [...]
 3. He finally catches up with [Raven](chars/Raven-Of-the-Night.md), but he explains that the kingdom of spears is under attack by a horde of flesh eating carrot creatures and he should prioritize his kingdom instead of grasping for any chance for petty revenge.
 4. [CHOICE]
-	- Ignore (consumed by rage)
-		1. Epok boss fight
-	- Take his advice
-		1. L
+	- Ignore him 
+		1. Epic boss fight with [Raven of the Night](chars/Raven-Of-the-Night.md)
+		2. Kingdom was about to be wiped out by the monsters, but with the help of the local demon population, only half of the population died in the attack
+		3. [Spear guy](chars/spear-guy.md) is exiled for ignoring his duties as the heir to the throne and protector of the lands.
+		4. The Kingdom of Spears is no longer a kingdom and is instead ruled by a court of 50% humans and 50% demons, since they, unlike the traitorous [prince](chars/spear-guy.md) actually helped save the kingdom.
+	- Take the advice of a murderer
+		1. [Spear guy](chars/spear-guy.md) fights a gauntlet of carrot monsters
+		2. He gets help from demons while in a tight spot
+		3. [Spear Guy](chars/spear-guy.md) makes a truce with the demons to ensure equal rights between the species and include demons in his court so they can voice their oppinions. 
+5. The ban on non-polearm weaponry is lifted
