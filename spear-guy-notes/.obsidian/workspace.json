@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Design-doc.md",
+                "file": "design-doc.md",
                 "mode": "source",
                 "source": false
               }
@@ -25,14 +25,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Spear-Guy-Story-Outline.md",
+                "file": "spear-guy-story-outline.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +97,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Spear-Guy-Story-Outline.md"
+                "file": "design-doc.md"
               }
             }
           },
@@ -108,7 +107,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Spear-Guy-Story-Outline.md",
+                "file": "design-doc.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,7 +124,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Spear-Guy-Story-Outline.md",
+                "file": "design-doc.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -172,15 +171,15 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "32662264400bb28e",
+  "active": "dd131188703c3324",
   "lastOpenFiles": [
+    "spear-guy-story-outline.md",
+    "design-doc.md",
+    "items/the-spear-of-destruction.md",
+    "chars/raven-of-the-night.md",
     "chars/spear-guy.md",
-    "Spear-Guy-Story-Outline.md",
-    "chars/Raven-Of-the-Night.md",
-    "Design-doc.md",
     "items/The Spear Of Destruction.md",
     "Raven-Of-the-Night.md",
-    "items/The-Spear-Of-Destruction.md",
     "Hej-Vide!.md",
     "items",
     "chars",
