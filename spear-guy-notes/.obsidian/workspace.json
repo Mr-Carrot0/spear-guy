@@ -30,9 +30,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "c5c5942ab94767d0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "recommended plugins.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -98,7 +110,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "spear-guy-story-outline.md"
+                "file": "recommended plugins.md"
               }
             }
           },
@@ -108,7 +120,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "spear-guy-story-outline.md",
+                "file": "recommended plugins.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,7 +137,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "spear-guy-story-outline.md",
+                "file": "recommended plugins.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -160,7 +172,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "spear-guy-story-outline.md"
+                "file": "recommended plugins.md"
               }
             }
           }
@@ -169,7 +181,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -181,10 +194,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "0607b8c509cdee33",
+  "active": "c5c5942ab94767d0",
   "lastOpenFiles": [
-    "items/the-spear-of-destruction.md",
     "spear-guy-story-outline.md",
+    "recommended plugins.md",
+    "items/the-spear-of-destruction.md",
     "design-doc.md",
     "chars/spear-guy.md",
     "chars/raven-of-the-night.md",
