@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cdmewcfftarud" path="res://Assets/Sprites/stolen/cat_stolen.png" id="2_o2kcy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qxq2l"]
-size = Vector2(11, 26)
+size = Vector2(11, 27)
 
 [sub_resource type="Animation" id="Animation_2te2c"]
 length = 0.001
@@ -91,9 +91,9 @@ tracks/0/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_jxlcx"]
 _data = {
 "RESET": SubResource("Animation_2te2c"),
+"fall": SubResource("Animation_0yhjq"),
 "idle": SubResource("Animation_m0a4k"),
-"spin-fall": SubResource("Animation_0yhjq"),
-"spin-jump": SubResource("Animation_o7ct5"),
+"jump": SubResource("Animation_o7ct5"),
 "walk": SubResource("Animation_cxaxq")
 }
 
@@ -101,10 +101,10 @@ _data = {
 animation = &"walk"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_tdd2p"]
-animation = &"spin-fall"
+animation = &"fall"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_kg3cx"]
-animation = &"spin-jump"
+animation = &"jump"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ecfws"]
 animation = &"idle"
@@ -137,31 +137,31 @@ break_loop_at_end = true
 autorestart_delay = 0.0
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_thp2w"]
-graph_offset = Vector2(-87.9297, -18.1531)
+graph_offset = Vector2(-9.12292, 71.0728)
 nodes/Animation/node = SubResource("AnimationNodeAnimation_ecfws")
-nodes/Animation/position = Vector2(80, 80)
+nodes/Animation/position = Vector2(186.667, 160)
 "nodes/Animation 2/node" = SubResource("AnimationNodeAnimation_htqfk")
-"nodes/Animation 2/position" = Vector2(80, 213.333)
+"nodes/Animation 2/position" = Vector2(186.667, 293.333)
 "nodes/Animation 3/node" = SubResource("AnimationNodeAnimation_tdd2p")
-"nodes/Animation 3/position" = Vector2(613.333, 266.667)
+"nodes/Animation 3/position" = Vector2(346.667, 373.333)
 "nodes/Animation 4/node" = SubResource("AnimationNodeAnimation_kg3cx")
-"nodes/Animation 4/position" = Vector2(613.333, 426.667)
+"nodes/Animation 4/position" = Vector2(346.667, 533.333)
 nodes/TimeScale/node = SubResource("AnimationNodeTimeScale_ce1iv")
-nodes/TimeScale/position = Vector2(1520, 186.667)
+nodes/TimeScale/position = Vector2(746.667, 320)
 nodes/m/node = SubResource("AnimationNodeTransition_frqy2")
-nodes/m/position = Vector2(1680, 80)
+nodes/m/position = Vector2(906.667, 213.333)
 nodes/on_ground/node = SubResource("AnimationNodeTransition_cm00l")
-nodes/on_ground/position = Vector2(373.333, 80)
-nodes/output/position = Vector2(1946.67, 53.3333)
+nodes/on_ground/position = Vector2(373.333, 160)
+nodes/output/position = Vector2(1146.67, 213.333)
 nodes/spin/node = SubResource("AnimationNodeOneShot_ku8a8")
-nodes/spin/position = Vector2(853.333, 266.667)
+nodes/spin/position = Vector2(560, 346.667)
 node_connections = [&"TimeScale", 0, &"spin", &"m", 0, &"on_ground", &"m", 1, &"TimeScale", &"on_ground", 0, &"Animation", &"on_ground", 1, &"Animation 2", &"output", 0, &"m", &"spin", 0, &"Animation 3", &"spin", 1, &"Animation 4"]
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_2d27w")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, 1)
+position = Vector2(-0.5, 3.05)
 shape = SubResource("RectangleShape2D_qxq2l")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

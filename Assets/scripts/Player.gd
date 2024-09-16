@@ -12,20 +12,20 @@ var debug = {
 	, "vel": 1
 	, "dir": 1,
 	"ani": 1
-	, "oneshot": 0,
+	, "oneshot": 1
+	,
 }
 
 func _ready():
 	_tree.active = true
 	
-
 func _physics_process(_delta) -> void:
 	# Handle jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = jmp_vel
 
 		_tree["parameters/m/transition_request"] = "air"
-		# _tree["parameters/[OneShot]/request"] = AnimationNodeOneShot.ONE_SHOT_REQUEST_[Request]
+		# _tree["parameters/[OneShot]/request"] = AnimationNodeOneShot.ONE_SHOT_REQUEST_\request\
 		_tree["parameters/spin/request"] = AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE
 
 	var x_dir = Input.get_axis("move_left", "move_right")
@@ -39,7 +39,7 @@ func _physics_process(_delta) -> void:
 	sprite.offset.x = [0, -3][int(is_flipped)]
 	
 	## TREE
-	# animation_tree["parameters/[Transition]/transition_request"] = "[state]"
+	# animation_tree["parameters/[Transition]/transition_request"] = "\state\"
 	_tree["parameters/on_ground/transition_request"] = ["idle", "walk"][abs(x_dir)]
 
 	# if is_on_floor() and !Input.is_action_just_pressed("jump"):
@@ -60,6 +60,6 @@ func _physics_process(_delta) -> void:
 				print("x_dir: ", x_dir)
 		if debug.ani:
 			if debug.oneshot:
-				print(_tree["parameters/spin/request"] == AnimationNodeOneShot.ONE_SHOT_REQUEST_NONE)
+				print(AnimationNodeOneShot[_tree["parameters/spin/request"]])
 	
 	move_and_slide()
