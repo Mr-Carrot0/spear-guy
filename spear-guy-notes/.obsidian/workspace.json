@@ -4,7 +4,7 @@
     "type": "split",
     "children": [
       {
-        "id": "6fef10e3fc8b0fe4",
+        "id": "a928d73f686e6dc1",
         "type": "tabs",
         "children": [
           {
@@ -20,18 +20,19 @@
             }
           },
           {
-            "id": "c5c5942ab94767d0",
+            "id": "ac2ef4b37f219947",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "-ignore/notes.md",
+                "file": "attributes/curses/Curse from Hell.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -97,7 +98,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "misc/spear-guy-story-outline.md"
+                "file": "attributes/curses/Curse from Hell.md"
               }
             }
           },
@@ -107,7 +108,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "misc/spear-guy-story-outline.md",
+                "file": "attributes/curses/Curse from Hell.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -124,7 +125,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "misc/spear-guy-story-outline.md",
+                "file": "attributes/curses/Curse from Hell.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -159,7 +160,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "misc/spear-guy-story-outline.md"
+                "file": "attributes/curses/Curse from Hell.md"
               }
             }
           }
@@ -181,13 +182,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "32662264400bb28e",
+  "active": "ac2ef4b37f219947",
   "lastOpenFiles": [
+    "misc/spear-guy-story-outline.md",
+    "attributes/curses/Curse from Hell.md",
+    "attributes/blessings",
+    "attributes/curses",
+    "attributes",
     "-ignore/notes.md",
     "chars/spear-guy.md",
     "-ignore/Hej-Vide!.md",
     "-ignore/Untitled.md",
-    "misc/spear-guy-story-outline.md",
     "items/the-spear-of-destruction.md",
     "misc",
     "-ignore",
