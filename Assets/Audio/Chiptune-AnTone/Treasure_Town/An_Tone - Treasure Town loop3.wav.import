@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cpv72bcipegq0"
+path="res://.godot/imported/An_Tone - Treasure Town loop3.wav-819056a5ef522e1cd873f33ff775967c.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/Chiptune-AnTone/Chiptune/Treasure_Town/An_Tone - Treasure Town loop3.wav"
+dest_files=["res://.godot/imported/An_Tone - Treasure Town loop3.wav-819056a5ef522e1cd873f33ff775967c.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

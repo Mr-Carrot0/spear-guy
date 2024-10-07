@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cdv1dirqegcsu"
+path="res://.godot/imported/An_Tone - system-overload loop2.wav-39fe3c0f27024c4b50c4984e46dcdc5e.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/Chiptune-AnTone/Chiptune/An_Tone_Chiptune3/An_Tone - system-overload loop2.wav"
+dest_files=["res://.godot/imported/An_Tone - system-overload loop2.wav-39fe3c0f27024c4b50c4984e46dcdc5e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

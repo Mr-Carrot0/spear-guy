@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://btx02qhy06q6c"
+path="res://.godot/imported/An_Tone - funventure loop2.wav-76d7acfc1d4a42ecaf688bc6976d0c63.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/Chiptune-AnTone/Chiptune/An_Tone_Chiptune4/An_Tone - funventure loop2.wav"
+dest_files=["res://.godot/imported/An_Tone - funventure loop2.wav-76d7acfc1d4a42ecaf688bc6976d0c63.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
