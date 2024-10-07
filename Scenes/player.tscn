@@ -6,8 +6,9 @@
 
 [sub_resource type="Resource" id="Resource_d8rp4"]
 script = ExtResource("2_ddakc")
+max_health = 100.0
 health = 1.0
-damage = null
+damage = 10.0
 is_indestrucable = true
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qxq2l"]
@@ -144,6 +145,7 @@ break_loop_at_end = true
 autorestart_delay = 0.0
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_thp2w"]
+graph_offset = Vector2(47.2711, 70.9924)
 nodes/Animation/node = SubResource("AnimationNodeAnimation_ecfws")
 nodes/Animation/position = Vector2(186.667, 160)
 "nodes/Animation 2/node" = SubResource("AnimationNodeAnimation_htqfk")
