@@ -171,6 +171,9 @@
   },
   "active": "8d37b2395776d501",
   "lastOpenFiles": [
+    "-ignore/img/spear-destruction-body.png.import",
+    "-ignore/img/spear-destruction-butt.png.import",
+    "-ignore/img/spear-destruction-head.png.import",
     "-ignore/img/spear-destruction-head.png",
     "items/the-spear-of-destruction.md",
     "-ignore/img/spear-destruction-butt.png",
@@ -189,12 +192,10 @@
     "-ignore/Hej-Vide!.md",
     "-ignore/Untitled.md",
     "misc",
-    "-ignore",
     "misc/design-doc.md",
     "chars/raven-of-the-night.md",
     "items/The Spear Of Destruction.md",
     "Raven-Of-the-Night.md",
-    "items",
     "log/2024-08-26.md"
   ]
 }
