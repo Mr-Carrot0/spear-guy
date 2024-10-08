@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://b4j2pj20jtvon"
-path="res://.godot/imported/An_Tone - sleepy stars arrangement.wav-572164b72dfb3385beef3eaaf5e727ca.sample"
+path="res://.godot/imported/An_Tone - sleepy stars arrangement.wav-88cf37450e179dba34b07428d591e782.sample"
 
 [deps]
 
-source_file="res://Assets/Audio/Chiptune-AnTone/Chiptune/An_Tone_Chiptune5/An_Tone - sleepy stars arrangement.wav"
-dest_files=["res://.godot/imported/An_Tone - sleepy stars arrangement.wav-572164b72dfb3385beef3eaaf5e727ca.sample"]
+source_file="res://Assets/Audio/Chiptune-AnTone/An_Tone_Chiptune5/An_Tone - sleepy stars arrangement.wav"
+dest_files=["res://.godot/imported/An_Tone - sleepy stars arrangement.wav-88cf37450e179dba34b07428d591e782.sample"]
 
 [params]
 

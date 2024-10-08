@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://br66jdpuihrfy"
-path="res://.godot/imported/An_Tone - Treasure Town loop1.wav-febd27f65b9d5a331c6de61e9034e059.sample"
+path="res://.godot/imported/An_Tone - Treasure Town loop1.wav-3f85050a12651079c39b248f68a80046.sample"
 
 [deps]
 
-source_file="res://Assets/Audio/Chiptune-AnTone/Chiptune/Treasure_Town/An_Tone - Treasure Town loop1.wav"
-dest_files=["res://.godot/imported/An_Tone - Treasure Town loop1.wav-febd27f65b9d5a331c6de61e9034e059.sample"]
+source_file="res://Assets/Audio/Chiptune-AnTone/Treasure_Town/An_Tone - Treasure Town loop1.wav"
+dest_files=["res://.godot/imported/An_Tone - Treasure Town loop1.wav-3f85050a12651079c39b248f68a80046.sample"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://btxwa83n6uxfc"
-path="res://.godot/imported/An_Tone - The Explorers code loop2.wav-037e7adb064713875f57a650b279991c.sample"
+path="res://.godot/imported/An_Tone - The Explorers code loop2.wav-e7a504864e66128ae24ef6dcd4bb811e.sample"
 
 [deps]
 
-source_file="res://Assets/Audio/Chiptune-AnTone/Chiptune/An_Tone_Chiptune1/An_Tone - The Explorers code loop2.wav"
-dest_files=["res://.godot/imported/An_Tone - The Explorers code loop2.wav-037e7adb064713875f57a650b279991c.sample"]
+source_file="res://Assets/Audio/Chiptune-AnTone/An_Tone_Chiptune1/An_Tone - The Explorers code loop2.wav"
+dest_files=["res://.godot/imported/An_Tone - The Explorers code loop2.wav-e7a504864e66128ae24ef6dcd4bb811e.sample"]
 
 [params]
 

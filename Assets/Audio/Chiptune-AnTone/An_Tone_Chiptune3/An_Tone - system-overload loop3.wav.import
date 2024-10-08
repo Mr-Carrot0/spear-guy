@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cwryu70pdugty"
-path="res://.godot/imported/An_Tone - system-overload loop3.wav-9450a153e21f2993db39762355eaa9e9.sample"
+path="res://.godot/imported/An_Tone - system-overload loop3.wav-0b1beac5a6b9deba59de7252e033dcae.sample"
 
 [deps]
 
-source_file="res://Assets/Audio/Chiptune-AnTone/Chiptune/An_Tone_Chiptune3/An_Tone - system-overload loop3.wav"
-dest_files=["res://.godot/imported/An_Tone - system-overload loop3.wav-9450a153e21f2993db39762355eaa9e9.sample"]
+source_file="res://Assets/Audio/Chiptune-AnTone/An_Tone_Chiptune3/An_Tone - system-overload loop3.wav"
+dest_files=["res://.godot/imported/An_Tone - system-overload loop3.wav-0b1beac5a6b9deba59de7252e033dcae.sample"]
 
 [params]
 

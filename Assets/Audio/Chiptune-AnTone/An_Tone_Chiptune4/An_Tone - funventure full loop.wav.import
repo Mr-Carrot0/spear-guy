@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://hjncdeym50vx"
-path="res://.godot/imported/An_Tone - funventure full loop.wav-a54f112b96ac0b56e41c52347ba8b0c4.sample"
+path="res://.godot/imported/An_Tone - funventure full loop.wav-3331005dcd0516c422519f27de0f8105.sample"
 
 [deps]
 
-source_file="res://Assets/Audio/Chiptune-AnTone/Chiptune/An_Tone_Chiptune4/An_Tone - funventure full loop.wav"
-dest_files=["res://.godot/imported/An_Tone - funventure full loop.wav-a54f112b96ac0b56e41c52347ba8b0c4.sample"]
+source_file="res://Assets/Audio/Chiptune-AnTone/An_Tone_Chiptune4/An_Tone - funventure full loop.wav"
+dest_files=["res://.godot/imported/An_Tone - funventure full loop.wav-3331005dcd0516c422519f27de0f8105.sample"]
 
 [params]
 
