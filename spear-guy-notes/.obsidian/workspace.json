@@ -15,7 +15,7 @@
               "state": {
                 "file": "items/the-spear-of-destruction.md",
                 "mode": "source",
-                "source": true
+                "source": false
               }
             }
           }
@@ -169,12 +169,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "32662264400bb28e",
+  "active": "8d37b2395776d501",
   "lastOpenFiles": [
-    "spear-destruction-body.png",
-    "spear-destruction-butt.png",
-    "spear-destruction-head.png",
+    "-ignore/img/spear-destruction-head.png",
     "items/the-spear-of-destruction.md",
+    "-ignore/img/spear-destruction-butt.png",
+    "-ignore/img/spear-destruction-body.png",
+    "-ignore/img",
     "misc/spear-guy-story-outline.md",
     "spear-destruction-head.png.import",
     "spear-destruction-body.png.import",
@@ -194,7 +195,6 @@
     "items/The Spear Of Destruction.md",
     "Raven-Of-the-Night.md",
     "items",
-    "chars",
     "log/2024-08-26.md"
   ]
 }
