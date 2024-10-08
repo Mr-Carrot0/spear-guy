@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "attributes/curses/Curse from Hell.md",
+                "file": "items/the-spear-of-destruction.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "attributes/curses/Curse from Hell.md"
+                "file": "items/the-spear-of-destruction.md"
               }
             }
           },
@@ -108,7 +108,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "attributes/curses/Curse from Hell.md",
+                "file": "items/the-spear-of-destruction.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,7 +125,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "attributes/curses/Curse from Hell.md",
+                "file": "items/the-spear-of-destruction.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -160,7 +160,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "attributes/curses/Curse from Hell.md"
+                "file": "items/the-spear-of-destruction.md"
               }
             }
           }
@@ -184,8 +184,8 @@
   },
   "active": "ac2ef4b37f219947",
   "lastOpenFiles": [
-    "misc/spear-guy-story-outline.md",
     "attributes/curses/Curse from Hell.md",
+    "misc/spear-guy-story-outline.md",
     "attributes/blessings",
     "attributes/curses",
     "attributes",
