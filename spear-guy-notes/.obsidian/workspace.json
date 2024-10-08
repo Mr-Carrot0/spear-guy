@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "items/the-spear-of-destruction.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 292.5
+    "width": 292.5,
+    "collapsed": true
   },
   "right": {
     "id": "9d627117d7bcc630",

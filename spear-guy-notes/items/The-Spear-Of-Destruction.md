@@ -6,8 +6,8 @@ tags:
   - weapon
 cssclasses:
   - small-img
-  - pixel
   - spear
+  - pixel
 ---
 
 An ancient artifact of the church, designed to obliterate weapons, rather than damaging amour or inflicting wounds. 
