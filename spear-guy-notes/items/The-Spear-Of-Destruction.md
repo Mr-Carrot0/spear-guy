@@ -14,4 +14,6 @@ An ancient artifact of the church, designed to obliterate weapons, rather than d
 
 
 
-![](spear-destruction-butt.png)![](spear-destruction-body.png)![](spear-destruction-head.png)
+![](spear-destruction-butt.png)![](spear-destruction-body.png) ![](<file://C:\Users\jan050319\OneDrive - Skellefteå kommun\X-project\Godot\projects\spear-guy\Assets\Sprites\spear-destruction-head.png>)
+
+
