@@ -151,28 +151,30 @@ break_loop_at_end = true
 autorestart_delay = 0.0
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_thp2w"]
-graph_offset = Vector2(47.2711, 70.9924)
+graph_offset = Vector2(49.9628, 84.113)
 nodes/Animation/node = SubResource("AnimationNodeAnimation_ecfws")
 nodes/Animation/position = Vector2(186.667, 160)
 "nodes/Animation 2/node" = SubResource("AnimationNodeAnimation_htqfk")
 "nodes/Animation 2/position" = Vector2(186.667, 293.333)
 "nodes/Animation 3/node" = SubResource("AnimationNodeAnimation_tdd2p")
-"nodes/Animation 3/position" = Vector2(346.667, 373.333)
+"nodes/Animation 3/position" = Vector2(346.667, 480)
 "nodes/Animation 4/node" = SubResource("AnimationNodeAnimation_kg3cx")
-"nodes/Animation 4/position" = Vector2(346.667, 533.333)
+"nodes/Animation 4/position" = Vector2(320, 640)
 nodes/TimeScale/node = SubResource("AnimationNodeTimeScale_ce1iv")
-nodes/TimeScale/position = Vector2(746.667, 320)
+nodes/TimeScale/position = Vector2(746.667, 426.667)
 nodes/m/node = SubResource("AnimationNodeTransition_frqy2")
 nodes/m/position = Vector2(906.667, 213.333)
 nodes/on_ground/node = SubResource("AnimationNodeTransition_cm00l")
 nodes/on_ground/position = Vector2(373.333, 160)
 nodes/output/position = Vector2(1146.67, 213.333)
 nodes/spin/node = SubResource("AnimationNodeOneShot_ku8a8")
-nodes/spin/position = Vector2(560, 346.667)
+nodes/spin/position = Vector2(560, 480)
 node_connections = [&"TimeScale", 0, &"spin", &"m", 0, &"on_ground", &"m", 1, &"TimeScale", &"on_ground", 0, &"Animation", &"on_ground", 1, &"Animation 2", &"output", 0, &"m", &"spin", 0, &"Animation 3", &"spin", 1, &"Animation 4"]
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_2d27w")
+speed = 200.0
+jmp_vel = -320.0
 weapon = SubResource("Resource_d8rp4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -205,3 +207,7 @@ parameters/on_ground/current_index = 1
 parameters/spin/active = false
 parameters/spin/internal_active = false
 parameters/spin/request = 0
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(3, 3)
+position_smoothing_enabled = true
