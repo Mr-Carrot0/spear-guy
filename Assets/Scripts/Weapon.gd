@@ -9,13 +9,13 @@ class_name Weapon
 
 var status = "pristine" if not is_indestrucable else "indestrucable"
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-# func _process(_delta):
-# 	print(name)
 func _update():
 	if status == "pristine" and health < max_health:
 		status = "damaged"
-
+		
+func _process(_delta):
+	_update()
+	
 func hit(target):
 	if target is Weapon and target.is_indestrucable == false:
 		target.health -= damage

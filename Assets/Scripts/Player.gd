@@ -20,7 +20,7 @@ func _ready():
 	_tree.active = true
 	
 func _physics_process(_delta) -> void:
-	print("hi")
+	
 	# Handle jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = jmp_vel
@@ -30,7 +30,7 @@ func _physics_process(_delta) -> void:
 		_tree["parameters/spin/request"] = AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE
 
 	var x_dir = Input.get_axis("move_left", "move_right")
-	print(x_dir)
+	
 	velocity.x = x_dir * speed if x_dir else move_toward(velocity.x, 0, speed)
 
 	if x_dir != 0:
