@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://5jpo611kaau8"]
+[gd_scene load_steps=25 format=3 uid="uid://5jpo611kaau8"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/Player.gd" id="1_2d27w"]
 [ext_resource type="Script" path="res://Assets/Scripts/Spear.gd" id="2_ddakc"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://buo2m4dv26fei" path="res://Assets/Sprites/spear-destruction-body.png" id="3_pwp5r"]
 [ext_resource type="Texture2D" uid="uid://br28xqtakcvr8" path="res://Assets/Sprites/spear-destruction-butt.png" id="4_g55yi"]
 [ext_resource type="Texture2D" uid="uid://b5ocy8bakvquk" path="res://Assets/Sprites/spear-destruction-head.png" id="5_tjp00"]
+[ext_resource type="PackedScene" uid="uid://dq0av4vfxu0hg" path="res://Scenes/bar.tscn" id="7_flfno"]
 
 [sub_resource type="Resource" id="Resource_d8rp4"]
 script = ExtResource("2_ddakc")
@@ -205,3 +206,14 @@ parameters/on_ground/current_index = 1
 parameters/spin/active = false
 parameters/spin/internal_active = false
 parameters/spin/request = 0
+
+[node name="bar" parent="." instance=ExtResource("7_flfno")]
+anchor_left = -0.03
+anchor_top = -0.0553333
+anchor_right = 0.0
+anchor_bottom = -0.0553333
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+max_size = Vector2(50, 5)
