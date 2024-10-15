@@ -18,6 +18,7 @@ var debug = {
 
 func _ready():
 	_tree.active = true
+	init_act()
 	
 func _physics_process(_delta) -> void:
 	# Handle jump.

@@ -1,11 +1,11 @@
-extends CharacterBody2D 
-class_name Actor 
+extends CharacterBody2D
+class_name Actor
 
 @onready var sprite = $Sprite2D
 
-# Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
+signal health_update()
 
 # @export 
 @export var speed := 100.0
@@ -13,11 +13,16 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 @export var MAX_HEALTH: float = 100
 @export var health: float = 100
+@export var bar: Bar2
 @export var weapon: Weapon
 @export var armour = 0
 
-func _die(): 
+func init_act():
+	health_update.emit(health)
+
+func _die():
 	# replace with death stuff
+	health_update.emit(health)
 	print("dies of death")
 
 func _process(delta):
@@ -25,6 +30,5 @@ func _process(delta):
 		velocity.y += gravity * delta
 	
 	# replace with some signal or smth
-	if position.y > ProjectSettings.get_setting("display/window/size/viewport_height") or health <= 0:
+	if position.y > ProjectSettings.get_setting("display/window/size/viewport_height") or health < 0:
 		_die()
-	

@@ -1,20 +1,10 @@
-extends ColorRect
+extends Polygon2D
 class_name Bar
-# @export_category("test")
-@export var max_size: Vector2
-@export var whysf = Vector2(0, -20)
+
+@onready var parent = get_parent()
 
 func _ready():
-	size = max_size
-	position = whysf
+	parent.connect("health_update", changeSize)
 
-func update(newSize = false):
-	if newSize != false:
-		size.x = newSize
-	position.x = (max_size.x - 2 * size.x) / 2 + whysf.x
-
-
-func _physics_process(_delta):
-	# if size.x > 0:
-	# 	size.x -= 1
-	update()
+func changeSize(size):
+	scale.x = size
