@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://jb1bkkmi4tvh" path="res://Assets/Sprites/gun-guy-temp.png" id="3_mxg1r"]
 [ext_resource type="PackedScene" uid="uid://c806261i1sywi" path="res://Scenes/deathzone.tscn" id="4_0k0gb"]
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_8vfe3"]
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_wvc4t"]
 
 [node name="leveltest2" type="Node2D"]
 
@@ -21,8 +21,5 @@ position = Vector2(-1076, 86)
 texture = ExtResource("3_mxg1r")
 
 [node name="deathzone" parent="." instance=ExtResource("4_0k0gb")]
-position = Vector2(6571, 660)
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="deathzone"]
-position = Vector2(1, -1)
-shape = SubResource("WorldBoundaryShape2D_8vfe3")
+position = Vector2(6477, 672)
+collision_shape = SubResource("WorldBoundaryShape2D_wvc4t")
