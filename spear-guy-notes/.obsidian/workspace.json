@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "items/the-spear-of-destruction.md",
-                "mode": "preview",
+                "file": "misc/spear-guy-story-outline.md",
+                "mode": "source",
                 "source": false
               }
             }
@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 292.5,
-    "collapsed": true
+    "width": 292.5
   },
   "right": {
     "id": "9d627117d7bcc630",
@@ -86,7 +85,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "items/the-spear-of-destruction.md"
+                "file": "misc/spear-guy-story-outline.md"
               }
             }
           },
@@ -96,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "items/the-spear-of-destruction.md",
+                "file": "misc/spear-guy-story-outline.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "items/the-spear-of-destruction.md",
+                "file": "misc/spear-guy-story-outline.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -148,7 +147,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "items/the-spear-of-destruction.md"
+                "file": "misc/spear-guy-story-outline.md"
               }
             }
           }
@@ -172,29 +171,30 @@
   },
   "active": "32662264400bb28e",
   "lastOpenFiles": [
+    "planning.md",
+    "design_dokument.md",
+    "misc/design-doc.md",
+    "misc/spear-guy-story-outline.md",
+    "-ignore/Hej-Vide!.md",
+    "-ignore/notes.md",
+    "attributes/curses/Curse from Hell.md",
+    "chars/raven-of-the-night.md",
+    "chars/spear-guy.md",
+    "items/the-spear-of-destruction.md",
     "-ignore/img/spear-destruction-body.png.import",
     "-ignore/img/spear-destruction-butt.png.import",
     "-ignore/img/spear-destruction-head.png.import",
     "-ignore/img/spear-destruction-head.png",
-    "items/the-spear-of-destruction.md",
     "-ignore/img/spear-destruction-butt.png",
     "-ignore/img/spear-destruction-body.png",
     "-ignore/img",
-    "misc/spear-guy-story-outline.md",
     "spear-destruction-head.png.import",
     "spear-destruction-body.png.import",
     "spear-destruction-butt.png.import",
-    "attributes/curses/Curse from Hell.md",
     "attributes/blessings",
     "attributes/curses",
     "attributes",
-    "-ignore/notes.md",
-    "chars/spear-guy.md",
-    "-ignore/Hej-Vide!.md",
     "-ignore/Untitled.md",
-    "misc",
-    "misc/design-doc.md",
-    "chars/raven-of-the-night.md",
     "items/The Spear Of Destruction.md",
     "Raven-Of-the-Night.md",
     "log/2024-08-26.md"
