@@ -15,7 +15,7 @@
               "state": {
                 "file": "misc/spear-guy-story-outline.md",
                 "mode": "source",
-                "source": true
+                "source": false
               }
             }
           }
@@ -171,6 +171,12 @@
   },
   "active": "32662264400bb28e",
   "lastOpenFiles": [
+    "-ignore/Hej-Vide!.md",
+    "-ignore/notes.md",
+    "attributes/curses/Curse from Hell.md",
+    "chars/raven-of-the-night.md",
+    "chars/spear-guy.md",
+    "misc/spear-guy-story-outline.md",
     "misc/design-doc.md",
     "items/the-spear-of-destruction.md",
     "-ignore/img/spear-destruction-body.png.import",
@@ -180,19 +186,13 @@
     "-ignore/img/spear-destruction-butt.png",
     "-ignore/img/spear-destruction-body.png",
     "-ignore/img",
-    "misc/spear-guy-story-outline.md",
     "spear-destruction-head.png.import",
     "spear-destruction-body.png.import",
     "spear-destruction-butt.png.import",
-    "attributes/curses/Curse from Hell.md",
     "attributes/blessings",
     "attributes/curses",
     "attributes",
-    "-ignore/notes.md",
-    "chars/spear-guy.md",
-    "-ignore/Hej-Vide!.md",
     "-ignore/Untitled.md",
-    "chars/raven-of-the-night.md",
     "items/The Spear Of Destruction.md",
     "Raven-Of-the-Night.md",
     "log/2024-08-26.md"

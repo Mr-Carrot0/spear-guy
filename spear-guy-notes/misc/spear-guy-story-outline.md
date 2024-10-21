@@ -39,13 +39,13 @@ tags:
 		1. Epic boss fight with [Raven of the Night](chars/raven-of-the-night.md)
 		2. Kingdom was about to be wiped out by the monsters, but with the help of the local demon population, only half of the population died in the attack
 		3. [Spear guy](chars/spear-guy.md) is exiled for ignoring his duties as the heir to the throne and protector of the lands.
-		4. The Kingdom of Spears is no longer a kingdom and is instead ruled by a court of 50% humans and 50% demons, since they, unlike the traitorous [prince](chars/spear-guy.md) actually helped save the kingdom.
+		4. The Kingdom of Spears is no longer a kingdom and is instead ruled by a court of 50% humans and 50% demons since they, unlike the traitorous [prince](chars/spear-guy.md), actually helped save the kingdom.
 	- Take the advice of a murderer
 		1. [Spear guy](chars/spear-guy.md) fights a gauntlet of carrot monsters
 		2. He gets help from demons while in a tight spot
 		3. [CHOICE] - Demons offer help
 			1. [Spear Guy](chars/spear-guy.md) makes a truce with the demons to ensure equal rights between the species and include demons in his court so they can voice their opinions. 
 			2. [Spear Guy](chars/spear-guy.md) rejects the offer and the demons leave him to die 
-			3. Same as ignore-him
+			3. Same as ignore-him(4)
 5. The ban on non-polearm weaponry is lifted due to the crisis and new rule. 
 
