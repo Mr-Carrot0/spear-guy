@@ -1,8 +1,7 @@
-[gd_scene load_steps=27 format=3 uid="uid://5jpo611kaau8"]
+[gd_scene load_steps=26 format=3 uid="uid://5jpo611kaau8"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/Player.gd" id="1_2d27w"]
 [ext_resource type="Script" path="res://Assets/Scripts/Spear.gd" id="2_ddakc"]
-[ext_resource type="Script" path="res://Assets/Scripts/bar2.gd" id="2_hy2it"]
 [ext_resource type="Texture2D" uid="uid://cdmewcfftarud" path="res://Assets/Sprites/stolen/cat_stolen.png" id="2_o2kcy"]
 [ext_resource type="Texture2D" uid="uid://buo2m4dv26fei" path="res://Assets/Sprites/spear-destruction-body.png" id="3_pwp5r"]
 [ext_resource type="Texture2D" uid="uid://br28xqtakcvr8" path="res://Assets/Sprites/spear-destruction-butt.png" id="4_g55yi"]
@@ -10,10 +9,6 @@
 [ext_resource type="PackedScene" uid="uid://dq0av4vfxu0hg" path="res://Scenes/bar.tscn" id="8_4imr0"]
 
 [sub_resource type="Resource" id="Resource_1hoxl"]
-script = ExtResource("2_hy2it")
-max_size = Vector2(40, 4)
-color = Color(0.498039, 0, 0.843137, 1)
-off = Vector2(-40, -80)
 
 [sub_resource type="Resource" id="Resource_d8rp4"]
 script = ExtResource("2_ddakc")
@@ -215,4 +210,6 @@ parameters/spin/internal_active = false
 parameters/spin/request = 0
 
 [node name="bar2" parent="." instance=ExtResource("8_4imr0")]
-position = Vector2(19, 1)
+position = Vector2(-4, -19)
+scale = Vector2(1, 0.5)
+polygon = PackedVector2Array(0, 0, 0, -8, 3.80125, -8, 8, -8, 8, 0)
