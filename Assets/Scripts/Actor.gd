@@ -16,6 +16,9 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @export var weapon: Weapon
 @export var armour = 0
 
+func init_act():
+	pass
+
 func _die(): 
 	# replace with death stuff
 	print("dies of death")
