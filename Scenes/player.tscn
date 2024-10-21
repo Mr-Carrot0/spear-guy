@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://5jpo611kaau8"]
+[gd_scene load_steps=25 format=3 uid="uid://5jpo611kaau8"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/Player.gd" id="1_2d27w"]
 [ext_resource type="Script" path="res://Assets/Scripts/Spear.gd" id="2_ddakc"]
@@ -7,8 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://br28xqtakcvr8" path="res://Assets/Sprites/spear-destruction-butt.png" id="4_g55yi"]
 [ext_resource type="Texture2D" uid="uid://b5ocy8bakvquk" path="res://Assets/Sprites/spear-destruction-head.png" id="5_tjp00"]
 [ext_resource type="PackedScene" uid="uid://dq0av4vfxu0hg" path="res://Scenes/bar.tscn" id="8_4imr0"]
-
-[sub_resource type="Resource" id="Resource_1hoxl"]
 
 [sub_resource type="Resource" id="Resource_d8rp4"]
 script = ExtResource("2_ddakc")
@@ -175,7 +173,6 @@ node_connections = [&"TimeScale", 0, &"spin", &"m", 0, &"on_ground", &"m", 1, &"
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_2d27w")
-bar = SubResource("Resource_1hoxl")
 weapon = SubResource("Resource_d8rp4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -209,7 +206,7 @@ parameters/spin/active = false
 parameters/spin/internal_active = false
 parameters/spin/request = 0
 
-[node name="bar2" parent="." instance=ExtResource("8_4imr0")]
+[node name="H-bar" parent="." instance=ExtResource("8_4imr0")]
 position = Vector2(-4, -19)
 scale = Vector2(1, 0.5)
 polygon = PackedVector2Array(0, 0, 0, -8, 3.80125, -8, 8, -8, 8, 0)
