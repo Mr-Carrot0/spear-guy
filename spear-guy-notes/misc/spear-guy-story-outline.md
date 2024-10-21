@@ -12,7 +12,7 @@ tags:
 | Trigger | Event                                                                                                                                         |
 | ------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
 | Death   | Transports you to Hell where you have to either make a deal with the demon lord or escape his clutches in order to get back to the adventure. |
-| Escape  | Gains [Curse from Hell](attributes/curses/Curse%20from%20Hell.md)                                                                                               |
+| Escape  | Gains [Curse from Hell](attributes/curses/Curse%20from%20Hell.md)                                                                             |
 
 
 ## Timeline 
