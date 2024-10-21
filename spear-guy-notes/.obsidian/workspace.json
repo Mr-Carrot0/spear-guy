@@ -14,8 +14,8 @@
               "type": "markdown",
               "state": {
                 "file": "misc/spear-guy-story-outline.md",
-                "mode": "preview",
-                "source": false
+                "mode": "source",
+                "source": true
               }
             }
           }
