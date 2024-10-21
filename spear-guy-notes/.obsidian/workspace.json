@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "items/the-spear-of-destruction.md",
+                "file": "misc/spear-guy-story-outline.md",
                 "mode": "preview",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "items/the-spear-of-destruction.md"
+                "file": "misc/spear-guy-story-outline.md"
               }
             }
           },
@@ -95,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "items/the-spear-of-destruction.md",
+                "file": "misc/spear-guy-story-outline.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "items/the-spear-of-destruction.md",
+                "file": "misc/spear-guy-story-outline.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -147,7 +147,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "items/the-spear-of-destruction.md"
+                "file": "misc/spear-guy-story-outline.md"
               }
             }
           }
@@ -171,11 +171,12 @@
   },
   "active": "32662264400bb28e",
   "lastOpenFiles": [
+    "misc/design-doc.md",
+    "items/the-spear-of-destruction.md",
     "-ignore/img/spear-destruction-body.png.import",
     "-ignore/img/spear-destruction-butt.png.import",
     "-ignore/img/spear-destruction-head.png.import",
     "-ignore/img/spear-destruction-head.png",
-    "items/the-spear-of-destruction.md",
     "-ignore/img/spear-destruction-butt.png",
     "-ignore/img/spear-destruction-body.png",
     "-ignore/img",
@@ -191,8 +192,6 @@
     "chars/spear-guy.md",
     "-ignore/Hej-Vide!.md",
     "-ignore/Untitled.md",
-    "misc",
-    "misc/design-doc.md",
     "chars/raven-of-the-night.md",
     "items/The Spear Of Destruction.md",
     "Raven-Of-the-Night.md",
