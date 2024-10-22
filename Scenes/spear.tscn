@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://b5ocy8bakvquk" path="res://Assets/Sprites/spear-destruction-head.png" id="4_3frb6"]
 
 [node name="spear" type="Node2D"]
+position = Vector2(325, 198)
+scale = Vector2(10.68, 10.68)
 script = ExtResource("1_r4bbn")
 
 [node name="head" type="Sprite2D" parent="."]
@@ -15,7 +17,7 @@ texture = ExtResource("4_3frb6")
 [node name="body" type="Node2D" parent="."]
 position = Vector2(6, -6)
 
-[node name="1" type="Sprite2D" parent="body"]
+[node name="0" type="Sprite2D" parent="body"]
 texture = ExtResource("3_moqds")
 
 [node name="butt" type="Sprite2D" parent="."]
