@@ -1,9 +1,23 @@
-[gd_scene format=3 uid="uid://b12b4256u40lk"]
+[gd_scene load_steps=5 format=3 uid="uid://b12b4256u40lk"]
+
+[ext_resource type="Script" path="res://Assets/Scripts/spear-test.gd" id="1_r4bbn"]
+[ext_resource type="Texture2D" uid="uid://br28xqtakcvr8" path="res://Assets/Sprites/spear-destruction-butt.png" id="2_epju7"]
+[ext_resource type="Texture2D" uid="uid://buo2m4dv26fei" path="res://Assets/Sprites/spear-destruction-body.png" id="3_moqds"]
+[ext_resource type="Texture2D" uid="uid://b5ocy8bakvquk" path="res://Assets/Sprites/spear-destruction-head.png" id="4_3frb6"]
 
 [node name="spear" type="Node2D"]
+script = ExtResource("1_r4bbn")
 
 [node name="butt" type="Sprite2D" parent="."]
+texture = ExtResource("2_epju7")
+metadata/_edit_lock_ = true
 
-[node name="handle" type="Sprite2D" parent="."]
+[node name="body" type="Sprite2D" parent="."]
+position = Vector2(6, -6)
+texture = ExtResource("3_moqds")
+metadata/_edit_lock_ = true
 
 [node name="head" type="Sprite2D" parent="."]
+position = Vector2(11, -11)
+texture = ExtResource("4_3frb6")
+metadata/_edit_lock_ = true

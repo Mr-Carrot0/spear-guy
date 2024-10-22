@@ -1,27 +1,10 @@
 extends Node2D
 
-var sprites = {
-	"butt": $butt,
-	"body": $body,
-	"head": $head
-}
-
-func rotate_vec(vec:Vector2):
-	vec = new Vector2()
+@onready var butt = $butt
+@onready var head = $head
+@onready var body = $head
 
 var i = 0
 
 func _ready():
-	for sprite in sprites:
-		sprite.position = [Vector2(0, 0), Vector2(6, -6), Vector2(11, -11)][i]
-		i += 1
-	i = 0
-
-func _update():
-	pass
-	
-	
-
-func _process(_delta):
-	_update()
-	rotate(0.1)
+	print_debug("butt:",butt.position,"\n","butt:",butt.position,"\n","butt:",butt.position,"\n")
