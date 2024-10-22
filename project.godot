@@ -13,7 +13,6 @@ config_version=5
 config/name="spear guy"
 run/main_scene="res://Scenes/level-test.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
-boot_splash/bg_color=Color(1, 0.500781, 0.765662, 1)
 boot_splash/image="res://Assets/Sprites/spear-destruction-head.png"
 boot_splash/use_filter=false
 config/icon="res://Assets/Sprites/gun-guy-temp.png"

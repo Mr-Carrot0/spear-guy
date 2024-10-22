@@ -71,7 +71,7 @@ the boss?
 
 - Platforms/flotte
 
-- mobs,
+- mobs
 
 - Shop i staden
   - enchantments
@@ -81,7 +81,7 @@ the boss?
 		  - gold ring + silver ring + [Curse from Hell](attributes/curses/curse-from-hell.md) = [Ring of Fire](items/ring-of-fire.md) 
   - Armour upgrades
 
-- Du drunkar i vatten (för mycket rustning)
+- Du drunknar i vatten (för mycket rustning)
 
 #### Combat
 

@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://b12b4256u40lk"]
+
+[node name="spear" type="Node2D"]
+
+[node name="butt" type="Sprite2D" parent="."]
+
+[node name="handle" type="Sprite2D" parent="."]
+
+[node name="head" type="Sprite2D" parent="."]
