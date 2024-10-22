@@ -9,7 +9,7 @@ extends Area2D
 func _ready() -> void:
 	update_collision_shape()
 
-func _process(_delta:float) -> void:
+func _process(_delta: float) -> void:
 	if Engine.is_editor_hint():
 		update_collision_shape()
 

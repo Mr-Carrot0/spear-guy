@@ -4,19 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "a928d73f686e6dc1",
+        "id": "b88771c75f88dd75",
         "type": "tabs",
         "children": [
           {
-            "id": "32662264400bb28e",
+            "id": "0407d251112f783e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "items/the-spear-of-destruction.md",
-                "mode": "preview",
+                "file": "design_dokument.md",
+                "mode": "source",
                 "source": false
-              }
+              },
+              "icon": "lucide-file",
+              "title": "design_dokument"
             }
           }
         ]
@@ -39,7 +41,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
             }
           },
           {
@@ -54,7 +58,9 @@
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "Search"
             }
           },
           {
@@ -62,15 +68,16 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 292.5,
-    "collapsed": true
+    "width": 292.5
   },
   "right": {
     "id": "9d627117d7bcc630",
@@ -86,8 +93,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "items/the-spear-of-destruction.md"
-              }
+                "file": "design_dokument.md"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of design_dokument"
             }
           },
           {
@@ -96,7 +105,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "items/the-spear-of-destruction.md",
+                "file": "design_dokument.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +113,9 @@
                 "searchQuery": "",
                 "backlinkCollapsed": true,
                 "unlinkedCollapsed": false
-              }
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for design_dokument"
             }
           },
           {
@@ -113,10 +124,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "items/the-spear-of-destruction.md",
+                "file": "design_dokument.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from design_dokument"
             }
           },
           {
@@ -127,7 +140,9 @@
               "state": {
                 "sortOrder": "frequency",
                 "useHierarchy": true
-              }
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
             }
           },
           {
@@ -139,7 +154,9 @@
                 "sortOrder": "frequency",
                 "showSearch": false,
                 "searchQuery": ""
-              }
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
             }
           },
           {
@@ -148,8 +165,10 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "items/the-spear-of-destruction.md"
-              }
+                "file": "design_dokument.md"
+              },
+              "icon": "lucide-info",
+              "title": "File properties for design_dokument"
             }
           }
         ],
@@ -170,13 +189,18 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "32662264400bb28e",
+  "active": "0407d251112f783e",
   "lastOpenFiles": [
+    "spear-guy-notes/misc/spear-guy-story-outline.md",
+    "design_dokument.md",
+    "spear-guy-notes/misc",
+    "spear-guy-notes",
+    "planning.md",
+    "items/the-spear-of-destruction.md",
     "-ignore/img/spear-destruction-body.png.import",
     "-ignore/img/spear-destruction-butt.png.import",
     "-ignore/img/spear-destruction-head.png.import",
     "-ignore/img/spear-destruction-head.png",
-    "items/the-spear-of-destruction.md",
     "-ignore/img/spear-destruction-butt.png",
     "-ignore/img/spear-destruction-body.png",
     "-ignore/img",
@@ -186,13 +210,10 @@
     "spear-destruction-butt.png.import",
     "attributes/curses/Curse from Hell.md",
     "attributes/blessings",
-    "attributes/curses",
-    "attributes",
     "-ignore/notes.md",
     "chars/spear-guy.md",
     "-ignore/Hej-Vide!.md",
     "-ignore/Untitled.md",
-    "misc",
     "misc/design-doc.md",
     "chars/raven-of-the-night.md",
     "items/The Spear Of Destruction.md",

@@ -4,7 +4,7 @@ av *Johan Andersson och Vide Jacobsson*
 
 ## Spelöversikt
 
-Spear Guy är ett platformspel där våran huvudkaraktär *Spear Guy*, ger sig ut på en resa
+Spear Guy är ett plattformsspel där våran huvudkaraktär *Spear Guy*, ger sig ut på en resa
 för att hämnas sin far *The King* som blev mördad av *Raven of the night*.
 Han får möta allt från kriminiella till upprorande demonstranter
 I slutet möter han sin faders mördare och det avgörs i en episk battle!
@@ -40,10 +40,8 @@ och man får det svårt
 
 ### Spelregler
 
--  Man måste börja om på nivån om man får slut liv i sin health bar.
-
-- Man får endast guldet säkrat om man klarar av leveln
-
+- Man måste börja om på nivån om man får slut liv i sin health bar.
+- Man får endast guldet säkrat om man klarar av nivån
 - Besegra fiender genom att ta ut deras vapen. (Döda dem endast om man känner sig som en mördare)  
 
 ### Spelvärlden
@@ -74,11 +72,15 @@ the boss?
 - mobs,
 
 - Shop i staden
-  - enchaments
+  - enchantments
   - magic ring
-  - Armour upgrade
+	  - add traits and stat changes
+	  - move curses/blessings to ring(s)
+		  - gold ring + silver ring + [[cur]]
+  - Armour upgrades
 
-- Du drunkar i vatten (för mycket rustning)
+- Du drunknar i vatten (för mycket rustning)
+- Du kan inte brinna om du är under vattnet (med undantag av *inextinguishable* modifier, då skadan minskas, men du brinner fortfarande)
 
 #### Combat
 
@@ -98,14 +100,14 @@ Carrot with Shades.
 
 ## Story
 
-See [top](##Spelöversikt) or Johans other [notes](/spear-guy-notes/misc/spear-guy-story-outline.md)
+See [top](##Spelöversikt) or Johans other [notes](misc/spear-guy-story-outline.md)
 
 
 ## Spelvärld
 
 ### Look and feel
 
-Ljus och intensivt
+Ljust och intensivt
 
 ### Nivåer
 

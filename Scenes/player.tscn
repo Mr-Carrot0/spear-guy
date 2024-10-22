@@ -1,7 +1,7 @@
 [gd_scene load_steps=24 format=3 uid="uid://5jpo611kaau8"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/Player.gd" id="1_2d27w"]
-[ext_resource type="Script" path="res://Assets/Scripts/Spear.gd" id="2_ddakc"]
+[ext_resource type="Script" path="res://Assets/Scripts/resourses/Spear.gd" id="2_ddakc"]
 [ext_resource type="Texture2D" uid="uid://cdmewcfftarud" path="res://Assets/Sprites/stolen/cat_stolen.png" id="2_o2kcy"]
 [ext_resource type="Texture2D" uid="uid://buo2m4dv26fei" path="res://Assets/Sprites/spear-destruction-body.png" id="3_pwp5r"]
 [ext_resource type="Texture2D" uid="uid://br28xqtakcvr8" path="res://Assets/Sprites/spear-destruction-butt.png" id="4_g55yi"]
