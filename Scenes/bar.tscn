@@ -1,7 +1,8 @@
 [gd_scene load_steps=2 format=3 uid="uid://dq0av4vfxu0hg"]
 
-[ext_resource type="Script" path="res://Assets/Scripts/bar.gd" id="1_sr7h8"]
+[ext_resource type="Script" path="res://Assets/Scripts/bar.gd" id="1_op84s"]
 
 [node name="bar" type="Polygon2D"]
-polygon = PackedVector2Array(0, 0, 0, -16, 8, -16, 8, 0)
-script = ExtResource("1_sr7h8")
+scale = Vector2(1, 0.5)
+polygon = PackedVector2Array(0, 0, 0, -16, 8, -16, 8, -16, 8, 0)
+script = ExtResource("1_op84s")
