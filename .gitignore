@@ -3,5 +3,7 @@
 /android/
 # other
 .vscode/
-/spear-guy-notes/.obsidian/
+spear-guy-notes/.obsidian/
+.obsidian/
 /addons/
+/spear-guy-notes/.obsidian
