@@ -1,5 +1,6 @@
-extends Actor
 
+extends Actor
+class_name Player
 @onready var _tree: AnimationTree = $AnimationTree
 
 var is_flipped = false
