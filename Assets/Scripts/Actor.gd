@@ -12,7 +12,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 @export var MAX_HEALTH := 100.0
 @export var health := 100.0
-@export var weapon: Weapon
+# @export var weapon: Weapon
 @export var armour = 0
 
 func _die():
