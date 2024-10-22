@@ -7,4 +7,4 @@ extends Node2D
 var i = 0
 
 func _ready():
-	print_debug("butt:",butt.position,"\n","butt:",butt.position,"\n","butt:",butt.position,"\n")
+	print_debug("butt:", butt.position, "\n", "body:", body.position, "\n", "head:", head.position)
