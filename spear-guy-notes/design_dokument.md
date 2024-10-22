@@ -73,10 +73,10 @@ the boss?
 
 - Shop i staden
   - enchantments
-  - magic ring
-	  - add traits and stat changes
+  - magic rings
+	  - add traits and stat changes with runes
 	  - move curses/blessings to ring(s)
-		  - gold ring + silver ring + [[cur]]
+		  - gold ring + silver ring + [Curse from Hell](attributes/curses/curse-from-hell.md) = [Ring of Fire](items/ring-of-fire.md) 
   - Armour upgrades
 
 - Du drunknar i vatten (för mycket rustning)
