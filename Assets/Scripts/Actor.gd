@@ -7,7 +7,6 @@ class_name Actor
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 
-# @export 
 @export var speed := 100.0
 @export var jmp_vel := -160.0
 
@@ -25,6 +24,6 @@ func _process(delta):
 		velocity.y += gravity * delta
 	
 	# replace with some signal or smth
-	if position.y > ProjectSettings.get_setting("display/window/size/viewport_height") or health <= 0:
+	if health <= 0:
 		_die()
 	
