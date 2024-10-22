@@ -173,9 +173,12 @@ node_connections = [&"TimeScale", 0, &"spin", &"m", 0, &"on_ground", &"m", 1, &"
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_2d27w")
-speed = 200.0
+speed = null
 jmp_vel = -320.0
+MAX_HEALTH = null
+health = null
 weapon = SubResource("Resource_d8rp4")
+armour = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5, 3.05)

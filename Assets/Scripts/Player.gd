@@ -17,6 +17,8 @@ var debug = {
 	,
 }
 
+
+
 func _ready():
 	_tree.active = true
 	

@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://5jpo611kaau8" path="res://Scenes/player.tscn" id="2_0wrm8"]
 [ext_resource type="PackedScene" uid="uid://bboov152741w7" path="res://Scenes/tilemap.tscn" id="2_jbqll"]
 [ext_resource type="Texture2D" uid="uid://jb1bkkmi4tvh" path="res://Assets/Sprites/gun-guy-temp.png" id="3_mxg1r"]
-[ext_resource type="PackedScene" uid="uid://c806261i1sywi" path="res://Scenes/deathzone.tscn" id="4_0k0gb"]
+[ext_resource type="PackedScene" path="res://Scenes/deathzone.tscn" id="4_0k0gb"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_wvc4t"]
 
