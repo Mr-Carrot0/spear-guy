@@ -24,15 +24,6 @@
       "key": "ArrowUp"
     }
   ],
-  "obsidian-git:commit": [
-    {
-      "modifiers": [
-        "Mod",
-        "Shift"
-      ],
-      "key": "S"
-    }
-  ],
   "editor:toggle-source": [
     {
       "modifiers": [
@@ -65,6 +56,24 @@
         "Alt"
       ],
       "key": "T"
+    }
+  ],
+  "editor:save-file": [],
+  "obsidian-git:commit": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "S"
+    }
+  ],
+  "obsidian-git:push": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "S"
     }
   ]
 }
