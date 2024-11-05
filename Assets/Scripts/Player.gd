@@ -1,4 +1,3 @@
-
 extends Actor
 class_name Player
 @onready var _tree: AnimationTree = $AnimationTree
@@ -22,8 +21,10 @@ var debug = {
 func _ready():
 	_tree.active = true
 	
-func _physics_process(_delta) -> void:
-	
+func _physics_process(delta) -> void:
+
+	super(delta)
+		
 	# Handle jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = jmp_vel
@@ -68,3 +69,5 @@ func _physics_process(_delta) -> void:
 				print(AnimationNodeOneShot[_tree["parameters/spin/request"]])
 	
 	move_and_slide()
+	
+	

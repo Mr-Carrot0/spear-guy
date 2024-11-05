@@ -1,19 +1,16 @@
-extends Weapon_wip
+extends Node2D
 
-@onready var body: Node2D = $body
+@onready var butt = $butt
+@onready var body = $body
+@onready var head = $head
 
-@export var spacing_global = Vector2(6, -6)
-@export var spacing_body = Vector2(6, -6)
-var off = Vector2.ZERO
+var spacing_global = Vector2(5,-5)
+var off = Vector2(1,-1)
 
 var b_children: Array[Node] # Sprite2D
 
+var i = 0
+
 func _ready():
-	super()
+	# print("butt:", butt.position, "\n", "body:", body.position, "\n", "head:", head.position)
 	b_children = body.get_children()
-	var bcl = len(b_children)
-	if bcl != 0:
-		for i in range(bcl):
-			var pos = off + i * spacing_body
-			b_children[i].position = pos
-		head.position = spacing_body * (bcl + 1) + off
