@@ -12,14 +12,15 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 @export var MAX_HEALTH := 100.0
 @export var health := 100.0
-# @export var weapon: Weapon
 @export var armour = 0
+
+var weapon: Weapon
 
 func _die():
 	# replace with death stuff
 	print("dies of death")
 
-func _process(delta):
+func _physics_process(delta):
 	if not is_on_floor():
 		velocity.y += gravity * delta
 	

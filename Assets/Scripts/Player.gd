@@ -1,4 +1,3 @@
-
 extends Actor
 class_name Player
 @onready var _tree: AnimationTree = $AnimationTree
@@ -17,13 +16,11 @@ var debug = {
 	,
 }
 
-
-
 func _ready():
 	_tree.active = true
 	
 func _physics_process(_delta) -> void:
-	
+	super(_delta)
 	# Handle jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = jmp_vel
@@ -44,13 +41,8 @@ func _physics_process(_delta) -> void:
 	sprite.offset.x = [0, -3][int(is_flipped)]
 	
 	## TREE
-	# animation_tree["parameters/[Transition]/transition_request"] = "\state\"
+	# animation_tree["parameters/[Transition]/transition_request"] = "[state]"
 	_tree["parameters/on_ground/transition_request"] = ["idle", "walk"][abs(x_dir)]
-
-	# if is_on_floor() and !Input.is_action_just_pressed("jump"):
-	# 	_tree["parameters/m/transition_request"] = "ground"
-	# else:
-	# 	_tree["parameters/m/transition_request"] = "air"
 	
 	_tree["parameters/m/transition_request"] = "ground" if is_on_floor() and !Input.is_action_just_pressed("jump") else "air"
 	
