@@ -1,10 +1,7 @@
-[gd_scene load_steps=23 format=3 uid="uid://5jpo611kaau8"]
+[gd_scene load_steps=19 format=3 uid="uid://5jpo611kaau8"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/Player.gd" id="1_2d27w"]
 [ext_resource type="Texture2D" uid="uid://cdmewcfftarud" path="res://Assets/Sprites/stolen/cat_stolen.png" id="2_o2kcy"]
-[ext_resource type="PackedScene" uid="uid://b12b4256u40lk" path="res://Scenes/spear.tscn" id="3_eotf3"]
-[ext_resource type="Texture2D" uid="uid://br28xqtakcvr8" path="res://Assets/Sprites/spear-destruction-butt.png" id="4_g55yi"]
-[ext_resource type="Texture2D" uid="uid://b5ocy8bakvquk" path="res://Assets/Sprites/spear-destruction-head.png" id="5_tjp00"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qxq2l"]
 size = Vector2(11, 27)
@@ -160,10 +157,6 @@ nodes/spin/node = SubResource("AnimationNodeOneShot_ku8a8")
 nodes/spin/position = Vector2(560, 480)
 node_connections = [&"TimeScale", 0, &"spin", &"m", 0, &"on_ground", &"m", 1, &"TimeScale", &"on_ground", 0, &"Animation", &"on_ground", 1, &"Animation 2", &"spin", 0, &"Animation 3", &"spin", 1, &"Animation 4"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0gb4f"]
-radius = 1.9799
-height = 18.9505
-
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_2d27w")
 jmp_vel = -320.0
@@ -203,35 +196,3 @@ parameters/spin/request = 0
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(3, 3)
 position_smoothing_enabled = true
-
-[node name="spear" parent="." instance=ExtResource("3_eotf3")]
-position = Vector2(10.5, 1.5)
-body_count = 2
-
-[node name="head" type="Sprite2D" parent="spear"]
-position = Vector2(11, -11)
-texture = ExtResource("5_tjp00")
-metadata/_edit_lock_ = true
-
-[node name="butt" type="Sprite2D" parent="spear"]
-texture = ExtResource("4_g55yi")
-metadata/_edit_lock_ = true
-
-[node name="hitbox" type="Area2D" parent="spear"]
-position = Vector2(9.2, -9)
-scale = Vector2(1, 1)
-metadata/_edit_lock_ = true
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="spear/hitbox"]
-polygon = PackedVector2Array(2.8, -6, 6, -6.2, 5.8, -3, 2.39999, 2.2, -2.4, -2.4)
-metadata/_edit_lock_ = true
-
-[node name="hurtbox" type="Area2D" parent="spear"]
-scale = Vector2(1, 1)
-metadata/_edit_lock_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="spear/hurtbox"]
-position = Vector2(2.4, -2.4)
-rotation = 0.785398
-shape = SubResource("CapsuleShape2D_0gb4f")
-metadata/_edit_lock_ = true

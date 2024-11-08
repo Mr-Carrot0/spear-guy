@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "design_dokument.md",
+                "file": "-ignore/Hej-Vide!.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "design_dokument"
+              "title": "Hej-Vide!"
             }
           },
           {
@@ -239,7 +239,6 @@
     "spear-destruction-body.png.import",
     "spear-destruction-butt.png.import",
     "attributes/blessings",
-    "-ignore/notes.md",
     "chars/spear-guy.md",
     "-ignore/Hej-Vide!.md",
     "-ignore/Untitled.md",

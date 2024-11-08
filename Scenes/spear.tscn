@@ -6,7 +6,6 @@
 script = ExtResource("1_i38sw")
 body_count = null
 body_img = null
-spacing_global = null
 spacing_body = null
 max_health = null
 health = null

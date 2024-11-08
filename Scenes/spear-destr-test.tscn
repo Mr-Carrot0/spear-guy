@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://ct31h1y6880do"]
+
+[ext_resource type="Script" path="res://Assets/Scripts/spear-new.gd" id="1_odd5j"]
+[ext_resource type="Texture2D" uid="uid://b5ocy8bakvquk" path="res://Assets/Sprites/spear-destruction-head.png" id="2_fipwg"]
+[ext_resource type="Texture2D" uid="uid://br28xqtakcvr8" path="res://Assets/Sprites/spear-destruction-butt.png" id="3_su2vu"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_7ng7r"]
+b = Vector2(13.5, -13.5)
+
+[node name="spear-of-destruction" type="Node2D"]
+position = Vector2(227, 153)
+scale = Vector2(5, 5)
+script = ExtResource("1_odd5j")
+body_count = 2
+is_indestrucable = true
+status = null
+
+[node name="body" type="Node2D" parent="."]
+position = Vector2(6, -6)
+
+[node name="head" type="Sprite2D" parent="."]
+position = Vector2(12, -12)
+texture = ExtResource("2_fipwg")
+
+[node name="hitbox" type="Area2D" parent="head"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="head/hitbox"]
+polygon = PackedVector2Array(0.5, 4.5, -4.5, -0.5, 0.5, -3.5, 4.5, -4.5, 3.5, -0.5)
+
+[node name="butt" type="Sprite2D" parent="."]
+texture = ExtResource("3_su2vu")
+
+[node name="hurtbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hurtbox"]
+position = Vector2(-3.5, 3.5)
+shape = SubResource("SegmentShape2D_7ng7r")
