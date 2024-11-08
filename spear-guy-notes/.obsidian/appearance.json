@@ -1,5 +1,6 @@
 {
   "enabledCssSnippets": [
     "img-big"
-  ]
+  ],
+  "theme": "obsidian"
 }

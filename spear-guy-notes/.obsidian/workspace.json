@@ -121,10 +121,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "design_dokument.md"
+                "file": "-ignore/Hej-Vide!.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of design_dokument"
+              "title": "Outline of Hej-Vide!"
             }
           },
           {
@@ -133,7 +133,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "design_dokument.md",
+                "file": "-ignore/Hej-Vide!.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -143,7 +143,7 @@
                 "unlinkedCollapsed": false
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for design_dokument"
+              "title": "Backlinks for Hej-Vide!"
             }
           },
           {
@@ -152,12 +152,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "design_dokument.md",
+                "file": "-ignore/Hej-Vide!.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from design_dokument"
+              "title": "Outgoing links from Hej-Vide!"
             }
           },
           {
@@ -193,19 +193,18 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "design_dokument.md"
+                "file": "-ignore/Hej-Vide!.md"
               },
               "icon": "lucide-info",
-              "title": "File properties for design_dokument"
+              "title": "File properties for Hej-Vide!"
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
