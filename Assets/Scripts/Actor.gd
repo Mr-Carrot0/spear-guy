@@ -31,7 +31,7 @@ func _physics_process(delta):
 	if ff:
 		init_w_x = -weapon.position.x
 		ff = false
-		
+	weapon.position.x = init_w_x *bool_to_int_2(is_flipped)
 	if not is_on_floor():
 		velocity.y += gravity * delta
 	
