@@ -13,9 +13,9 @@ samt en slutboss.
 - Johan slutar tidigt den dagen.
 
 ## Vem ska göra vad? 
-- Vi både kommer att programmera, samt skapar vi båda (iallafal en del) egen grafik kommer va både att rita pixelart.
+- Vi både kommer att programmera, samt kommer vi rita egen pixelart (iallafal en del av den).
 
 - Johan har kommit på en story, som vi komemr att bygga vidare på.
 samt hur spelarens vapen ska fungera.
 
-- Vi även att jobba på det spelet på implementerad tillämplad programmerings-lektionerna. 
+- Vi jobbar även på det spelet på implementerad tillämplad programmerings-lektionerna. 
