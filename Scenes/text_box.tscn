@@ -4,6 +4,10 @@
 
 [node name="text_box" type="CanvasLayer"]
 script = ExtResource("1_kjrye")
+contents = Array[String](["Hello there who are you?
+this is a test
+can I be done in a better way", "is this a new line?", "I think you are correct good sir...
+", "lets finish this quick"])
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchors_preset = -1
@@ -26,4 +30,3 @@ offset_right = 312.0
 offset_bottom = 176.0
 theme_override_constants/line_spacing = -2
 theme_override_font_sizes/font_size = 26
-text = "asdf"

@@ -1,20 +1,43 @@
 extends CanvasLayer
 
-@export var content = "Lorem ipsum dolar amet sinus dolores aptum dragon
-I am eating food in my kitchen, what are you doing?
-Can I join you for a supper?"
+
+@export_multiline var contents:Array[String]
 
 @export var typeingspeed:float = 20
-var basedelay:float = 1 / typeingspeed
+var base_delay:float = 1 / typeingspeed
+
+var current_content: String
+var current_content_index: int
+var time_elapsed: float = 0
 
 func _ready() -> void:
-	for char in content:
-		var delay = basedelay
-		
-		if char == '\n':
-			delay *= 5
-			
-		await get_tree().create_timer(delay).timeout
-		$ColorRect/Label.text += char
+	next_content()
 
+func _process(delta: float) -> void:
+	if current_content_index < current_content.length():
+		time_elapsed += delta
+		var current_char = current_content[current_content_index] 
+		var delay = base_delay
 		
+		if current_char == '\n':
+			delay *= 5
+		
+		if time_elapsed > delay:
+			$ColorRect/Label.text += current_char
+			time_elapsed = 0
+			current_content_index += 1
+			
+
+func _input(_event: InputEvent) -> void:
+	if Input.is_action_just_pressed("continue"):
+		next_content()
+
+func next_content() -> void: 
+	if not contents.is_empty():
+		
+		current_content = contents.pop_front()
+		current_content_index = 0
+		$ColorRect/Label.text = ""
+		
+	else:
+		queue_free()
