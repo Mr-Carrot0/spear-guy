@@ -8,12 +8,9 @@
 b = Vector2(13.5, -13.5)
 
 [node name="spear-of-destruction" type="Node2D"]
-position = Vector2(227, 153)
-scale = Vector2(5, 5)
 script = ExtResource("1_odd5j")
-body_count = 2
 is_indestrucable = true
-status = null
+metadata/_edit_lock_ = true
 
 [node name="body" type="Node2D" parent="."]
 position = Vector2(6, -6)

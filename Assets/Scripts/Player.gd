@@ -1,8 +1,8 @@
 extends Actor
 class_name Player
-@onready var _tree: AnimationTree = $AnimationTree
 
-var is_flipped = false
+
+@onready var _tree: AnimationTree = $AnimationTree
 
 var debug = {
 	"main": 0
@@ -17,6 +17,7 @@ var debug = {
 }
 
 func _ready():
+	super()
 	_tree.active = true
 	
 func _physics_process(_delta) -> void:
@@ -38,7 +39,8 @@ func _physics_process(_delta) -> void:
 	# var direction = velocity.normalized()
 	
 	sprite.flip_h = is_flipped
-	sprite.offset.x = [0, -3][int(is_flipped)]
+	sprite.offset.x = -3 * int(is_flipped)
+
 	
 	## TREE
 	# animation_tree["parameters/[Transition]/transition_request"] = "[state]"

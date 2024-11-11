@@ -10,10 +10,10 @@ enum condition {
 @export_category("names")
 # @export var names:Weapon_names
 
-@onready var butt: Sprite2D = $butt #get_node(NodePath(names.butt_name))
-@onready var head: Sprite2D = $head #get_node(NodePath(names.head_name))
-@onready var hitbox: Area2D = $head/hitbox #get_node(NodePath(names.hitbox_name))
-@onready var hurtbox: Area2D = $hurtbox #get_node(NodePath(names.hurtbox_name))
+@onready var butt: Sprite2D = $butt # get_node(NodePath(names.butt_name))
+@onready var head: Sprite2D = $head # get_node(NodePath(names.head_name))
+@onready var hitbox: Area2D = $head/hitbox # get_node(NodePath(names.hitbox_name))
+@onready var hurtbox: Area2D = $hurtbox # get_node(NodePath(names.hurtbox_name))
 
 
 @export_category("health")
