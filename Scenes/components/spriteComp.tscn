@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://db4hh4t12e0qt"]
+
+[ext_resource type="Script" path="res://Scenes/components/spriteComp.gd" id="1_o4vg3"]
+
+[node name="SpriteComp" type="Sprite2D"]
+hframes = 10
+vframes = 6
+script = ExtResource("1_o4vg3")
