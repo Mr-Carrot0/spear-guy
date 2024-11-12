@@ -1,47 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://b12b4256u40lk"]
+[gd_scene load_steps=2 format=3 uid="uid://b12b4256u40lk"]
 
-[ext_resource type="Script" path="res://Assets/Scripts/spear-test.gd" id="1_r4bbn"]
-[ext_resource type="Texture2D" uid="uid://br28xqtakcvr8" path="res://Assets/Sprites/spear-destruction-butt.png" id="2_epju7"]
-[ext_resource type="Texture2D" uid="uid://buo2m4dv26fei" path="res://Assets/Sprites/spear-destruction-body.png" id="3_moqds"]
-[ext_resource type="Texture2D" uid="uid://b5ocy8bakvquk" path="res://Assets/Sprites/spear-destruction-head.png" id="4_3frb6"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_oarpn"]
-size = Vector2(4.24264, 18.2434)
+[ext_resource type="Script" path="res://Assets/Scripts/Spear.gd" id="1_i38sw"]
 
 [node name="spear" type="Node2D"]
-position = Vector2(297, 209)
-scale = Vector2(5, 5)
-script = ExtResource("1_r4bbn")
-
-[node name="head" type="Sprite2D" parent="."]
-position = Vector2(11, -11)
-texture = ExtResource("4_3frb6")
+script = ExtResource("1_i38sw")
 metadata/_edit_lock_ = true
 
 [node name="body" type="Node2D" parent="."]
 position = Vector2(6, -6)
-metadata/_edit_lock_ = true
-
-[node name="0" type="Sprite2D" parent="body"]
-texture = ExtResource("3_moqds")
-metadata/_edit_lock_ = true
-
-[node name="butt" type="Sprite2D" parent="."]
-texture = ExtResource("2_epju7")
-metadata/_edit_lock_ = true
-
-[node name="hitbox" type="Area2D" parent="."]
-position = Vector2(9.2, -9)
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="hitbox"]
-polygon = PackedVector2Array(2.8, -6, 6, -6.2, 5.8, -3, 2.39999, 2.2, -2.4, -2.4)
-
-[node name="hurtbox" type="Area2D" parent="."]
-scale = Vector2(1, 1)
-metadata/_edit_lock_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="hurtbox"]
-position = Vector2(2.55, -2.54999)
-rotation = 0.785398
-scale = Vector2(1, 1)
-shape = SubResource("RectangleShape2D_oarpn")

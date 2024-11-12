@@ -1,8 +1,9 @@
 ---
 aliases:
   - Curse of Hell
+  - Curse from Hell
 effects:
-  - +90% fire resistance
+  - +70% fire resistance
   - burning
   - inextinguishable
 ---

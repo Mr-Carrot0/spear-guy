@@ -18,9 +18,9 @@ they should alter the players stats.
 - create tilemap items
 
 
-## Coins
+## Money
 
-- make the valuale items more rare
+- make the valuable items more rare
 
 You can add it to the pool of items less times
 
@@ -43,10 +43,10 @@ More score if you is fast,
 
 extra lives for collecting coins?
 
-## Enemys
+## Enemies
 
 Create some simple 
-enemys
+anemis
 and add more complicated later
 
 ## Global score count etc
@@ -71,10 +71,6 @@ it should show how much life the entity has
 change the music 
 and use a canvasmodulat/shader to change how the game looks 
 based on certain events
-
-## Keys and Doors
-
-use a key to unlock a door.
 
 ## BOSS???
 
