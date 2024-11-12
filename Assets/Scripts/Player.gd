@@ -15,6 +15,7 @@ var debug = {
 	, "oneshot": 1
 	,
 }
+var old_flip = is_flipped
 
 func _ready():
 	super()
@@ -37,10 +38,9 @@ func _physics_process(_delta) -> void:
 	if x_dir != 0:
 		is_flipped = bool(1 - x_dir)
 	# var direction = velocity.normalized()
-	
-	sprite.flip_h = is_flipped
-	sprite.offset.x = -3 * int(is_flipped)
-
+	if is_flipped != old_flip:
+		flip()
+		old_flip = is_flipped
 	
 	## TREE
 	# animation_tree["parameters/[Transition]/transition_request"] = "[state]"

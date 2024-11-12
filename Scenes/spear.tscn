@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://b12b4256u40lk"]
 
-[ext_resource type="Script" path="res://Assets/Scripts/spear-new.gd" id="1_i38sw"]
+[ext_resource type="Script" path="res://Assets/Scripts/Spear.gd" id="1_i38sw"]
 
 [node name="spear" type="Node2D"]
 script = ExtResource("1_i38sw")
