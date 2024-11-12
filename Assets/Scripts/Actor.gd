@@ -29,6 +29,12 @@ func die():
 	print("dies of death")
 
 func _physics_process(delta):
+	if not is_on_floor():
+		velocity.y += gravity * delta
+	
+	# replace with some signal or smth
+	if health <= 0:
+		die()
 	
 func damage(amount: int):
 	health -= amount
@@ -40,9 +46,3 @@ func damage(amount: int):
 		queue_free()
 		
 
-	if not is_on_floor():
-		velocity.y += gravity * delta
-	
-	# replace with some signal or smth
-	if health <= 0:
-		die()

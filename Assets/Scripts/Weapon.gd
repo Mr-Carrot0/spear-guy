@@ -3,12 +3,6 @@ class_name Weapon
 
 enum condition {
 	PRISTINE,
-	DESTROYED,
-	DAMAGED
-}
-
-enum condition {
-	PRISTINE,
 	DAMAGED,
 	DESTROYED
 }
