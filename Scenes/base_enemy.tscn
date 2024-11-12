@@ -16,7 +16,6 @@ size = Vector2(16, 32)
 texture = ExtResource("1_awpai")
 script = ExtResource("2_jnqe7")
 character_body = NodePath("..")
-anim_frame_amount = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_trr20")
@@ -28,6 +27,7 @@ speed = 900.0
 
 [node name="DamageComp" parent="." instance=ExtResource("4_apase")]
 position = Vector2(0, 10)
+damage_amount = 20
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DamageComp"]
 position = Vector2(0, 1)

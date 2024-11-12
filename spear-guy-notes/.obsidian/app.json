@@ -1,8 +1,0 @@
-{
-  "useMarkdownLinks": true,
-  "alwaysUpdateLinks": true,
-  "newLinkFormat": "absolute",
-  "userIgnoreFilters": [
-    "-ignore/"
-  ]
-}

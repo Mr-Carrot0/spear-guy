@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://5jpo611kaau8"]
+[gd_scene load_steps=26 format=3 uid="uid://5jpo611kaau8"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/Player.gd" id="1_2d27w"]
 [ext_resource type="Script" path="res://Assets/Scripts/Spear.gd" id="2_ddakc"]
@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://buo2m4dv26fei" path="res://Assets/Sprites/spear-destruction-body.png" id="3_pwp5r"]
 [ext_resource type="Texture2D" uid="uid://br28xqtakcvr8" path="res://Assets/Sprites/spear-destruction-butt.png" id="4_g55yi"]
 [ext_resource type="Texture2D" uid="uid://b5ocy8bakvquk" path="res://Assets/Sprites/spear-destruction-head.png" id="5_tjp00"]
+[ext_resource type="PackedScene" uid="uid://behoknjndfrll" path="res://Scenes/components/health_comp.tscn" id="6_xutob"]
+[ext_resource type="PackedScene" uid="uid://b0n2s8qmr7c7m" path="res://Scenes/components/healthBarComp.tscn" id="7_4qk2x"]
 
 [sub_resource type="Resource" id="Resource_d8rp4"]
 script = ExtResource("2_ddakc")
@@ -176,6 +178,8 @@ script = ExtResource("1_2d27w")
 jmp_vel = -320.0
 weapon = SubResource("Resource_d8rp4")
 
+[node name="healthComp" parent="." instance=ExtResource("6_xutob")]
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5, 3.05)
 shape = SubResource("RectangleShape2D_qxq2l")
@@ -210,3 +214,7 @@ parameters/spin/request = 0
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(3, 3)
 position_smoothing_enabled = true
+
+[node name="HealthBar" parent="." node_paths=PackedStringArray("a") instance=ExtResource("7_4qk2x")]
+position = Vector2(0, -15)
+a = NodePath("../healthComp")
