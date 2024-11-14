@@ -21,17 +21,16 @@ var old_flip = is_flipped
 func _ready():
 	super()
 	_tree.active = true
+	# _tree["parameters/[OneShot]/request"] = AnimationNodeOneShot.ONE_SHOT_REQUEST_[request]
 	
-func _physics_process(delta) -> void:
-
-	super(delta)
+func _physics_process(_delta) -> void:
+	super(_delta)
 		
 	# Handle jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = jmp_vel
 
 		_tree["parameters/m/transition_request"] = "air"
-		# _tree["parameters/[OneShot]/request"] = AnimationNodeOneShot.ONE_SHOT_REQUEST_\request\
 		_tree["parameters/spin/request"] = AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE
 
 	var x_dir = Input.get_axis("move_left", "move_right")

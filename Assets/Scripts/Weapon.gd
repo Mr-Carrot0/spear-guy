@@ -4,11 +4,9 @@ class_name Weapon
 enum condition {
 	PRISTINE,
 	DAMAGED,
-	DESTROYED
+	DESTROYED,
+	DIRTY
 }
-
-@export_category("names")
-# @export var names:Weapon_names
 
 @onready var butt: Sprite2D = $butt # get_node(NodePath(names.butt_name))
 @onready var head: Sprite2D = $head # get_node(NodePath(names.head_name))
@@ -27,23 +25,20 @@ enum condition {
 
 
 func _ready():
-	# defults
-	var n = 0
-	for i in [butt.texture, head.texture]:
-		if i == null:
-			i = [
-				preload("res://Assets/Sprites/spear-destruction-butt.png"),
-				preload("res://Assets/Sprites/spear-destruction-body.png")
-				][n]
-		n += 1
+	set_defults([butt, head])
 
 func _process(_delta):
-	_update()
+	_update_status()
+
+func set_defults(arr: Array[Sprite2D]):
+	for key in arr:
+		if key.texture == null: 
+			key.texture = load("res://Assets/Sprites/spear-destruction-" + key.name + ".png")
 
 
-func _update():
+func _update_status():
 	if status == condition.PRISTINE and health < max_health:
-		status = condition.DAMAGED
+		status = condition.DIRTY if is_indestrucable else condition.DAMAGED
 		
 func hit(target):
 	if target is Weapon and not target.is_indestrucable:

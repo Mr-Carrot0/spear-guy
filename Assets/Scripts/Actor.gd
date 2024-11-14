@@ -5,18 +5,23 @@ signal damage_taken
 signal death
 
 @onready var sprite = $Sprite2D
-@onready var weapon = $weapon
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
-
 var is_flipped = false
 
+@export var weapon_node_path: NodePath = "weapon"
+
+@onready var weapon: Weapon = get_node(weapon_node_path)
+
+@export_category("physics")
 @export var speed := 140.0
 @export var jmp_vel := -320.0
 
+@export_category("health")
 @export var MAX_HEALTH := 100.0
 @export var health := 100.0
 @export var armour = 0
+
 
 func _ready():
 	pass
@@ -44,5 +49,3 @@ func damage(amount: int):
 		death.emit()
 		
 		queue_free()
-		
-
