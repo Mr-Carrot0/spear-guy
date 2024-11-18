@@ -1,5 +1,4 @@
 [gd_scene load_steps=20 format=3 uid="uid://5jpo611kaau8"]
-[gd_scene load_steps=20 format=3 uid="uid://5jpo611kaau8"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/Player.gd" id="1_2d27w"]
 [ext_resource type="Texture2D" uid="uid://cdmewcfftarud" path="res://Assets/Sprites/stolen/cat_stolen.png" id="2_o2kcy"]
