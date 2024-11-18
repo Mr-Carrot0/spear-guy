@@ -41,6 +41,9 @@ func _update_status():
 		status = condition.DIRTY if is_indestrucable else condition.DAMAGED
 	if status == condition.DAMAGED and health <= 0:
 		status = condition.DESTROYED
+		# play some fancy animation maybe
+		# then queue_free()
+	# signal weapon_status_changed(status)
 		
 func hit(target):
 	if target is Weapon and not target.is_indestrucable:
