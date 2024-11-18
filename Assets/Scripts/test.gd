@@ -1,9 +1,9 @@
 extends Resource
 class_name Weapon_names
 
-@export var butt_name: StringName = "butt"
-@export var body_name: StringName = "body"
-@export var head_name: StringName = "head"
+@export var butt_name: NodePath = "butt"
+@export var body_name: NodePath = "body"
+@export var head_name: NodePath = "head"
 
-@export var hitbox_name: StringName = "hitbox"
-@export var hurtbox_name: StringName = "hurtbox"
+@export var hitbox_name: NodePath = "hitbox"
+@export var hurtbox_name: NodePath = "hurtbox"
