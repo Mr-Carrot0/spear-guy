@@ -10,26 +10,29 @@ class_name Spear
 var bodies: Array[Sprite2D] = []
 
 @export_category("vec")
-@export var spacing_body = Vector2i(6, -6)
-var off
+@export var spacing_body := Vector2i(6, -6)
+var off: Vector2i
+# var off2: Vector2
 
 func _ready():
 	super()
+	set_defults([body])
 	off = spacing_body * (body_count + 1)
 	__add_bodies(body_count)
 
 func __add_bodies(n: int):
-	var bl = len(bodies)
+	var bl := len(bodies)
 	for j in range(n):
 		var tot = bl + j
 		bodies.append(Sprite2D.new())
 		bodies[tot].texture = body_img
 		body.add_child(bodies[tot])
 
-		bodies[tot].position = tot * spacing_body
-			
-	hurt_col_b += off
-	head.position = off
+		bodies[tot].position = Vector2(tot * spacing_body)
+	
+	var off2 = Vector2(off)
+	hurt_col_b += off2
+	head.position = off2
 
 func update_bodies(new_body_count: int) -> void:
 	if new_body_count != body_count:

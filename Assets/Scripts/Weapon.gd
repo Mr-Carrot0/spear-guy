@@ -32,13 +32,15 @@ func _process(_delta):
 
 func set_defults(arr: Array[Sprite2D]):
 	for key in arr:
-		if key.texture == null: 
+		if key.texture == null:
 			key.texture = load("res://Assets/Sprites/spear-destruction-" + key.name + ".png")
 
 
 func _update_status():
 	if status == condition.PRISTINE and health < max_health:
 		status = condition.DIRTY if is_indestrucable else condition.DAMAGED
+	if status == condition.DAMAGED and health <= 0:
+		status = condition.DESTROYED
 		
 func hit(target):
 	if target is Weapon and not target.is_indestrucable:
