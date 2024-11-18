@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dvlocyd4cya2d" path="res://Assets/tilesheet/simple_16.png" id="1"]
 [ext_resource type="Texture2D" uid="uid://b6khbfh0hbath" path="res://Assets/Sprites/generated/generated_16.png" id="2_6rwmj"]
+[ext_resource type="PackedScene" path="res://Scenes/spike.tscn" id="3_qf8j4"]
 
 [sub_resource type="TileSetAtlasSource" id="2"]
 resource_name = "Atlas1"
