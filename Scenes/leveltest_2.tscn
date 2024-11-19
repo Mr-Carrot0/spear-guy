@@ -15,12 +15,9 @@
 [node name="leveltest2" type="Node2D"]
 
 [node name="background" parent="." instance=ExtResource("1_f0786")]
-scroll_scale = Vector2(0.5, 1)
-scroll_offset = Vector2(1436, -5)
-repeat_times = 100
 
 [node name="Player" parent="." instance=ExtResource("2_0wrm8")]
-position = Vector2(1840, 157)
+position = Vector2(-1670, -162)
 
 [node name="tilemap" parent="." instance=ExtResource("2_jbqll")]
 position = Vector2(-34, -15)
