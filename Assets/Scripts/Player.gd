@@ -32,10 +32,12 @@ func _physics_process(delta) -> void:
 		_tree["parameters/m/transition_request"] = "air"
 		# _tree["parameters/[OneShot]/request"] = AnimationNodeOneShot.ONE_SHOT_REQUEST_\request\
 		_tree["parameters/spin/request"] = AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE
-
-	var x_dir = Input.get_axis("move_left", "move_right")
 	
-	velocity.x = x_dir * speed if x_dir else move_toward(velocity.x, 0, speed)
+	var x_dir = Input.get_axis("move_left", "move_right")
+	if x_dir:
+		velocity.x = x_dir * speed 
+	else:
+		velocity.x = move_toward(velocity.x, 0, speed)
 
 	if x_dir != 0:
 		is_flipped = bool(1 - x_dir)

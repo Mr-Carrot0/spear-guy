@@ -8,7 +8,7 @@ class_name SpriteComp
 
 #@onready var frame_default := frame
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if character_body:
 		if character_body.velocity.x < 0.0:
 			flip_h = true
