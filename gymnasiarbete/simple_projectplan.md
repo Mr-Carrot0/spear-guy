@@ -5,7 +5,7 @@
 - Det kommer att finnas ett antal levlar där man möter fiender
 samt en slutboss.
 
-- pixelart grafik.
+- pixelart grafik. 
 
 ## När ska det göras? 
 - Vide har ett cirka 3 timmar långt hål på början av fredagen.

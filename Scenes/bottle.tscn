@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://g4brj1eweik"]
+
+[ext_resource type="Texture2D" uid="uid://dcdpl6fecjc8y" path="res://Assets/Sprites/items/bottle.png" id="1_esmi1"]
+[ext_resource type="Script" path="res://Scenes/bottle.gd" id="1_hqk20"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4c3ii"]
+size = Vector2(4, 13)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_77yh7"]
+size = Vector2(6, 15)
+
+[node name="bottle" type="RigidBody2D"]
+contact_monitor = true
+max_contacts_reported = 10
+script = ExtResource("1_hqk20")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_esmi1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1.5)
+shape = SubResource("RectangleShape2D_4c3ii")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 1.5)
+shape = SubResource("RectangleShape2D_77yh7")
+debug_color = Color(0, 0.638372, 0.379581, 0.42)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

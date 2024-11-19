@@ -41,7 +41,23 @@ position = Vector2(1726, 197)
 scene = "level-test"
 
 [node name="bottle" parent="." instance=ExtResource("8_s7x6g")]
-position = Vector2(1802, 79)
+position = Vector2(-108, 65)
+mass = 0.13
+
+[node name="bottle2" parent="." instance=ExtResource("8_s7x6g")]
+position = Vector2(-213, 146)
+mass = 0.13
+
+[node name="bottle3" parent="." instance=ExtResource("8_s7x6g")]
+position = Vector2(-166, 116)
+mass = 0.13
+
+[node name="bottle4" parent="." instance=ExtResource("8_s7x6g")]
+position = Vector2(-391, 106)
+mass = 0.13
+
+[node name="bottle5" parent="." instance=ExtResource("8_s7x6g")]
+position = Vector2(-484, 66)
 mass = 0.13
 
 [node name="Player" parent="." instance=ExtResource("2_0wrm8")]
