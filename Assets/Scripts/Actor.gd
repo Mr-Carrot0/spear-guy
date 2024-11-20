@@ -45,4 +45,3 @@ func damage(amount: int):
 		
 		queue_free()
 		
-
