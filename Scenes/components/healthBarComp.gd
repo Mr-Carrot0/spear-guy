@@ -1,17 +1,17 @@
 extends Polygon2D
 class_name healthBarComp
 
-@export var a: healthComp
-@onready var max_width = a.MAX_HEALTH
+@export var hComp: healthComp
+@onready var max_width = hComp.MAX_HEALTH
 var healthy_color: Color = Color.GREEN
 var damaged_color: Color = Color.DARK_RED
 
 func _ready() -> void:
 	draw()
-	a.damage_taken.connect(draw)
+	hComp.damage_taken.connect(draw)
 
 func draw():
-	var width = a.health 
+	var width = hComp.health 
 	var proportion = width / max_width
 	scale.x = proportion
 	if proportion < 0.5:

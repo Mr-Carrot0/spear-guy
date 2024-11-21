@@ -5,6 +5,8 @@ class_name Player
 
 @onready var _tree: AnimationTree = $AnimationTree
 
+var is_flipped = false
+
 var debug = {
 	"main": 0
 	,
@@ -19,7 +21,7 @@ var debug = {
 var old_flip = is_flipped
 
 func _ready():
-	super()
+#	super()
 	_tree.active = true
 	
 func _physics_process(delta) -> void:

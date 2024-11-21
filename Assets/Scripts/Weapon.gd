@@ -1,3 +1,4 @@
+# Feels like some parts of this should be moved to Spear.gd
 extends Node2D
 class_name Weapon
 

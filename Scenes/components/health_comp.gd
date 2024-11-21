@@ -1,7 +1,6 @@
 extends Node
-class_name healthComp #extends RefCounted
+class_name healthComp 
 
-# body to be damaged
 signal damage_taken
 signal death
 @export var MAX_HEALTH := 100.0
@@ -14,7 +13,8 @@ func take_damage(amount: int):
 	if (health <= 0):
 		death.emit()	
 		die()
-		# do something with the bodt
-
+		
 func die() -> void:
-	queue_free() 
+	pass
+	# do something with the body
+	#queue_free() 

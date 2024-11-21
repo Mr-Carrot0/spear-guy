@@ -4,13 +4,17 @@ class_name Actor
 @onready var sprite = $Sprite2D
 
 # @onready var weapon = $weapon
-# var is_flipped = false
+
 																																																											   
 @export var speed := 140.0
 @export var jmp_vel := -320.0
 
 @export var weapon: Weapon
 @export var armour = 0
+	
+
+func flip():
+	scale.x = -1
 		
 func knockback():
 	if velocity.y == 0: 
