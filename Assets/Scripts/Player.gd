@@ -23,13 +23,17 @@ func _ready():
 	
 func _physics_process(_delta) -> void:
 	super(_delta)
-		
+	# for i in [1, 4]:
+	# 	if Input.is_action_just_pressed("num_" + str(i)):
+	# 		print(i)
+	# 		weapon.update_bodies(i)
+	
 	# Handle jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = jmp_vel
 
-		_tree["parameters/m/transition_request"] = "air"
-		_tree["parameters/spin/request"] = AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE
+		_tree["parameters/on_ground/transition_request"] = "air"
+		_tree["parameters/air/request"] = AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE
 
 	var x_dir = Input.get_axis("move_left", "move_right")
 	
@@ -46,7 +50,7 @@ func _physics_process(_delta) -> void:
 	# animation_tree["parameters/[Transition]/transition_request"] = "[state]"
 	_tree["parameters/on_ground/transition_request"] = ["idle", "walk"][abs(x_dir)]
 	
-	_tree["parameters/m/transition_request"] = "ground" if is_on_floor() and !Input.is_action_just_pressed("jump") else "air"
+	_tree["parameters/on_ground/transition_request"] = "ground" if is_on_floor() and !Input.is_action_just_pressed("jump") else "air"
 	
 
 	if debug.main:

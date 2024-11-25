@@ -2,7 +2,7 @@ extends Weapon
 class_name Spear
 
 @onready var body: Node2D = $body # get_node(NodePath(names.body_name))
-@onready var hurt_col_b: Vector2 = $hurtbox/CollisionShape2D.shape.b
+@onready var colshape = $hurtbox/CollisionShape2D
 
 @export_category("body")
 @export var body_count := 1
@@ -16,22 +16,31 @@ var off: Vector2i
 
 func _ready():
 	super()
-	set_defults([body])
+	print()
 	off = spacing_body * (body_count + 1)
+	# print("off: ",off)
 	__add_bodies(body_count)
+	colshape.shape.b = + Vector2(off)
+
+func _process(_delta):
+	super(_delta)
+	# if Input.is_action_just_pressed("test"):
+	# 	__add_bodies(1)
 
 func __add_bodies(n: int):
 	var bl := len(bodies)
 	for j in range(n):
 		var tot = bl + j
-		bodies.append(Sprite2D.new())
-		bodies[tot].texture = body_img
-		body.add_child(bodies[tot])
+		var tmp = Sprite2D.new()
 
-		bodies[tot].position = Vector2(tot * spacing_body)
+		tmp.texture = body_img
+		bodies.append(tmp)
+		body.add_child(tmp)
+
+		bodies[-1].position = Vector2(tot * spacing_body)
 	
-	var off2 = Vector2(off)
-	hurt_col_b += off2
+	var off2 := Vector2(off)
+	colshape.shape.b += off2
 	head.position = off2
 
 func update_bodies(new_body_count: int) -> void:
@@ -44,6 +53,17 @@ func update_bodies(new_body_count: int) -> void:
 		if diff < 0: # remove bodies
 			for i in range(1, 1 - diff):
 				bodies[-i].queue_free()
+				bodies.remove_at(-i)
 				head.position = off
 		else: # add bodies
 			__add_bodies(diff)
+			
+# func _print_self()->void:
+# 	print(JSON.stringify({
+# 			'colshape': colshape,
+# 			'off': off,
+# 			'h_pos': head.position,
+# 			# 'b': off,
+# 			# 'c': off,
+# 			# 'd': off,
+# 			},"\t"))

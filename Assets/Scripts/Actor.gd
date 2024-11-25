@@ -47,5 +47,4 @@ func damage(amount: int):
 	
 	if (health < 0):
 		death.emit()
-		
 		queue_free()
