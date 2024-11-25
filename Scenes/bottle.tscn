@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://g4brj1eweik"]
+[gd_scene load_steps=5 format=3 uid="uid://yj1covomf4oh"]
 
 [ext_resource type="Texture2D" uid="uid://dcdpl6fecjc8y" path="res://Assets/Sprites/items/bottle.png" id="1_esmi1"]
 [ext_resource type="Script" path="res://Scenes/bottle.gd" id="1_hqk20"]
@@ -7,7 +7,7 @@
 size = Vector2(4, 13)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_77yh7"]
-size = Vector2(6, 15)
+size = Vector2(8, 15)
 
 [node name="bottle" type="RigidBody2D"]
 contact_monitor = true

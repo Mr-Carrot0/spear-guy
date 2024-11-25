@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://cd0vwqax2ykqh"]
+[gd_scene load_steps=2 format=3 uid="uid://ccwiisr78lifd"]
 
 [ext_resource type="Texture2D" uid="uid://cnldcsf3q4ioy" path="res://Assets/Sprites/items/cloud.png" id="1_776tj"]
 
@@ -12,7 +12,7 @@ offset_bottom = 1295.0
 color = Color(4.62055e-06, 0.702529, 0.756016, 1)
 
 [node name="Parallax2D" type="Parallax2D" parent="."]
-scroll_scale = Vector2(0.1, 0.1)
+scroll_scale = Vector2(0.02, 0.3)
 repeat_size = Vector2(500, 0)
 repeat_times = 40
 

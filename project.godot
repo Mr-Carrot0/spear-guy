@@ -13,9 +13,9 @@ config_version=5
 config/name="spear guy"
 run/main_scene="res://Scenes/leveltest_2.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
-boot_splash/image="res://Assets/Sprites/spear-destruction-head.png"
+boot_splash/image="res://Assets/Sprites/items/small_e.png"
 boot_splash/use_filter=false
-config/icon="res://Assets/Sprites/gun-guy-temp.png"
+config/icon="res://Assets/Sprites/items/mspear.png"
 
 [display]
 

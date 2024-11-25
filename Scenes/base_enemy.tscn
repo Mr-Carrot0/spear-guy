@@ -1,23 +1,32 @@
-[gd_scene load_steps=7 format=3 uid="uid://cnmmsnfh1nw6o"]
+[gd_scene load_steps=10 format=3 uid="uid://dkrbcfo4ck83x"]
 
-[ext_resource type="Texture2D" uid="uid://digvop13nkaar" path="res://Assets/Sprites/enemy/enemy_generic.png" id="1_awpai"]
+[ext_resource type="Script" path="res://Scenes/base_enemy.gd" id="1_dplx1"]
+[ext_resource type="Texture2D" uid="uid://honudsoswswb" path="res://Assets/Sprites/items/small_e.png" id="2_4ve6c"]
 [ext_resource type="Script" path="res://Scenes/components/spriteComp.gd" id="2_jnqe7"]
 [ext_resource type="Script" path="res://Scenes/components/movementComp.gd" id="3_s5xwm"]
-[ext_resource type="PackedScene" uid="uid://dkta6odce06b8" path="res://Scenes/components/damageComp.tscn" id="4_apase"]
+[ext_resource type="Texture2D" uid="uid://xbrb7s7jbc0i" path="res://Assets/Sprites/items/hat.png" id="4_4qwrj"]
+[ext_resource type="PackedScene" uid="uid://bgsq7b0um0iak" path="res://Scenes/blade.tscn" id="4_mo83i"]
+[ext_resource type="Script" path="res://Scenes/components/health_comp.gd" id="5_tpk5u"]
+[ext_resource type="PackedScene" uid="uid://b0n2s8qmr7c7m" path="res://Scenes/components/healthBarComp.tscn" id="6_sisqy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_trr20"]
-size = Vector2(16, 32)
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_66lpf"]
+size = Vector2(13, 23)
 
 [node name="base_enemy" type="CharacterBody2D"]
+script = ExtResource("1_dplx1")
 
-[node name="SpriteComp" type="Sprite2D" parent="." node_paths=PackedStringArray("character_body")]
-texture = ExtResource("1_awpai")
+[node name="body" type="Sprite2D" parent="." node_paths=PackedStringArray("character_body")]
+position = Vector2(0, 8)
+texture = ExtResource("2_4ve6c")
 script = ExtResource("2_jnqe7")
 character_body = NodePath("..")
 
+[node name="hat" type="Sprite2D" parent="."]
+position = Vector2(0, -1)
+texture = ExtResource("4_4qwrj")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 4.5)
 shape = SubResource("RectangleShape2D_trr20")
 
 [node name="MovementComp" type="Node" parent="." node_paths=PackedStringArray("character_body")]
@@ -25,11 +34,15 @@ script = ExtResource("3_s5xwm")
 character_body = NodePath("..")
 speed = 900.0
 
-[node name="DamageComp" parent="." instance=ExtResource("4_apase")]
-position = Vector2(0, 10)
-damage_amount = 20
+[node name="blade" parent="." instance=ExtResource("4_mo83i")]
+position = Vector2(-4, 12)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DamageComp"]
-position = Vector2(0, 1)
-shape = SubResource("CircleShape2D_66lpf")
-debug_color = Color(0.961248, 0, 0.511433, 0.42)
+[node name="healthComp" type="Node" parent="." node_paths=PackedStringArray("body")]
+script = ExtResource("5_tpk5u")
+body = NodePath("..")
+
+[node name="HealthBarComp" parent="." node_paths=PackedStringArray("hComp") instance=ExtResource("6_sisqy")]
+scale = Vector2(2, 1)
+hComp = NodePath("../healthComp")
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]

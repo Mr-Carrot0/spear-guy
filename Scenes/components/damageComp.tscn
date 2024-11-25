@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://dkta6odce06b8"]
-
-[ext_resource type="Script" path="res://Scenes/components/damage_comp.gd" id="1_7h3ww"]
-
-[node name="DamageComp" type="Area2D"]
-script = ExtResource("1_7h3ww")
-
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]

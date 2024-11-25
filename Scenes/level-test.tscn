@@ -2,8 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://5jpo611kaau8" path="res://Scenes/player.tscn" id="1_7n1tk"]
 [ext_resource type="PackedScene" uid="uid://bboov152741w7" path="res://Scenes/tilemap.tscn" id="2_ljcio"]
-[ext_resource type="PackedScene" uid="uid://c33p0xxlmjpyi" path="res://Scenes/portal.tscn" id="3_12xdp"]
-[ext_resource type="PackedScene" uid="uid://cd0vwqax2ykqh" path="res://Scenes/background.tscn" id="4_vsl4s"]
+[ext_resource type="PackedScene" path="res://Scenes/portal.tscn" id="3_12xdp"]
+[ext_resource type="PackedScene" uid="uid://ccwiisr78lifd" path="res://Scenes/background.tscn" id="4_vsl4s"]
 
 [node name="Node2D" type="Node2D"]
 

@@ -1,16 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://bmw2gy00nlxtr"]
+[gd_scene load_steps=3 format=3 uid="uid://cytv4wvt68hed"]
 
 [ext_resource type="Texture2D" uid="uid://edjox1x07bh3" path="res://Assets/Sprites/terrain/spike.png" id="1_shtik"]
-[ext_resource type="PackedScene" uid="uid://dkta6odce06b8" path="res://Scenes/components/damageComp.tscn" id="2_55kw1"]
+[ext_resource type="Script" path="res://Scenes/components/damage_comp.gd" id="2_i2562"]
 
 [node name="spike" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_shtik")
 
-[node name="DamageComp" parent="." instance=ExtResource("2_55kw1")]
-damage_amount = 10
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="DamageComp"]
+[node name="damageComp" type="Area2D" parent="."]
 position = Vector2(0, 10)
+script = ExtResource("2_i2562")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="damageComp"]
 polygon = PackedVector2Array(-8, -3, 0, -17, 8, -2)

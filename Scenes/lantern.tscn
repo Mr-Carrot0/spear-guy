@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bdkt08u4f6cja"]
+
+[ext_resource type="Texture2D" uid="uid://wmgua3337rxw" path="res://Assets/Sprites/items/lantern.png" id="1_xvva2"]
+
+[node name="lantern" type="PointLight2D"]
+color = Color(0.949869, 0.225158, 0.559207, 1)
+energy = 2.29
+texture = ExtResource("1_xvva2")

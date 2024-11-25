@@ -1,10 +1,14 @@
 extends Node
 class_name healthComp 
 
+@export var body: Node2D
 signal damage_taken
 signal death
 @export var MAX_HEALTH := 100.0
-@export var health := MAX_HEALTH
+@onready var health := MAX_HEALTH
+
+func _ready() -> void:
+	print(health)
 
 func take_damage(amount: int):
 	health -= amount
@@ -15,6 +19,7 @@ func take_damage(amount: int):
 		die()
 		
 func die() -> void:
-	pass
-	# do something with the body
-	#queue_free() 
+	if body is Player:
+		pass
+	else:
+		body.queue_free()
