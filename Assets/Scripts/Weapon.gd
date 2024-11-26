@@ -5,14 +5,13 @@ enum condition {
 	PRISTINE,
 	DAMAGED,
 	DESTROYED,
-	DIRTY
+	# DIRTY
 }
-
-@onready var butt: Sprite2D = $butt # get_node(NodePath(names.butt_name))
-@onready var head: Sprite2D = $head # get_node(NodePath(names.head_name))
-@onready var hitbox: Area2D = $head/hitbox # get_node(NodePath(names.hitbox_name))
-@onready var hurtbox: Area2D = $hurtbox # get_node(NodePath(names.hurtbox_name))
-
+# @export var names:Weapon_names
+@onready var butt: Sprite2D = $butt # get_node(names.butt)
+@onready var head: Sprite2D = $head # get_node(names.head)
+@onready var hitbox: Area2D = $head/hitbox # get_node(names.hitbox)
+@onready var hurtbox: Area2D = $hurtbox # get_node(names.hurtbox)
 
 @export_category("health")
 @export var max_health: float = 100
@@ -37,8 +36,8 @@ func set_defults(arr: Array[Sprite2D]):
 
 
 func _update_status():
-	if status == condition.PRISTINE and health < max_health:
-		status = condition.DIRTY if is_indestrucable else condition.DAMAGED
+	if status == condition.PRISTINE and health < max_health and not is_indestrucable:
+		status = condition.DAMAGED
 	if status == condition.DAMAGED and health <= 0:
 		status = condition.DESTROYED
 		# play some fancy animation maybe
