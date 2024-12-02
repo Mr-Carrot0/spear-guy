@@ -201,4 +201,3 @@ metadata/_edit_lock_ = true
 
 [node name="spear_destr" parent="." instance=ExtResource("3_qb6i6")]
 position = Vector2(4, 10)
-is_indestrucable = true

@@ -5,8 +5,8 @@ av *Johan Andersson och Vide Jacobsson*
 ## Spelöversikt
 
 Spear Guy är ett plattformsspel där våran huvudkaraktär *Spear Guy*, ger sig ut på en resa
-för att hämnas sin far *The King* som blev mördad av *Raven of the night*.
-Han får möta allt från kriminiella till upprorande demonstranter
+för att hämnas sin far *The King* som blev mördad av [Raven of the Night](raven-of-the-night.md).
+Han får möta allt från kriminella till upprorande demonstranter
 I slutet möter han sin faders mördare och det avgörs i en episk battle!
 
 ### Genre

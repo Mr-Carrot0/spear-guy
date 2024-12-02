@@ -1,32 +1,19 @@
 extends Weapon
 class_name Spear
 
-
-@onready var body: Node2D = $body # get_node(names.body)
-@onready var colshape = $hurtbox/CollisionShape2D
-
-
-@export_category("body")
-@export var body_count := 1
-@export var body_img: Texture2D = preload("res://Assets/Sprites/spear-destruction-body.png")
-# var bodies: Array[Sprite2D] = []
-
-@export_category("vec")
-@export var spacing_body := Vector2i(6, -6)
-var off: Vector2i
 # var off2: Vector2
 
 func _ready():
 	super()
-	for i in range(body_count):
-		var tmp = Sprite2D.new()
-		tmp.texture = body_img
-		tmp.position = i * spacing_body # add Vector2 constructor if error
+	# for i in range(body_count):
+	# 	var tmp = Sprite2D.new()
+	# 	tmp.texture = body_img
+	# 	tmp.position = i * spacing_body # add Vector2 constructor if error
 
-		body.add_child(tmp)
+	# 	body.add_child(tmp)
 		
-	head.position = spacing_body * (body_count + 1) # add Vector2 constructor if error
-	$hurtbox/CollisionShape2D.shape.b += Vector2(spacing_body * (body_count - 1)) 
+	# head.position = spacing_body * (body_count + 1) # add Vector2 constructor if error
+	# colshape.shape.b += Vector2(spacing_body * (body_count - 1)) 
 # 	print()
 # 	off = spacing_body * (body_count + 1)
 # 	# print("off: ",off)
