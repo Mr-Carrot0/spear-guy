@@ -60,7 +60,7 @@ func _update_status():
 	if status == condition.DAMAGED and health <= 0:
 		status = condition.DESTROYED
 		# play some fancy animation maybe
-		# then queue_free()
+		queue_free()
 	# signal weapon_status_changed(status)
 		
 func hit(target):
