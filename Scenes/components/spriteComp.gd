@@ -13,7 +13,7 @@ class_name SpriteComp
 #		if character_body.velocity.x < 0.0:
 #			flip_h = true
 #		elif character_body.velocity.x > 0.0:
-#			flip_h = false
+#		flip_h = false
 
 		#if abs(character_body.velocity.x) > 0.0: # if character body is moving, animate it
 		#	count += delta 

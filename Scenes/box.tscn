@@ -1,7 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://7ev2qty26xf8"]
+[gd_scene load_steps=7 format=3 uid="uid://7ev2qty26xf8"]
 
 [ext_resource type="Texture2D" uid="uid://duap72yrgyblo" path="res://Assets/Sprites/items/box.png" id="1_voamq"]
 [ext_resource type="Script" path="res://Scenes/components/health_comp.gd" id="2_jub5q"]
+[ext_resource type="Script" path="res://Scenes/components/damage_gradeComp.gd" id="3_mxc7w"]
+[ext_resource type="Texture2D" uid="uid://dlk55awv5tfce" path="res://Assets/Sprites/items/mbox.png" id="4_wsp6f"]
+[ext_resource type="Texture2D" uid="uid://bra8w7glmcgqf" path="res://Assets/Sprites/items/dbox.png" id="5_wey57"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_68oec"]
 size = Vector2(16, 16)
@@ -11,10 +14,13 @@ size = Vector2(16, 16)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_68oec")
 
-[node name="Box" type="Sprite2D" parent="."]
-texture = ExtResource("1_voamq")
-
 [node name="healthComp" type="Node" parent="." node_paths=PackedStringArray("body")]
 script = ExtResource("2_jub5q")
 body = NodePath("..")
-MAX_HEALTH = 10.0
+MAX_HEALTH = 200.0
+
+[node name="DamageGrade" type="Sprite2D" parent="." node_paths=PackedStringArray("hComp")]
+texture = ExtResource("1_voamq")
+script = ExtResource("3_mxc7w")
+hComp = NodePath("../healthComp")
+damageds = Array[Texture2D]([ExtResource("4_wsp6f"), ExtResource("5_wey57")])

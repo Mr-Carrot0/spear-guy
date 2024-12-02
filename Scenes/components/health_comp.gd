@@ -11,10 +11,13 @@ func _ready() -> void:
 	print(health)
 
 func take_damage(amount: int):
-	health -= amount
+	if health < amount:
+		health = 0
+	else: 
+		health -= amount
 	damage_taken.emit()
 	
-	if (health <= 0):
+	if health <= 0:
 		death.emit()	
 		die()
 		

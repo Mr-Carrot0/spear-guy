@@ -1,0 +1,27 @@
+[gd_scene load_steps=7 format=3 uid="uid://yxxgkwkv3y5g"]
+
+[ext_resource type="Script" path="res://Scenes/components/damage_gradeComp.gd" id="1_c4f45"]
+[ext_resource type="Script" path="res://Scenes/components/health_comp.gd" id="1_ydpgl"]
+[ext_resource type="Texture2D" uid="uid://cevwm647xr3l5" path="res://Assets/Sprites/terrain/brick_wall.png" id="2_ka6my"]
+[ext_resource type="Texture2D" uid="uid://c1w5sfu2820xf" path="res://Assets/Sprites/terrain/mbrick_wall.png" id="4_edu0n"]
+[ext_resource type="Texture2D" uid="uid://cfxvy56k4ac6d" path="res://Assets/Sprites/terrain/dbrick_wall.png" id="5_3oypx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_soogx"]
+size = Vector2(16, 32)
+
+[node name="wall" type="StaticBody2D"]
+
+[node name="healthComp" type="Node" parent="." node_paths=PackedStringArray("body")]
+script = ExtResource("1_ydpgl")
+body = NodePath("..")
+MAX_HEALTH = 300.0
+
+[node name="DamageGrade" type="Sprite2D" parent="." node_paths=PackedStringArray("hComp")]
+texture = ExtResource("2_ka6my")
+script = ExtResource("1_c4f45")
+hComp = NodePath("../healthComp")
+damageds = Array[Texture2D]([ExtResource("4_edu0n"), ExtResource("5_3oypx")])
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_soogx")
+debug_color = Color(0.927454, 3.66756e-05, 0.668492, 0.42)
