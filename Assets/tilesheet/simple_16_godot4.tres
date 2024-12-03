@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=15 format=3 uid="uid://642tmirunb4o"]
+[gd_resource type="TileSet" load_steps=16 format=3 uid="uid://642tmirunb4o"]
 
 [ext_resource type="Texture2D" uid="uid://dvlocyd4cya2d" path="res://Assets/tilesheet/simple_16.png" id="1"]
 [ext_resource type="Material" uid="uid://bb68rhwo6mprg" path="res://Assets/shaders/water.tres" id="1_l8crw"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://yj1covomf4oh" path="res://Scenes/bottle.tscn" id="7_u0ud4"]
 [ext_resource type="PackedScene" uid="uid://ccjhuq4jutdug" path="res://Scenes/torch.tscn" id="8_v6klp"]
 [ext_resource type="PackedScene" uid="uid://kqesunn8tyxr" path="res://Scenes/arrow.tscn" id="9_38yqj"]
+[ext_resource type="PackedScene" uid="uid://cp65bixuy6an1" path="res://Scenes/icicle.tscn" id="11_kgyrs"]
 
 [sub_resource type="TileSetAtlasSource" id="2"]
 resource_name = "Atlas1"
@@ -201,6 +202,7 @@ scenes/3/scene = ExtResource("6_gmvpg")
 scenes/4/scene = ExtResource("7_u0ud4")
 scenes/5/scene = ExtResource("8_v6klp")
 scenes/6/scene = ExtResource("9_38yqj")
+scenes/7/scene = ExtResource("11_kgyrs")
 
 [resource]
 physics_layer_0/collision_layer = 1
