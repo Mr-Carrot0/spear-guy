@@ -114,6 +114,11 @@ animation = &"idle"
 
 [sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_ce1iv"]
 
+[sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_ku8a8"]
+sync = true
+break_loop_at_end = true
+autorestart_delay = 0.0
+
 [sub_resource type="AnimationNodeTransition" id="AnimationNodeTransition_frqy2"]
 input_0/name = "ground"
 input_0/auto_advance = false
@@ -134,33 +139,29 @@ input_1/auto_advance = false
 input_1/break_loop_at_end = true
 input_1/reset = true
 
-[sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_ku8a8"]
-sync = true
-break_loop_at_end = true
-autorestart_delay = 0.0
-
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_thp2w"]
 nodes/Animation/node = SubResource("AnimationNodeAnimation_ecfws")
 nodes/Animation/position = Vector2(186.667, 160)
 "nodes/Animation 2/node" = SubResource("AnimationNodeAnimation_htqfk")
 "nodes/Animation 2/position" = Vector2(186.667, 293.333)
 "nodes/Animation 3/node" = SubResource("AnimationNodeAnimation_tdd2p")
-"nodes/Animation 3/position" = Vector2(346.667, 480)
+"nodes/Animation 3/position" = Vector2(293.333, 426.667)
 "nodes/Animation 4/node" = SubResource("AnimationNodeAnimation_kg3cx")
-"nodes/Animation 4/position" = Vector2(320, 640)
+"nodes/Animation 4/position" = Vector2(266.667, 586.667)
 nodes/TimeScale/node = SubResource("AnimationNodeTimeScale_ce1iv")
-nodes/TimeScale/position = Vector2(746.667, 426.667)
-nodes/m/node = SubResource("AnimationNodeTransition_frqy2")
-nodes/m/position = Vector2(906.667, 213.333)
-nodes/on_ground/node = SubResource("AnimationNodeTransition_cm00l")
-nodes/on_ground/position = Vector2(373.333, 160)
+nodes/TimeScale/position = Vector2(693.333, 373.333)
+nodes/air/node = SubResource("AnimationNodeOneShot_ku8a8")
+nodes/air/position = Vector2(506.667, 426.667)
+nodes/on_ground/node = SubResource("AnimationNodeTransition_frqy2")
+nodes/on_ground/position = Vector2(906.667, 213.333)
 nodes/output/position = Vector2(1146.67, 213.333)
-nodes/spin/node = SubResource("AnimationNodeOneShot_ku8a8")
-nodes/spin/position = Vector2(560, 480)
-node_connections = [&"TimeScale", 0, &"spin", &"m", 0, &"on_ground", &"m", 1, &"TimeScale", &"on_ground", 0, &"Animation", &"on_ground", 1, &"Animation 2", &"output", 0, &"m", &"spin", 0, &"Animation 3", &"spin", 1, &"Animation 4"]
+nodes/walk/node = SubResource("AnimationNodeTransition_cm00l")
+nodes/walk/position = Vector2(373.333, 160)
+node_connections = [&"TimeScale", 0, &"air", &"air", 0, &"Animation 3", &"air", 1, &"Animation 4", &"on_ground", 0, &"walk", &"on_ground", 1, &"TimeScale", &"output", 0, &"on_ground", &"walk", 0, &"Animation", &"walk", 1, &"Animation 2"]
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_2d27w")
+weapon_node_path = NodePath("spear_destr")
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -185,22 +186,22 @@ libraries = {
 tree_root = SubResource("AnimationNodeBlendTree_thp2w")
 anim_player = NodePath("../AnimationPlayer")
 parameters/TimeScale/scale = 1.2
-parameters/m/current_state = "ground"
-parameters/m/transition_request = ""
-parameters/m/current_index = 0
-parameters/on_ground/current_state = "walk"
+parameters/air/active = false
+parameters/air/internal_active = false
+parameters/air/request = 0
+parameters/on_ground/current_state = ""
 parameters/on_ground/transition_request = ""
-parameters/on_ground/current_index = 1
-parameters/spin/active = false
-parameters/spin/internal_active = false
-parameters/spin/request = 0
+parameters/on_ground/current_index = -1
+parameters/walk/current_state = "walk"
+parameters/walk/transition_request = ""
+parameters/walk/current_index = 1
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(3, 3)
 position_smoothing_enabled = true
 metadata/_edit_lock_ = true
 
-[node name="weapon" parent="." instance=ExtResource("3_qb6i6")]
+[node name="spear_destr" parent="." instance=ExtResource("3_qb6i6")]
 position = Vector2(2, 10)
 rotation = 0.586431
 is_indestrucable = true

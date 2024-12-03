@@ -1,39 +1,23 @@
-[gd_scene load_steps=7 format=3 uid="uid://cslfpdip2qy5p"]
+[gd_scene load_steps=5 format=3 uid="uid://cslfpdip2qy5p"]
 
 [ext_resource type="PackedScene" uid="uid://b12b4256u40lk" path="res://Scenes/spear.tscn" id="1_4nbp4"]
 [ext_resource type="Texture2D" uid="uid://b5ocy8bakvquk" path="res://Assets/Sprites/spear-destruction-head.png" id="2_4lexi"]
-[ext_resource type="Script" path="res://Assets/Scripts/resource/W_child_names.gd" id="2_jgvym"]
 [ext_resource type="Texture2D" uid="uid://br28xqtakcvr8" path="res://Assets/Sprites/spear-destruction-butt.png" id="3_h7hh4"]
-
-[sub_resource type="Resource" id="Resource_tmo2e"]
-script = ExtResource("2_jgvym")
-head = NodePath("head")
-body = NodePath("body")
-butt = NodePath("butt")
-hurtbox = NodePath("hurtbox")
-hitbox = null
-hurt_colshape = null
-hit_colshape = null
-[ext_resource type="Script" path="res://Scenes/components/damage_comp.gd" id="3_nxld8"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_ql4gq"]
 b = Vector2(13.5, -13.5)
 
 [node name="spear" instance=ExtResource("1_4nbp4")]
-w_names = SubResource("Resource_tmo2e")
+body_count = 3
 is_indestrucable = true
 
 [node name="head" type="Sprite2D" parent="." index="1"]
 position = Vector2(12, -12)
 texture = ExtResource("2_4lexi")
 
-[node name="damageComp(hitbox)" type="Area2D" parent="head" index="0"]
-position = Vector2(-15.5, 15.5)
-script = ExtResource("3_nxld8")
-damage_amount = 30
+[node name="hitbox" type="Area2D" parent="head" index="0"]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="head/damageComp(hitbox)" index="0"]
-position = Vector2(15.5, -15.5)
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="head/hitbox" index="0"]
 polygon = PackedVector2Array(0.5, 4.5, -4.5, -0.5, 0.5, -3.5, 4.5, -4.5, 3.5, -0.5)
 
 [node name="butt" type="Sprite2D" parent="." index="2"]
