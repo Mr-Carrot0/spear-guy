@@ -14,6 +14,7 @@ hurtbox = NodePath("hurtbox")
 hitbox = null
 hurt_colshape = null
 hit_colshape = null
+[ext_resource type="Script" path="res://Scenes/components/damage_comp.gd" id="3_nxld8"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_ql4gq"]
 b = Vector2(13.5, -13.5)
@@ -26,9 +27,13 @@ is_indestrucable = true
 position = Vector2(12, -12)
 texture = ExtResource("2_4lexi")
 
-[node name="hitbox" type="Area2D" parent="head" index="0"]
+[node name="damageComp(hitbox)" type="Area2D" parent="head" index="0"]
+position = Vector2(-15.5, 15.5)
+script = ExtResource("3_nxld8")
+damage_amount = 30
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="head/hitbox" index="0"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="head/damageComp(hitbox)" index="0"]
+position = Vector2(15.5, -15.5)
 polygon = PackedVector2Array(0.5, 4.5, -4.5, -0.5, 0.5, -3.5, 4.5, -4.5, 3.5, -0.5)
 
 [node name="butt" type="Sprite2D" parent="." index="2"]

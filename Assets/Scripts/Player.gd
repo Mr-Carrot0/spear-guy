@@ -3,6 +3,8 @@ class_name Player
 
 @onready var _tree: AnimationTree = $AnimationTree
 
+var is_flipped = false
+
 var debug = {
 	"main": 0
 	,
@@ -17,7 +19,7 @@ var debug = {
 var old_flip = is_flipped
 
 func _ready():
-	super()
+#	super()
 	_tree.active = true
 	# _tree["parameters/[OneShot]/request"] = AnimationNodeOneShot.ONE_SHOT_REQUEST_[request]
 	
@@ -36,8 +38,10 @@ func _physics_process(_delta) -> void:
 		_tree["parameters/air/request"] = AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE
 
 	var x_dir = Input.get_axis("move_left", "move_right")
-	
-	velocity.x = x_dir * speed if x_dir else move_toward(velocity.x, 0, speed)
+	if x_dir:
+		velocity.x = x_dir * speed 
+	else:
+		velocity.x = move_toward(velocity.x, 0, speed)
 
 	if x_dir != 0:
 		is_flipped = bool(1 - x_dir)

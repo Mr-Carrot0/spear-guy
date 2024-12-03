@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://b0n2s8qmr7c7m"]
+
+[ext_resource type="Script" path="res://Scenes/components/healthBarComp.gd" id="1_kw1sr"]
+
+[node name="HealthBarComp" type="Polygon2D"]
+scale = Vector2(2, 2)
+offset = Vector2(-15, 0)
+polygon = PackedVector2Array(0, 0, 28, 0, 28, -4, 0, -4)
+script = ExtResource("1_kw1sr")

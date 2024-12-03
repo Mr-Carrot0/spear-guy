@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://bgsq7b0um0iak"]
+
+[ext_resource type="Texture2D" uid="uid://drhowmvlyor2k" path="res://Assets/Sprites/items/blade.png" id="1_3dxfn"]
+[ext_resource type="Script" path="res://Scenes/components/damage_comp.gd" id="2_4s56s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hu4mv"]
+size = Vector2(3, 11)
+
+[node name="blade" type="Node2D"]
+rotation = -1.34565
+
+[node name="Blade" type="Sprite2D" parent="."]
+position = Vector2(0, -6)
+texture = ExtResource("1_3dxfn")
+
+[node name="damageComp" type="Area2D" parent="."]
+script = ExtResource("2_4s56s")
+damage_amount = 40
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="damageComp"]
+position = Vector2(-0.5, -8.5)
+shape = SubResource("RectangleShape2D_hu4mv")
+debug_color = Color(0.974069, 0, 0.429455, 0.42)

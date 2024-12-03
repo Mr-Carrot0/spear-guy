@@ -1,0 +1,58 @@
+[gd_scene load_steps=5 format=3 uid="uid://ccjhuq4jutdug"]
+
+[ext_resource type="Texture2D" uid="uid://c34iginhwyolh" path="res://Assets/Sprites/items/torch.png" id="1_462vv"]
+
+[sub_resource type="Animation" id="Animation_yya84"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+
+[sub_resource type="Animation" id="Animation_0da1l"]
+resource_name = "fire"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.4, 2.96667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [1.0, 3.17, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_a6xq8"]
+_data = {
+"RESET": SubResource("Animation_yya84"),
+"fire": SubResource("Animation_0da1l")
+}
+
+[node name="Torch" type="Sprite2D"]
+texture = ExtResource("1_462vv")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../PointLight2D")
+libraries = {
+"": SubResource("AnimationLibrary_a6xq8")
+}
+autoplay = "fire"
+playback_auto_capture_transition_type = 10
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(0, -4.5)
+scale = Vector2(1, 0.4375)
+texture = ExtResource("1_462vv")
+texture_scale = 1.2

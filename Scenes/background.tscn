@@ -1,0 +1,77 @@
+[gd_scene load_steps=2 format=3 uid="uid://ccwiisr78lifd"]
+
+[ext_resource type="Texture2D" uid="uid://cnldcsf3q4ioy" path="res://Assets/Sprites/items/cloud.png" id="1_776tj"]
+
+[node name="background" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -12050.0
+offset_top = -927.0
+offset_right = 11450.0
+offset_bottom = 1295.0
+color = Color(4.62055e-06, 0.702529, 0.756016, 1)
+
+[node name="Parallax2D" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.02, 0.3)
+repeat_size = Vector2(500, 0)
+repeat_times = 40
+
+[node name="Cloud" type="Sprite2D" parent="Parallax2D"]
+position = Vector2(-794, 257)
+scale = Vector2(8.875, 8.875)
+texture = ExtResource("1_776tj")
+
+[node name="background" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.045, 0.3)
+scroll_offset = Vector2(49, 28)
+repeat_size = Vector2(500, 0)
+repeat_times = 30
+
+[node name="Cloud10" type="Sprite2D" parent="background"]
+position = Vector2(176, 255)
+scale = Vector2(3.21875, 2.70716)
+texture = ExtResource("1_776tj")
+
+[node name="Cloud9" type="Sprite2D" parent="background"]
+position = Vector2(580, 108)
+scale = Vector2(3.80859, 3.80859)
+texture = ExtResource("1_776tj")
+
+[node name="Cloud8" type="Sprite2D" parent="background"]
+position = Vector2(374, 257)
+scale = Vector2(3.80859, 3.80859)
+texture = ExtResource("1_776tj")
+
+[node name="Cloud6" type="Sprite2D" parent="background"]
+position = Vector2(150.5, 184.5)
+scale = Vector2(2.4375, 2.4375)
+texture = ExtResource("1_776tj")
+
+[node name="Cloud5" type="Sprite2D" parent="background"]
+position = Vector2(401, 101)
+texture = ExtResource("1_776tj")
+
+[node name="Cloud7" type="Sprite2D" parent="background"]
+position = Vector2(483, 51)
+scale = Vector2(3.6875, 3.6875)
+texture = ExtResource("1_776tj")
+
+[node name="Cloud4" type="Sprite2D" parent="background"]
+position = Vector2(247, -2.5)
+scale = Vector2(4.125, 4.125)
+texture = ExtResource("1_776tj")
+
+[node name="Cloud2" type="Sprite2D" parent="background"]
+position = Vector2(310, 201)
+scale = Vector2(3.375, 3.375)
+texture = ExtResource("1_776tj")
+
+[node name="Cloud3" type="Sprite2D" parent="background"]
+position = Vector2(293, 25)
+scale = Vector2(1.5625, 1.5625)
+texture = ExtResource("1_776tj")
+
+[node name="Cloud" type="Sprite2D" parent="background"]
+position = Vector2(246.5, 180.5)
+scale = Vector2(1.5625, 1.5625)
+texture = ExtResource("1_776tj")
