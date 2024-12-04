@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://s2ylh25q74pd"]
+[gd_scene load_steps=3 format=3 uid="uid://s2ylh25q74pd"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/text_box.gd" id="1_kjrye"]
+[ext_resource type="Texture2D" uid="uid://dkssjo8jwj0ig" path="res://Assets/Sprites/menu/nex_button_hint.png" id="2_nrg7o"]
 
 [node name="text_box" type="CanvasLayer"]
 script = ExtResource("1_kjrye")
@@ -18,6 +19,31 @@ offset_top = -0.0800171
 grow_horizontal = 2
 grow_vertical = 0
 color = Color(0, 0, 0, 1)
+
+[node name="Control" type="Control" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="Label" type="Label" parent="ColorRect/Control"]
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 24.0
+rotation = -0.270126
+theme_override_font_sizes/font_size = 13
+text = "Next"
+
+[node name="NexButtonHint" type="Sprite2D" parent="ColorRect/Control"]
+position = Vector2(8, 8)
+rotation = -0.215937
+texture = ExtResource("2_nrg7o")
 
 [node name="Label" type="Label" parent="ColorRect"]
 layout_mode = 1
