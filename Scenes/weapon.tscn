@@ -1,8 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://dylcb3kkx11to"]
+[gd_scene load_steps=4 format=3 uid="uid://dylcb3kkx11to"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/Weapon.gd" id="1_5m04d"]
+[ext_resource type="Script" path="res://Scenes/components/damage_comp.gd" id="2_ogcb0"]
+[ext_resource type="Script" path="res://Scenes/components/health_comp.gd" id="3_hp6hj"]
 
 [node name="weapon" type="Node2D"]
 script = ExtResource("1_5m04d")
 
 [node name="body" type="Node2D" parent="."]
+
+[node name="damageComp" type="Area2D" parent="."]
+script = ExtResource("2_ogcb0")
+
+[node name="hurtbox" type="Area2D" parent="."]
+
+[node name="healthComp" type="Node" parent="."]
+script = ExtResource("3_hp6hj")

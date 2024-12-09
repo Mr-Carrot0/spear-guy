@@ -3,8 +3,6 @@ class_name Player
 
 @onready var _tree: AnimationTree = $AnimationTree
 
-var is_flipped = false
-
 var debug = {
 	"main": 0
 	,

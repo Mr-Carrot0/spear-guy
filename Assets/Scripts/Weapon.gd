@@ -9,13 +9,16 @@ enum condition {
 	# DIRTY
 }
 
+@onready var body: Node2D = $body
+@onready var hurtbox: Area2D = $hurtbox
+@onready var hitbox: Area2D = $damageComp
+
 @export var w_names := WeaponChildNames.new()
-@onready var butt: Sprite2D = get_node(w_names.butt) # $butt
+
 @onready var head: Sprite2D = get_node(w_names.head) # $head
-@onready var hitbox: Area2D = get_node(w_names.hitbox) # $head/hitbox
-@onready var hurtbox: Area2D = get_node(w_names.hurtbox) # $hurtbox
-@onready var body: Node2D = get_node(w_names.body) # $body
-@onready var colshape = get_node(w_names.hurt_colshape) # $hurtbox/CollisionShape2D
+@onready var butt: Sprite2D = get_node(w_names.butt) # $butt
+@onready var hurt_colshape = get_node(w_names.hurt_colshape) # $hurtbox/CollisionShape2D
+@onready var hit_colshape = get_node(w_names.hit_colshape) # $damageComp/CollisionPolygon2D
 
 @export_category("body")
 @export var body_count := 1
@@ -45,7 +48,7 @@ func _ready():
 		body.add_child(tmp)
 		
 	head.position = spacing_body * (body_count + 1) # add Vector2 constructor if error
-	colshape.shape.b += Vector2(spacing_body * (body_count - 1))
+	hurt_colshape.shape.b += Vector2(spacing_body * (body_count - 1))
 
 func _process(_delta):
 	_update_status()
