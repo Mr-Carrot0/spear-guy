@@ -23,6 +23,8 @@ func take_damage(amount: int):
 		
 func die() -> void:
 	if body is Player:
+
+		#get_tree().call_deferred("reload_current_scene")
 		pass
 	else:
 		body.queue_free()

@@ -1,0 +1,66 @@
+[gd_scene load_steps=8 format=3 uid="uid://c7l1ff6vrrjp6"]
+
+[ext_resource type="Script" path="res://Scenes/boss.gd" id="1_cfjof"]
+[ext_resource type="PackedScene" uid="uid://yxxgkwkv3y5g" path="res://Scenes/wall.tscn" id="2_gfbji"]
+[ext_resource type="Texture2D" uid="uid://ydlxocwd65mq" path="res://Assets/Sprites/characters/rawen.png" id="2_wb580"]
+[ext_resource type="Script" path="res://Scenes/components/health_comp.gd" id="3_geivm"]
+[ext_resource type="PackedScene" uid="uid://dkrbcfo4ck83x" path="res://Scenes/base_enemy.tscn" id="3_ifyx7"]
+[ext_resource type="PackedScene" uid="uid://cp65bixuy6an1" path="res://Scenes/icicle.tscn" id="3_s2n7w"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ybe0d"]
+size = Vector2(13, 31)
+
+[node name="boss" type="CharacterBody2D"]
+script = ExtResource("1_cfjof")
+summonable_scene_1 = ExtResource("2_gfbji")
+summonable_scene_2 = ExtResource("3_s2n7w")
+underling_scene = ExtResource("3_ifyx7")
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
+enable_node_path = NodePath("../healthComp")
+
+[node name="healthComp" type="Node" parent="." node_paths=PackedStringArray("body")]
+script = ExtResource("3_geivm")
+body = NodePath("..")
+MAX_HEALTH = 2000.0
+
+[node name="Rawen" type="Sprite2D" parent="."]
+position = Vector2(-4.5, 0)
+scale = Vector2(0.90625, 1)
+texture = ExtResource("2_wb580")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 0.5)
+shape = SubResource("RectangleShape2D_ybe0d")
+
+[node name="SpawnArea" type="Node2D" parent="."]
+
+[node name="Marker2D" type="Marker2D" parent="SpawnArea"]
+position = Vector2(-93, -16)
+
+[node name="Marker2D2" type="Marker2D" parent="SpawnArea"]
+position = Vector2(1, -71)
+
+[node name="Marker2D3" type="Marker2D" parent="SpawnArea"]
+position = Vector2(131, -73)
+
+[node name="Marker2D8" type="Marker2D" parent="SpawnArea"]
+position = Vector2(128, -16)
+
+[node name="Marker2D10" type="Marker2D" parent="SpawnArea"]
+position = Vector2(60, -115)
+
+[node name="Marker2D9" type="Marker2D" parent="SpawnArea"]
+position = Vector2(-127, -33)
+
+[node name="Marker2D4" type="Marker2D" parent="SpawnArea"]
+position = Vector2(47, -1)
+
+[node name="Marker2D5" type="Marker2D" parent="SpawnArea"]
+position = Vector2(-52, -49)
+
+[node name="Marker2D6" type="Marker2D" parent="SpawnArea"]
+position = Vector2(61, -36)
+
+[node name="Marker2D7" type="Marker2D" parent="SpawnArea"]
+position = Vector2(-99, -101)

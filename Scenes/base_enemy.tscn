@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://dkrbcfo4ck83x"]
 
-[ext_resource type="Script" path="res://Scenes/base_enemy.gd" id="1_dplx1"]
+[ext_resource type="Script" path="res://Scenes/components/flipComp.gd" id="1_odrcn"]
 [ext_resource type="Texture2D" uid="uid://honudsoswswb" path="res://Assets/Sprites/items/small_e.png" id="2_4ve6c"]
 [ext_resource type="Script" path="res://Scenes/components/spriteComp.gd" id="2_jnqe7"]
 [ext_resource type="Script" path="res://Scenes/components/movementComp.gd" id="3_s5xwm"]
@@ -13,7 +13,7 @@
 size = Vector2(13, 23)
 
 [node name="base_enemy" type="CharacterBody2D"]
-script = ExtResource("1_dplx1")
+script = ExtResource("1_odrcn")
 
 [node name="body" type="Sprite2D" parent="." node_paths=PackedStringArray("character_body")]
 position = Vector2(0, 8)
@@ -46,3 +46,8 @@ scale = Vector2(2, 1)
 hComp = NodePath("../healthComp")
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
+script = ExtResource("1_odrcn")
+
+[node name="flipComp" type="Node" parent="." node_paths=PackedStringArray("body")]
+script = ExtResource("1_odrcn")
+body = NodePath("..")

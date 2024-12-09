@@ -1,0 +1,74 @@
+[gd_scene load_steps=12 format=3 uid="uid://d2lutv8ys5fpv"]
+
+[ext_resource type="Texture2D" uid="uid://bqssgg700sxw2" path="res://Assets/Sprites/characters/higher_knight.png" id="1_cytgw"]
+[ext_resource type="Script" path="res://Scenes/components/health_comp.gd" id="1_ik1io"]
+[ext_resource type="Script" path="res://Scenes/components/movementComp.gd" id="1_wgi62"]
+[ext_resource type="PackedScene" uid="uid://bs2yhr0r4glg4" path="res://Scenes/short_sword.tscn" id="2_gv0lk"]
+[ext_resource type="Script" path="res://Scenes/components/flipComp.gd" id="5_h5abr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sbig2"]
+size = Vector2(10, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qhv14"]
+atlas = ExtResource("1_cytgw")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_elmut"]
+atlas = ExtResource("1_cytgw")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1k1p7"]
+atlas = ExtResource("1_cytgw")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_upo3d"]
+atlas = ExtResource("1_cytgw")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yah17"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qhv14")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_elmut")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1k1p7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_upo3d")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="knight" type="CharacterBody2D"]
+
+[node name="MovementComp" type="Node" parent="." node_paths=PackedStringArray("character_body")]
+script = ExtResource("1_wgi62")
+character_body = NodePath("..")
+
+[node name="healthComp" type="Node" parent="." node_paths=PackedStringArray("body")]
+script = ExtResource("1_ik1io")
+body = NodePath("..")
+MAX_HEALTH = 500.0
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_sbig2")
+
+[node name="short_sword" parent="." instance=ExtResource("2_gv0lk")]
+position = Vector2(4, 9)
+rotation = 1.07338
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_yah17")
+autoplay = "default"
+frame_progress = 0.288326
+
+[node name="flipComp" type="Node" parent="." node_paths=PackedStringArray("body")]
+script = ExtResource("5_h5abr")
+body = NodePath("..")
