@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://cp65bixuy6an1"]
+
+[ext_resource type="Script" path="res://Assets/Scripts/icicle.gd" id="1_37m2t"]
+[ext_resource type="Texture2D" uid="uid://cbws0766dhaat" path="res://Assets/Sprites/terrain/icicle.png" id="2_3g2cp"]
+[ext_resource type="Script" path="res://Scenes/components/damage_comp.gd" id="3_qf04q"]
+
+[node name="icicle" type="AnimatableBody2D"]
+script = ExtResource("1_37m2t")
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
+enable_node_path = NodePath("../damageComp/CollisionPolygon2D")
+
+[node name="Icicle" type="Sprite2D" parent="."]
+texture = ExtResource("2_3g2cp")
+
+[node name="damageComp" type="Area2D" parent="."]
+script = ExtResource("3_qf04q")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="damageComp"]
+polygon = PackedVector2Array(-6, -8, 0, 6, 4, -8)
