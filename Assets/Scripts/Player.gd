@@ -4,25 +4,30 @@ class_name Player
 @onready var _tree: AnimationTree = $AnimationTree
 
 var debug = {
-	"main": 0
+	"main": 1
 	,
 	"phy": 0
 	, "pos": 0
 	, "vel": 1
 	, "dir": 1,
-	"ani": 1
-	, "oneshot": 1
-	,
+	"ani": 0
+	, "oneshot": 1,
 }
 var old_flip = is_flipped
 
 func _ready():
-#	super()
+	super()
 	_tree.active = true
 	# _tree["parameters/[OneShot]/request"] = AnimationNodeOneShot.ONE_SHOT_REQUEST_[request]
 	
 func _physics_process(_delta) -> void:
 	super(_delta)
+
+	# var tween := create_tween()
+	# tween.tween_method($spear_destr.look_at, null, get_global_mouse_position(), 1)
+	
+	weapon.look_at(get_global_mouse_position())
+	weapon.rotate(PI / 4)
 	# for i in [1, 4]:
 	# 	if Input.is_action_just_pressed("num_" + str(i)):
 	# 		print(i)
@@ -37,7 +42,7 @@ func _physics_process(_delta) -> void:
 
 	var x_dir = Input.get_axis("move_left", "move_right")
 	if x_dir:
-		velocity.x = x_dir * speed 
+		velocity.x = x_dir * speed
 	else:
 		velocity.x = move_toward(velocity.x, 0, speed)
 
@@ -68,5 +73,3 @@ func _physics_process(_delta) -> void:
 				print(AnimationNodeOneShot[_tree["parameters/spin/request"]])
 	
 	move_and_slide()
-	
-	

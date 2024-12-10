@@ -159,13 +159,9 @@ nodes/walk/node = SubResource("AnimationNodeTransition_cm00l")
 nodes/walk/position = Vector2(373.333, 160)
 node_connections = [&"TimeScale", 0, &"air", &"air", 0, &"Animation 3", &"air", 1, &"Animation 4", &"on_ground", 0, &"walk", &"on_ground", 1, &"TimeScale", &"output", 0, &"on_ground", &"walk", 0, &"Animation", &"walk", 1, &"Animation 2"]
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("weapon")]
 script = ExtResource("1_2d27w")
-speed = null
-jmp_vel = null
-MAX_HEALTH = null
-health = null
-armour = null
+weapon = NodePath("spear_destr")
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

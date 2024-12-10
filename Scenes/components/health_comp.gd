@@ -7,8 +7,8 @@ signal death
 @export var MAX_HEALTH := 100.0
 @onready var health := MAX_HEALTH
 
-func _ready() -> void:
-	print(health)
+func _ready() -> void:pass
+	# print(health)
 
 func take_damage(amount: int):
 	health -= amount

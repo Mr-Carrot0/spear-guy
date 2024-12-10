@@ -1,22 +1,17 @@
-[gd_scene load_steps=6 format=3 uid="uid://cslfpdip2qy5p"]
+[gd_scene load_steps=4 format=3 uid="uid://cslfpdip2qy5p"]
 
 [ext_resource type="PackedScene" uid="uid://b12b4256u40lk" path="res://Scenes/spear.tscn" id="1_4nbp4"]
 [ext_resource type="Texture2D" uid="uid://b5ocy8bakvquk" path="res://Assets/Sprites/spear-destruction-head.png" id="2_4lexi"]
-[ext_resource type="Script" path="res://Assets/Scripts/resource/W_child_names.gd" id="2_jgvym"]
-
-[sub_resource type="Resource" id="Resource_5c140"]
-script = ExtResource("2_jgvym")
-butt = NodePath("butt")
-head_name = &"head"
-hurt_colshape_name = &"CollisionShape2D"
-hit_colshape_name = &"CollisionPolygon2D"
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_ql4gq"]
 b = Vector2(13.5, -13.5)
 
 [node name="spear" instance=ExtResource("1_4nbp4")]
-w_names = SubResource("Resource_5c140")
+body_count = 3
 is_indestrucable = true
+
+[node name="damageComp" parent="." index="2"]
+collision_layer = 2
 
 [node name="head" type="Sprite2D" parent="damageComp" index="0"]
 position = Vector2(12, -12)

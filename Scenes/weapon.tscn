@@ -1,11 +1,20 @@
-[gd_scene load_steps=4 format=3 uid="uid://dylcb3kkx11to"]
+[gd_scene load_steps=6 format=3 uid="uid://dylcb3kkx11to"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/Weapon.gd" id="1_5m04d"]
+[ext_resource type="Script" path="res://Assets/Scripts/resource/W_child_names.gd" id="2_47yr0"]
 [ext_resource type="Script" path="res://Scenes/components/damage_comp.gd" id="2_ogcb0"]
 [ext_resource type="Script" path="res://Scenes/components/health_comp.gd" id="3_hp6hj"]
 
+[sub_resource type="Resource" id="Resource_euiv8"]
+script = ExtResource("2_47yr0")
+butt = NodePath("butt")
+head_name = &"head"
+hurt_colshape_name = &"CollisionShape2D"
+hit_colshape_name = &"CollisionPolygon2D"
+
 [node name="weapon" type="Node2D"]
 script = ExtResource("1_5m04d")
+w_names = SubResource("Resource_euiv8")
 
 [node name="body" type="Node2D" parent="."]
 

@@ -1,20 +1,29 @@
-[gd_scene load_steps=3 format=3 uid="uid://b12b4256u40lk"]
+[gd_scene load_steps=5 format=3 uid="uid://b12b4256u40lk"]
 
 [ext_resource type="PackedScene" uid="uid://dylcb3kkx11to" path="res://Scenes/weapon.tscn" id="1_51a17"]
+[ext_resource type="Script" path="res://Assets/Scripts/resource/W_child_names.gd" id="2_vncxw"]
 [ext_resource type="Texture2D" uid="uid://br28xqtakcvr8" path="res://Assets/Sprites/spear-destruction-butt.png" id="2_xq02l"]
 
+[sub_resource type="Resource" id="Resource_08uml"]
+script = ExtResource("2_vncxw")
+butt = NodePath("butt")
+head_name = &"head"
+hurt_colshape_name = &"CollisionShape2D"
+hit_colshape_name = &"CollisionPolygon2D"
+
 [node name="weapon" instance=ExtResource("1_51a17")]
+w_names = SubResource("Resource_08uml")
 metadata/_edit_lock_ = true
 
-[node name="body" parent="." index="0"]
+[node name="butt" type="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_xq02l")
+metadata/_edit_lock_ = true
+
+[node name="body" parent="." index="1"]
 position = Vector2(6, -6)
 
-[node name="damageComp" parent="." index="1"]
+[node name="damageComp" parent="." index="2"]
 metadata/_edit_lock_ = true
 
-[node name="hurtbox" parent="." index="2"]
-metadata/_edit_lock_ = true
-
-[node name="butt" type="Sprite2D" parent="." index="4"]
-texture = ExtResource("2_xq02l")
+[node name="hurtbox" parent="." index="3"]
 metadata/_edit_lock_ = true

@@ -17,6 +17,7 @@ enum condition {
 
 @onready var head: Sprite2D = get_node(w_names.head) # $head
 @onready var butt: Sprite2D = get_node(w_names.butt) # $butt
+
 @onready var hurt_colshape = get_node(w_names.hurt_colshape) # $hurtbox/CollisionShape2D
 @onready var hit_colshape = get_node(w_names.hit_colshape) # $damageComp/CollisionPolygon2D
 
@@ -27,7 +28,7 @@ enum condition {
 @export_category("health")
 @export var max_health: float = 100
 @onready var health: float = max_health
-@export var damage: float = 10
+@export var damage: float = 4
 
 @export_category("status")
 @export var is_indestrucable: bool = false
@@ -38,7 +39,8 @@ enum condition {
 @export var spacing_body := Vector2i(6, -6)
 var off: Vector2i
 
-func _ready():
+func _ready(): ## when var w = Weapon.new(): w.body_count = new_body_count; w.request_ready()
+	## test
 	set_defults([butt, head])
 	for i in range(body_count):
 		var tmp = Sprite2D.new()
@@ -46,8 +48,9 @@ func _ready():
 		tmp.position = i * spacing_body # add Vector2 constructor if error
 
 		body.add_child(tmp)
-		
-	head.position = spacing_body * (body_count + 1) # add Vector2 constructor if error
+		print(tmp.position)
+	hitbox.position = spacing_body * (body_count - 1) # add Vector2 constructor if error
+	print(hitbox.position)
 	hurt_colshape.shape.b += Vector2(spacing_body * (body_count - 1))
 
 func _process(_delta):
