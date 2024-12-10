@@ -17,4 +17,4 @@ tile_map_data = PackedByteArray("AAD3/wAAAgADAAAAAAD4/wAAAgADAAAAAAD5/wAAAgADAAA
 position = Vector2(-101, -102)
 
 [node name="boss" parent="." instance=ExtResource("4_oa2p0")]
-position = Vector2(262, -9)
+position = Vector2(264, -16)

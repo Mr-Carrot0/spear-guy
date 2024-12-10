@@ -5,7 +5,7 @@ class_name flipComp
 
 @export var body: CharacterBody2D
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	if body:
 		set_flip(body.velocity.x < 0)
 

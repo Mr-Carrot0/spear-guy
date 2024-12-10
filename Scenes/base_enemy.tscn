@@ -40,6 +40,8 @@ position = Vector2(-4, 12)
 [node name="healthComp" type="Node" parent="." node_paths=PackedStringArray("body")]
 script = ExtResource("5_tpk5u")
 body = NodePath("..")
+MAX_HEALTH = 200.0
+score_worth = 0
 
 [node name="HealthBarComp" parent="." node_paths=PackedStringArray("hComp") instance=ExtResource("6_sisqy")]
 scale = Vector2(2, 1)

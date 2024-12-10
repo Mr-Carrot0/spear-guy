@@ -1,7 +1,7 @@
 [gd_scene load_steps=23 format=3 uid="uid://5jpo611kaau8"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/Player.gd" id="1_2d27w"]
-[ext_resource type="Texture2D" uid="uid://cdmewcfftarud" path="res://Assets/Sprites/stolen/cat_stolen.png" id="2_o2kcy"]
+[ext_resource type="Texture2D" uid="uid://xps8a6xso4k4" path="res://Assets/Sprites/stolen/player.png" id="2_kly8p"]
 [ext_resource type="PackedScene" uid="uid://cslfpdip2qy5p" path="res://Scenes/spear-destr.tscn" id="3_qb6i6"]
 [ext_resource type="PackedScene" uid="uid://b0n2s8qmr7c7m" path="res://Scenes/components/healthBarComp.tscn" id="4_w1ag1"]
 [ext_resource type="PackedScene" uid="uid://behoknjndfrll" path="res://Scenes/components/health_comp.tscn" id="5_4a2hd"]
@@ -172,7 +172,7 @@ metadata/_edit_lock_ = true
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
 texture_repeat = 1
-texture = ExtResource("2_o2kcy")
+texture = ExtResource("2_kly8p")
 hframes = 16
 vframes = 16
 metadata/_edit_lock_ = true

@@ -1,3 +1,5 @@
+# This should if better designed be responsible for applying the damaged
+# Not the damage component
 extends Node
 class_name healthComp 
 
@@ -6,9 +8,8 @@ signal damage_taken
 signal death
 @export var MAX_HEALTH := 100.0
 @onready var health := MAX_HEALTH
+@export var score_worth: int = 100
 
-func _ready() -> void:
-	print(health)
 
 func take_damage(amount: int):
 	if health < amount:
@@ -27,6 +28,6 @@ func die() -> void:
 		#get_tree().call_deferred("reload_current_scene")
 		Globals.game_over.call_deferred()
 	else:
-		# change this
-		Globals.change_player_score(100)
+
+		Globals.change_player_score(score_worth)
 		body.queue_free()

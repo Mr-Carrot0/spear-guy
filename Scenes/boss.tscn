@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://c7l1ff6vrrjp6"]
+[gd_scene load_steps=9 format=3 uid="uid://c7l1ff6vrrjp6"]
 
 [ext_resource type="Script" path="res://Scenes/boss.gd" id="1_cfjof"]
 [ext_resource type="PackedScene" uid="uid://yxxgkwkv3y5g" path="res://Scenes/wall.tscn" id="2_gfbji"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://Scenes/components/health_comp.gd" id="3_geivm"]
 [ext_resource type="PackedScene" uid="uid://dkrbcfo4ck83x" path="res://Scenes/base_enemy.tscn" id="3_ifyx7"]
 [ext_resource type="PackedScene" uid="uid://cp65bixuy6an1" path="res://Scenes/icicle.tscn" id="3_s2n7w"]
+[ext_resource type="PackedScene" uid="uid://b0n2s8qmr7c7m" path="res://Scenes/components/healthBarComp.tscn" id="7_50tl5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ybe0d"]
 size = Vector2(13, 31)
@@ -22,7 +23,8 @@ enable_node_path = NodePath("../healthComp")
 [node name="healthComp" type="Node" parent="." node_paths=PackedStringArray("body")]
 script = ExtResource("3_geivm")
 body = NodePath("..")
-MAX_HEALTH = 2000.0
+MAX_HEALTH = 5000.0
+score_worth = 1000
 
 [node name="Rawen" type="Sprite2D" parent="."]
 position = Vector2(-4.5, 0)
@@ -39,7 +41,7 @@ shape = SubResource("RectangleShape2D_ybe0d")
 position = Vector2(-93, -16)
 
 [node name="Marker2D2" type="Marker2D" parent="SpawnArea"]
-position = Vector2(1, -71)
+position = Vector2(-40, -112)
 
 [node name="Marker2D3" type="Marker2D" parent="SpawnArea"]
 position = Vector2(131, -73)
@@ -64,3 +66,7 @@ position = Vector2(61, -36)
 
 [node name="Marker2D7" type="Marker2D" parent="SpawnArea"]
 position = Vector2(-99, -101)
+
+[node name="HealthBarComp" parent="." node_paths=PackedStringArray("hComp") instance=ExtResource("7_50tl5")]
+position = Vector2(3, -18)
+hComp = NodePath("../healthComp")
