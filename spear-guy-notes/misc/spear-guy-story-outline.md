@@ -21,7 +21,7 @@ tags:
 
 1. A basic obstacle course showcasing movement and traditional spear combat, guided by [the Prince](chars/spear-guy.md)'s personal teacher of physical combat and the way of the spear
 
-## Beginnings (10 years later)
+## Beginnings (X years later)
 
 1. [Raven of the Night](chars/raven-of-the-night.md) kills the [King of Spears](chars/King-of-Spears) with a black knife through the heart at an official ceremony
 2. [Raven of the Night](chars/raven-of-the-night.md)

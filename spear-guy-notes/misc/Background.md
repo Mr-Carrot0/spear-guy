@@ -1,0 +1,4 @@
+
+Once upon a time there was a prosperous country known as the Kingdom of Spears. The people had won many wars over the years and as the name implied, their weapon of choice was the spear, a long reaching stick with a piercing blade ready for stabbing your opponents with all your might. The people took pride in the simplicity and exactness of the polearm design: there was no easy way to hide such a humongous weapon if one was planing to put it to use. The duel of the spear became the definitive display of power over your opponent and the holy decider of fates. Conflicts whose consequences were worthy of putting one’s life on the line were resolved this way.
+
+But then
