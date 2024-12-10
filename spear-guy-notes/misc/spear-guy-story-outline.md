@@ -23,6 +23,8 @@ tags:
 
 ## Beginnings (X years later)
 
+*(see [Background](Background.md))* 
+
 1. [Raven of the Night](chars/raven-of-the-night.md) kills the [King of Spears](chars/King-of-Spears) with a black knife through the heart at an official ceremony
 2. [Raven of the Night](chars/raven-of-the-night.md)
 3. This incident incident causes a nation-wide ban on non-polearm weaponry as they're the only type that's virtually impossible to hide and the spear is  considered a holy in the present religion.
