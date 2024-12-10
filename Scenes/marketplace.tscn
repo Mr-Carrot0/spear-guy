@@ -1,0 +1,88 @@
+[gd_scene load_steps=7 format=3 uid="uid://cqqt88gjkqajj"]
+
+[ext_resource type="PackedScene" uid="uid://dqspfudujoajn" path="res://Scenes/wanted_poster.tscn" id="1_1gsai"]
+[ext_resource type="PackedScene" uid="uid://80exdd8628dh" path="res://Scenes/boss_fight_level.tscn" id="2_4vm7d"]
+[ext_resource type="Texture2D" uid="uid://ydlxocwd65mq" path="res://Assets/Sprites/characters/rawen.png" id="3_sctgb"]
+[ext_resource type="PackedScene" uid="uid://drjfbnesgl4hx" path="res://Scenes/leveltest_2.tscn" id="4_r1lt4"]
+[ext_resource type="Texture2D" uid="uid://bdmro3rcdfrdm" path="res://Assets/Sprites/items/sword.png" id="5_2v1lb"]
+[ext_resource type="PackedScene" uid="uid://bl75eh4bfbxml" path="res://Scenes/stats.tscn" id="6_7hthj"]
+
+[node name="marketplace" type="Control"]
+layout_mode = 3
+anchor_right = 1.817
+anchor_bottom = 2.014
+offset_right = 0.119995
+offset_bottom = -0.0400391
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.240841, 0.0971189, 0.054608, 1)
+
+[node name="wanted_poster" parent="." instance=ExtResource("1_1gsai")]
+layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 379.0
+offset_top = 285.0
+offset_right = 593.0
+offset_bottom = 502.0
+grow_horizontal = 1
+grow_vertical = 1
+to_scene = ExtResource("2_4vm7d")
+texture = ExtResource("3_sctgb")
+
+[node name="wanted_poster2" parent="." instance=ExtResource("1_1gsai")]
+layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 117.0
+offset_top = 64.0
+offset_right = 331.0
+offset_bottom = 281.0
+grow_horizontal = 1
+grow_vertical = 1
+to_scene = ExtResource("4_r1lt4")
+texture = ExtResource("5_2v1lb")
+
+[node name="wanted_poster3" parent="." instance=ExtResource("1_1gsai")]
+layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 562.0
+offset_top = 36.0
+offset_right = 776.0
+offset_bottom = 253.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="wanted_poster4" parent="." instance=ExtResource("1_1gsai")]
+layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 828.0
+offset_top = 280.0
+offset_right = 1042.0
+offset_bottom = 497.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="stats" parent="." instance=ExtResource("6_7hthj")]

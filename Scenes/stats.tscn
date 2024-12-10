@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://bl75eh4bfbxml"]
+
+[ext_resource type="Script" path="res://Assets/Scripts/stats.gd" id="1_o287l"]
+
+[node name="stats" type="CanvasLayer"]
+script = ExtResource("1_o287l")
+
+[node name="score_display" type="Label" parent="."]
+offset_left = 16.0
+offset_top = 8.0
+offset_right = 91.0
+offset_bottom = 35.0
+text = "Score: "

@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://d2lutv8ys5fpv"]
+[gd_scene load_steps=13 format=3 uid="uid://d2lutv8ys5fpv"]
 
 [ext_resource type="Texture2D" uid="uid://bqssgg700sxw2" path="res://Assets/Sprites/characters/higher_knight.png" id="1_cytgw"]
 [ext_resource type="Script" path="res://Scenes/components/health_comp.gd" id="1_ik1io"]
 [ext_resource type="Script" path="res://Scenes/components/movementComp.gd" id="1_wgi62"]
 [ext_resource type="PackedScene" uid="uid://bs2yhr0r4glg4" path="res://Scenes/short_sword.tscn" id="2_gv0lk"]
 [ext_resource type="Script" path="res://Scenes/components/flipComp.gd" id="5_h5abr"]
+[ext_resource type="PackedScene" uid="uid://b0n2s8qmr7c7m" path="res://Scenes/components/healthBarComp.tscn" id="6_8jb2b"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sbig2"]
 size = Vector2(10, 24)
@@ -72,3 +73,7 @@ frame_progress = 0.288326
 [node name="flipComp" type="Node" parent="." node_paths=PackedStringArray("body")]
 script = ExtResource("5_h5abr")
 body = NodePath("..")
+
+[node name="HealthBarComp" parent="." node_paths=PackedStringArray("hComp") instance=ExtResource("6_8jb2b")]
+position = Vector2(4, -16)
+hComp = NodePath("../healthComp")

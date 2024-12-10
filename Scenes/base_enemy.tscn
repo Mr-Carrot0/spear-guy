@@ -50,4 +50,5 @@ script = ExtResource("1_odrcn")
 
 [node name="flipComp" type="Node" parent="." node_paths=PackedStringArray("body")]
 script = ExtResource("1_odrcn")
+old_flip = true
 body = NodePath("..")

@@ -25,6 +25,8 @@ func die() -> void:
 	if body is Player:
 
 		#get_tree().call_deferred("reload_current_scene")
-		pass
+		Globals.game_over.call_deferred()
 	else:
+		# change this
+		Globals.change_player_score(100)
 		body.queue_free()

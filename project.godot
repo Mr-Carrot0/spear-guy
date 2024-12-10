@@ -11,11 +11,15 @@ config_version=5
 [application]
 
 config/name="spear guy"
-run/main_scene="res://Scenes/leveltest_2.tscn"
+run/main_scene="res://Scenes/marketplace.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 boot_splash/image="res://Assets/Sprites/items/small_e.png"
 boot_splash/use_filter=false
 config/icon="res://Assets/Sprites/items/mspear.png"
+
+[autoload]
+
+Globals="*res://globals.gd"
 
 [display]
 
@@ -24,6 +28,7 @@ window/size/viewport_height=360
 
 [gui]
 
+theme/custom="res://Assets/Fonts/font.tres"
 theme/custom_font="res://Assets/Fonts/C&C Red Alert [INET].ttf"
 theme/default_font_subpixel_positioning=0
 

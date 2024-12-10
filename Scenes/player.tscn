@@ -1,10 +1,11 @@
-[gd_scene load_steps=22 format=3 uid="uid://5jpo611kaau8"]
+[gd_scene load_steps=23 format=3 uid="uid://5jpo611kaau8"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/Player.gd" id="1_2d27w"]
 [ext_resource type="Texture2D" uid="uid://cdmewcfftarud" path="res://Assets/Sprites/stolen/cat_stolen.png" id="2_o2kcy"]
 [ext_resource type="PackedScene" uid="uid://cslfpdip2qy5p" path="res://Scenes/spear-destr.tscn" id="3_qb6i6"]
 [ext_resource type="PackedScene" uid="uid://b0n2s8qmr7c7m" path="res://Scenes/components/healthBarComp.tscn" id="4_w1ag1"]
 [ext_resource type="PackedScene" uid="uid://behoknjndfrll" path="res://Scenes/components/health_comp.tscn" id="5_4a2hd"]
+[ext_resource type="PackedScene" uid="uid://bl75eh4bfbxml" path="res://Scenes/stats.tscn" id="6_5b7ks"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qxq2l"]
 size = Vector2(10, 26)
@@ -214,3 +215,5 @@ hComp = NodePath("../healthComp")
 [node name="healthComp" parent="." node_paths=PackedStringArray("body") instance=ExtResource("5_4a2hd")]
 body = NodePath("..")
 MAX_HEALTH = 1000.0
+
+[node name="stats" parent="." instance=ExtResource("6_5b7ks")]
