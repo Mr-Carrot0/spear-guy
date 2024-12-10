@@ -29,3 +29,4 @@ anchor_bottom = 0.95
 offset_right = 0.279968
 offset_bottom = -3.05176e-05
 theme_override_font_sizes/normal_font_size = 40
+scroll_following = true
