@@ -266,7 +266,7 @@ color = Color(0.955155, 0.775914, 0.457968, 1)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_3cja0")
 autoplay = "default"
-frame_progress = 0.08572
+frame_progress = 0.678103
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_g1vec")
