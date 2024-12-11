@@ -219,7 +219,7 @@ MAX_HEALTH = 1000.0
 
 [node name="stats" parent="." instance=ExtResource("6_5b7ks")]
 
-[node name="Flash" type="Node" parent="." node_paths=PackedStringArray("target_node", "healthComp")]
+[node name="Flash" type="Node" parent="." node_paths=PackedStringArray("target_node", "health")]
 script = ExtResource("7_ywjb7")
 target_node = NodePath("../Sprite2D")
-healthComp = NodePath("../healthComp")
+health = NodePath("../healthComp")

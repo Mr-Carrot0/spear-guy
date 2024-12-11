@@ -5,12 +5,12 @@ class_name Flash
 @export var tint_color: Color = Color(1, 0, 0, 1.0)
 
 @export var target_node: Node2D
-@export var healthComp:healthComp
+@export var health:healthComp
 
 func _ready():
 	if !target_node:
 		target_node = get_tree().current_scene
-	healthComp.damage_taken.connect(apply_tint)
+	health.damage_taken.connect(apply_tint)
 
 func apply_tint():
 	if target_node:

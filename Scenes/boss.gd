@@ -84,7 +84,7 @@ func switch_phase():
 	phase_timer = phase_duration
 	var state = randi() % State.DEFEATED # Randomly pick a phase except DEFEATED it needs to be the last state
 	# in godot enums are named integers 
-	current_state = state   # TODO should cast this to an enum
+	current_state = state as State
 	#if health <= 0:
 	#	current_state = State.DEFEATED
 	

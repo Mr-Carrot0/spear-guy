@@ -80,7 +80,7 @@ body = NodePath("..")
 position = Vector2(4, -16)
 hComp = NodePath("../healthComp")
 
-[node name="Flash" type="Node" parent="." node_paths=PackedStringArray("target_node", "healthComp")]
+[node name="Flash" type="Node" parent="." node_paths=PackedStringArray("target_node", "health")]
 script = ExtResource("7_em6pk")
 target_node = NodePath("../AnimatedSprite2D")
-healthComp = NodePath("../healthComp")
+health = NodePath("../healthComp")

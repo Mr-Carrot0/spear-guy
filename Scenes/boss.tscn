@@ -21,10 +21,11 @@ underling_scene = ExtResource("3_ifyx7")
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
 enable_node_path = NodePath("../healthComp")
 
-[node name="Flash" type="Node" parent="." node_paths=PackedStringArray("target_node", "healthComp")]
+[node name="Flash" type="Node" parent="." node_paths=PackedStringArray("target_node", "health")]
 script = ExtResource("5_d54un")
+tint_color = Color(0.979981, 0.656818, 0.807037, 1)
 target_node = NodePath("../Rawen")
-healthComp = NodePath("../healthComp")
+health = NodePath("../healthComp")
 
 [node name="healthComp" type="Node" parent="." node_paths=PackedStringArray("body")]
 script = ExtResource("3_geivm")

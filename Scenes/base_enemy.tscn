@@ -57,7 +57,7 @@ script = ExtResource("1_odrcn")
 old_flip = true
 body = NodePath("..")
 
-[node name="Flash" type="Node" parent="." node_paths=PackedStringArray("target_node", "healthComp")]
+[node name="Flash" type="Node" parent="." node_paths=PackedStringArray("target_node", "health")]
 script = ExtResource("9_ji7bn")
 target_node = NodePath("../body")
-healthComp = NodePath("../healthComp")
+health = NodePath("../healthComp")

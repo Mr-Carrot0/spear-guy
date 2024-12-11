@@ -1,9 +1,12 @@
-[gd_scene load_steps=5 format=4 uid="uid://80exdd8628dh"]
+[gd_scene load_steps=7 format=4 uid="uid://80exdd8628dh"]
 
 [ext_resource type="PackedScene" uid="uid://ccwiisr78lifd" path="res://Scenes/background.tscn" id="1_0pgfu"]
 [ext_resource type="PackedScene" uid="uid://bboov152741w7" path="res://Scenes/tilemap.tscn" id="2_0ekoe"]
 [ext_resource type="PackedScene" uid="uid://5jpo611kaau8" path="res://Scenes/player.tscn" id="3_kc2l1"]
 [ext_resource type="PackedScene" uid="uid://c7l1ff6vrrjp6" path="res://Scenes/boss.tscn" id="4_oa2p0"]
+[ext_resource type="PackedScene" uid="uid://c806261i1sywi" path="res://Scenes/deathzone.tscn" id="5_rvgcr"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_fcg2m"]
 
 [node name="boss_fight_level" type="Node2D"]
 
@@ -18,3 +21,9 @@ position = Vector2(-101, -102)
 
 [node name="boss" parent="." instance=ExtResource("4_oa2p0")]
 position = Vector2(264, -16)
+
+[node name="deathzone" parent="." instance=ExtResource("5_rvgcr")]
+position = Vector2(275, 524)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="deathzone"]
+shape = SubResource("WorldBoundaryShape2D_fcg2m")
