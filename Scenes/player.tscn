@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://5jpo611kaau8"]
+[gd_scene load_steps=24 format=3 uid="uid://5jpo611kaau8"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/Player.gd" id="1_2d27w"]
 [ext_resource type="Texture2D" uid="uid://xps8a6xso4k4" path="res://Assets/Sprites/stolen/player.png" id="2_kly8p"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b0n2s8qmr7c7m" path="res://Scenes/components/healthBarComp.tscn" id="4_w1ag1"]
 [ext_resource type="PackedScene" uid="uid://behoknjndfrll" path="res://Scenes/components/health_comp.tscn" id="5_4a2hd"]
 [ext_resource type="PackedScene" uid="uid://bl75eh4bfbxml" path="res://Scenes/stats.tscn" id="6_5b7ks"]
+[ext_resource type="Script" path="res://Scenes/components/flash.gd" id="7_ywjb7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qxq2l"]
 size = Vector2(10, 26)
@@ -217,3 +218,8 @@ body = NodePath("..")
 MAX_HEALTH = 1000.0
 
 [node name="stats" parent="." instance=ExtResource("6_5b7ks")]
+
+[node name="Flash" type="Node" parent="." node_paths=PackedStringArray("target_node", "healthComp")]
+script = ExtResource("7_ywjb7")
+target_node = NodePath("../Sprite2D")
+healthComp = NodePath("../healthComp")

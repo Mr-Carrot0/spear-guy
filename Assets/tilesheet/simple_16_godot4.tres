@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=17 format=3 uid="uid://642tmirunb4o"]
+[gd_resource type="TileSet" load_steps=19 format=3 uid="uid://642tmirunb4o"]
 
 [ext_resource type="Texture2D" uid="uid://dvlocyd4cya2d" path="res://Assets/tilesheet/simple_16.png" id="1"]
 [ext_resource type="Material" uid="uid://bb68rhwo6mprg" path="res://Assets/shaders/water.tres" id="1_l8crw"]
@@ -12,6 +12,10 @@
 [ext_resource type="PackedScene" uid="uid://kqesunn8tyxr" path="res://Scenes/arrow.tscn" id="9_38yqj"]
 [ext_resource type="PackedScene" uid="uid://cp65bixuy6an1" path="res://Scenes/icicle.tscn" id="11_kgyrs"]
 [ext_resource type="PackedScene" uid="uid://dnbblff7f6wsu" path="res://Scenes/platform.tscn" id="12_1u2bo"]
+[ext_resource type="PackedScene" uid="uid://d2lutv8ys5fpv" path="res://Scenes/knight.tscn" id="13_tb0kt"]
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_ujltw"]
+tile_data = PackedInt32Array(0, 196610, 0, 65536, 262146, 0, 131072, 262146, 0, 196608, 262146, 0, 262144, 196610, 1, 327680, 262146, 1, 393216, 262146, 1, 458752, 262146, 1, 524288, 262146, 1, 589824, 262146, 1, 655360, 262146, 1, 720896, 262146, 1)
 
 [sub_resource type="TileSetAtlasSource" id="2"]
 resource_name = "Atlas1"
@@ -205,6 +209,7 @@ scenes/5/scene = ExtResource("8_v6klp")
 scenes/6/scene = ExtResource("9_38yqj")
 scenes/7/scene = ExtResource("11_kgyrs")
 scenes/8/scene = ExtResource("12_1u2bo")
+scenes/9/scene = ExtResource("13_tb0kt")
 
 [resource]
 physics_layer_0/collision_layer = 1
@@ -213,3 +218,4 @@ sources/0 = SubResource("2")
 sources/1 = SubResource("TileSetAtlasSource_vupjc")
 sources/4 = SubResource("TileSetScenesCollectionSource_n6fd4")
 sources/2 = SubResource("TileSetAtlasSource_5t6qs")
+pattern_0 = SubResource("TileMapPattern_ujltw")

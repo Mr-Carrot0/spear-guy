@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dkrbcfo4ck83x"]
+[gd_scene load_steps=11 format=3 uid="uid://dkrbcfo4ck83x"]
 
 [ext_resource type="Script" path="res://Scenes/components/flipComp.gd" id="1_odrcn"]
 [ext_resource type="Texture2D" uid="uid://honudsoswswb" path="res://Assets/Sprites/items/small_e.png" id="2_4ve6c"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bgsq7b0um0iak" path="res://Scenes/blade.tscn" id="4_mo83i"]
 [ext_resource type="Script" path="res://Scenes/components/health_comp.gd" id="5_tpk5u"]
 [ext_resource type="PackedScene" uid="uid://b0n2s8qmr7c7m" path="res://Scenes/components/healthBarComp.tscn" id="6_sisqy"]
+[ext_resource type="Script" path="res://Scenes/components/flash.gd" id="9_ji7bn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_trr20"]
 size = Vector2(13, 23)
@@ -32,6 +33,7 @@ shape = SubResource("RectangleShape2D_trr20")
 [node name="MovementComp" type="Node" parent="." node_paths=PackedStringArray("character_body")]
 script = ExtResource("3_s5xwm")
 character_body = NodePath("..")
+dir = -1.0
 speed = 900.0
 
 [node name="blade" parent="." instance=ExtResource("4_mo83i")]
@@ -40,7 +42,7 @@ position = Vector2(-4, 12)
 [node name="healthComp" type="Node" parent="." node_paths=PackedStringArray("body")]
 script = ExtResource("5_tpk5u")
 body = NodePath("..")
-MAX_HEALTH = 200.0
+MAX_HEALTH = 500.0
 score_worth = 0
 
 [node name="HealthBarComp" parent="." node_paths=PackedStringArray("hComp") instance=ExtResource("6_sisqy")]
@@ -54,3 +56,8 @@ script = ExtResource("1_odrcn")
 script = ExtResource("1_odrcn")
 old_flip = true
 body = NodePath("..")
+
+[node name="Flash" type="Node" parent="." node_paths=PackedStringArray("target_node", "healthComp")]
+script = ExtResource("9_ji7bn")
+target_node = NodePath("../body")
+healthComp = NodePath("../healthComp")

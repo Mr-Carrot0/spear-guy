@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://c7l1ff6vrrjp6"]
+[gd_scene load_steps=10 format=3 uid="uid://c7l1ff6vrrjp6"]
 
 [ext_resource type="Script" path="res://Scenes/boss.gd" id="1_cfjof"]
 [ext_resource type="PackedScene" uid="uid://yxxgkwkv3y5g" path="res://Scenes/wall.tscn" id="2_gfbji"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://Scenes/components/health_comp.gd" id="3_geivm"]
 [ext_resource type="PackedScene" uid="uid://dkrbcfo4ck83x" path="res://Scenes/base_enemy.tscn" id="3_ifyx7"]
 [ext_resource type="PackedScene" uid="uid://cp65bixuy6an1" path="res://Scenes/icicle.tscn" id="3_s2n7w"]
+[ext_resource type="Script" path="res://Scenes/components/flash.gd" id="5_d54un"]
 [ext_resource type="PackedScene" uid="uid://b0n2s8qmr7c7m" path="res://Scenes/components/healthBarComp.tscn" id="7_50tl5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ybe0d"]
@@ -19,6 +20,11 @@ underling_scene = ExtResource("3_ifyx7")
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
 enable_node_path = NodePath("../healthComp")
+
+[node name="Flash" type="Node" parent="." node_paths=PackedStringArray("target_node", "healthComp")]
+script = ExtResource("5_d54un")
+target_node = NodePath("../Rawen")
+healthComp = NodePath("../healthComp")
 
 [node name="healthComp" type="Node" parent="." node_paths=PackedStringArray("body")]
 script = ExtResource("3_geivm")
