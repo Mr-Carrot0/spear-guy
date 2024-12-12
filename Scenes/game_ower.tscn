@@ -40,5 +40,5 @@ text = "Play again"
 
 [node name="quit" type="Button" parent="c"]
 layout_mode = 2
-text = "quit
+text = "Quit
 "
