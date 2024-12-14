@@ -46,14 +46,14 @@ position = Vector2(8, 8)
 rotation = -0.215937
 texture = ExtResource("2_nrg7o")
 
-[node name="Label" type="Label" parent="ColorRect"]
+[node name="Label" type="RichTextLabel" parent="ColorRect"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -304.0
-offset_top = 16.0
-offset_right = 312.0
-offset_bottom = 176.0
-theme_override_constants/line_spacing = -2
-theme_override_font_sizes/font_size = 26
+anchor_left = 0.025
+anchor_top = 0.075
+anchor_right = 0.973
+anchor_bottom = 0.95
+offset_right = 0.279968
+offset_bottom = -3.05176e-05
+theme_override_font_sizes/normal_font_size = 40
+scroll_following = true
