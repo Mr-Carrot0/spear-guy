@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://6spu1r7mrulb"]
+
+[ext_resource type="Script" path="res://Scenes/components/bladehit_sound.gd" id="1_qdv4b"]
+
+[node name="bladehitSound" type="Node"]
+script = ExtResource("1_qdv4b")

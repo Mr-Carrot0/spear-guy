@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bs2yhr0r4glg4"]
+[gd_scene load_steps=7 format=3 uid="uid://cm3or5tm6xkib"]
 
 [ext_resource type="Script" path="res://Scenes/components/damage_comp.gd" id="1_e1ey5"]
 [ext_resource type="Texture2D" uid="uid://bdmro3rcdfrdm" path="res://Assets/Sprites/items/sword.png" id="2_a44jp"]
 [ext_resource type="Script" path="res://Scenes/components/health_comp.gd" id="3_iov1y"]
+[ext_resource type="AudioStream" uid="uid://di06eoalysbcb" path="res://Assets/Audio/hitBlade.wav" id="4_ru7fs"]
+[ext_resource type="Script" path="res://Scenes/components/damageSoundComp.gd" id="4_wv4kn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1vv0k"]
 size = Vector2(3, 12)
@@ -24,3 +26,9 @@ script = ExtResource("3_iov1y")
 body = NodePath("..")
 MAX_HEALTH = 10.0
 score_worth = 200
+
+[node name="damageSoundComp" type="AudioStreamPlayer" parent="." node_paths=PackedStringArray("health")]
+stream = ExtResource("4_ru7fs")
+script = ExtResource("4_wv4kn")
+health = NodePath("../healthComp")
+keep_playing_on_parent_free = true

@@ -20,6 +20,13 @@ var marketplace: PackedScene
 func game_over():
 	get_tree().change_scene_to_file("res://Scenes/game_ower.tscn")
 
+func play_sound(sound: String):
+	var player = AudioStreamPlayer.new()
+	player.stream = load(sound)
+	player.finished.connect(player.queue_free)
+	add_child(player)
+	player.play()
+	
 	
 # https://www.reddit.com/r/godot/comments/17h3o1g/switching_between_scenes_but_keep_the_state/
 # https://docs.godotengine.org/en/stable/tutorials/scripting/singletons_autoload.html

@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bgsq7b0um0iak"]
+[gd_scene load_steps=7 format=3 uid="uid://bgsq7b0um0iak"]
 
 [ext_resource type="Texture2D" uid="uid://drhowmvlyor2k" path="res://Assets/Sprites/items/blade.png" id="1_3dxfn"]
 [ext_resource type="Script" path="res://Scenes/components/damage_comp.gd" id="2_4s56s"]
+[ext_resource type="AudioStream" uid="uid://di06eoalysbcb" path="res://Assets/Audio/hitBlade.wav" id="2_mo85k"]
 [ext_resource type="Script" path="res://Scenes/components/health_comp.gd" id="3_euqik"]
+[ext_resource type="Script" path="res://Scenes/components/damageSoundComp.gd" id="3_n47aj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hu4mv"]
 size = Vector2(3, 11)
@@ -13,6 +15,12 @@ rotation = -1.34565
 [node name="Blade" type="Sprite2D" parent="."]
 position = Vector2(0, -6)
 texture = ExtResource("1_3dxfn")
+
+[node name="damageSoundComp" type="AudioStreamPlayer" parent="." node_paths=PackedStringArray("health")]
+stream = ExtResource("2_mo85k")
+script = ExtResource("3_n47aj")
+health = NodePath("../damageComp/healthComp")
+keep_playing_on_parent_free = true
 
 [node name="damageComp" type="Area2D" parent="."]
 script = ExtResource("2_4s56s")
