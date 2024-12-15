@@ -24,10 +24,15 @@ func take_damage(amount: int):
 		
 func die() -> void:
 	if body is Player:
-
-		#get_tree().call_deferred("reload_current_scene")
+		# lose
+		Globals.play_sound("res://Assets/Audio/losetrumpet.mp3")
+		Globals.game_over.call_deferred()
+	elif body is Boss:
+		# win
+		Globals.change_player_score(score_worth)
+		Globals.play_sound("res://Assets/Audio/winfretless.ogg")
 		Globals.game_over.call_deferred()
 	else:
-
+		
 		Globals.change_player_score(score_worth)
 		body.queue_free()

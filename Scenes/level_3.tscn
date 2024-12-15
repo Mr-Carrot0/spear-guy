@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=4 uid="uid://se2d1tg5nimr"]
+[gd_scene load_steps=7 format=4 uid="uid://se2d1tg5nimr"]
 
 [ext_resource type="PackedScene" uid="uid://bboov152741w7" path="res://Scenes/tilemap.tscn" id="1_4f2ex"]
 [ext_resource type="PackedScene" uid="uid://5jpo611kaau8" path="res://Scenes/player.tscn" id="2_203x0"]
 [ext_resource type="PackedScene" uid="uid://c806261i1sywi" path="res://Scenes/deathzone.tscn" id="3_l0aqn"]
 [ext_resource type="PackedScene" path="res://Scenes/portal.tscn" id="4_udje7"]
+[ext_resource type="AudioStream" uid="uid://hjncdeym50vx" path="res://Assets/Audio/Chiptune-AnTone/An_Tone_Chiptune4/An_Tone - funventure full loop.wav" id="5_wwtjx"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_uw0ut"]
 
@@ -23,4 +24,9 @@ shape = SubResource("WorldBoundaryShape2D_uw0ut")
 
 [node name="portal" parent="." instance=ExtResource("4_udje7")]
 position = Vector2(3875, -332)
-scene = "marketplace"
+scene = "leveltest_2"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_wwtjx")
+volume_db = -7.145
+autoplay = true
