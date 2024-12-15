@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://3vsrpfk1in30"]
+[gd_scene load_steps=3 format=3 uid="uid://3vsrpfk1in30"]
 
 [ext_resource type="PackedScene" uid="uid://s2ylh25q74pd" path="res://Scenes/text_box.tscn" id="1_bu7sl"]
+[ext_resource type="Script" path="res://Scenes/intro.gd" id="1_i12ph"]
 
-[node name="intro" type="Node2D"]
+[node name="intro" type="Node"]
+script = ExtResource("1_i12ph")
 
 [node name="text_box" parent="." instance=ExtResource("1_bu7sl")]
 contents = Array[String](["Once upon a time there was a prosperous country known as the Kingdom of Spears. The people had won many wars over the years and as the name implied, their weapon of choice was the spear, a long reaching stick with a piercing blade ready for stabbing your opponents with all your might. The people took pride in the simplicity and exactness of the polearm design: there was no easy way to hide such a humongous weapon if one was planing to put it to use. The duel of the spear became the definitive display of power over their opponents and the holy decider of fates. Conflicts whose consequences were worthy of putting one’s life on the line were resolved this way. The outcome, of course, was not always fatal, but a noble being beaten by a humble farmer was not the greatest outlook and in these cases they were stripped of their title and the challenger were offered it instead, if they wanted it.
@@ -10,3 +12,5 @@ contents = Array[String](["Once upon a time there was a prosperous country known
 ", "So when [Raven of the Night] leaped from the balcony, landed before the king and stabbed the king through the heart, it became the shock of the century and the palace was thrown into chaos. Terry Godfeiry the third was dead and the testament was sourly lacking in detail regarding who the next should be. There was talks of holding a kingdom-wide tournament that nobody wanted to run, debates as to whether the ambiguity in the late king’s will was due to an unusual choice of candidate or a mundane one. The princess did her best to calm the situation down, but her authority did little when her title were dependent on the title of a corpse. Eventually she gave up and instead went to comfort her little brother, who’s blood was boiling as rage overtook him and he made the decision to take revenge on his father. After boldly announcing his intentions to kill the murderer, no matter the cost. His sister tried to diverge him of such dangerous thoughts, but no words could convince him to calm down. 
 ", "This is when the royal church reached out and offered him the recourses necessary to complete his goal (A carriage drawn by two horses, Food and water for three weeks) as well as a holy weapon locked within the depths of the treasury: [the spear of destruction]
 ", "And so, the adventure of [SPEAR GUY] begins…"])
+
+[connection signal="end" from="text_box" to="." method="_on_text_box_end"]

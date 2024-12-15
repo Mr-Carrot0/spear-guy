@@ -12,6 +12,8 @@ var current_content_index: int
 var time_elapsed: float = 0
 var prev_char: String = ''
 
+signal end
+
 func _ready() -> void:
 	next_content()
 
@@ -49,4 +51,5 @@ func next_content() -> void:
 		label.text = ""
 		
 	else:
+		end.emit()
 		queue_free()
