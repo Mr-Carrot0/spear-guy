@@ -13,8 +13,8 @@ func reset_player_score() -> void:
 
 func reset_game():
 	reset_player_score()
-	var default_scene_path = ProjectSettings.get_setting("application/run/main_scene")
-	get_tree().change_scene_to_file(default_scene_path)
+	#var default_scene_path = ProjectSettings.get_setting("application/run/main_scene")
+	get_tree().change_scene_to_file("res://Scenes/marketplace.tscn")
 
 var marketplace: PackedScene
 func game_over():
