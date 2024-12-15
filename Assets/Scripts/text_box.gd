@@ -10,6 +10,7 @@ var base_delay: float = 1 / typeingspeed
 var current_content: String
 var current_content_index: int
 var time_elapsed: float = 0
+var prev_char: String = ''
 
 func _ready() -> void:
 	next_content()
@@ -22,11 +23,14 @@ func _process(delta: float) -> void:
 		
 		if current_char == '\n':
 			delay *= 5
+		elif (prev_char in [',','.',':']):
+			delay *= 3
 		
 		if time_elapsed > delay:
 			label.text += current_char
 			time_elapsed = 0
 			current_content_index += 1
+		prev_char = current_char
 			
 
 func _input(_event: InputEvent) -> void:
