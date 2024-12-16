@@ -103,7 +103,7 @@ Carrot with Shades.
 See [top](##Spelöversikt) or Johans other [notes](misc/spear-guy-story-outline.md)
 
 
-## Spelvärld
+## Spelvärld —
 
 ### Look and feel
 
