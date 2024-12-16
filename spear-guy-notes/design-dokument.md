@@ -133,10 +133,10 @@ Shop
 
 ### Ljud/musik
 
-- Backgrundsmusik,
+- Bakgrundsmusik,
 ändras beroende på hur intensivt det är 
 
-## Spelarfeedback
+## Spelar-feedback
 
 - Om du gör dåligt så dör du.
 - Gör du bra får du guld och mindre skada.
