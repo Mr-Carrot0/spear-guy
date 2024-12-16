@@ -139,7 +139,5 @@ Shop
 ## Spelarfeedback
 
 - Om du gör dåligt så dör du.
-
 - Gör du bra får du guld och mindre skada.
-
 - Inte svårt att hitta rätt (gå höger)
