@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "chars/raven-of-the-night.md",
+                "file": "misc/spear-guy-story-outline.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "raven-of-the-night"
+              "title": "spear-guy-story-outline"
             }
           },
           {
@@ -35,8 +35,7 @@
               "title": "design-dokument"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -203,13 +202,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "37d23546f5602439",
+  "active": "acf39a2b5c10d496",
   "lastOpenFiles": [
-    "chars/raven-of-the-night.md",
-    "-ignore/img/raven-boss-pattern.jpg",
-    "design-dokument.md",
-    "misc/spear-guy-story-outline.md",
     "misc/design-doc.md",
+    "chars/raven-of-the-night.md",
+    "design-dokument.md",
+    "-ignore/img/raven-boss-pattern.jpg",
+    "misc/spear-guy-story-outline.md",
     "misc/Background.md"
   ]
 }
