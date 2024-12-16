@@ -16,6 +16,8 @@ texture = ExtResource("2_4lexi")
 
 [node name="damageComp(hitbox)" type="Area2D" parent="head" index="0"]
 position = Vector2(-15.5, 15.5)
+collision_layer = 0
+collision_mask = 3
 script = ExtResource("3_nxld8")
 damage_amount = 30
 

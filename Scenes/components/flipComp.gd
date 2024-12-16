@@ -6,7 +6,7 @@ class_name flipComp
 @export var body: CharacterBody2D
 
 func _physics_process(_delta: float) -> void:
-	if body:
+	if body and body.velocity.x != 0:
 		set_flip(body.velocity.x < 0)
 
 func set_flip(value: bool):

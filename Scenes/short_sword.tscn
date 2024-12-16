@@ -10,6 +10,7 @@
 size = Vector2(3, 12)
 
 [node name="short_sword" type="Area2D"]
+collision_layer = 2
 script = ExtResource("1_e1ey5")
 
 [node name="Sword" type="Sprite2D" parent="."]

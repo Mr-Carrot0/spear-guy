@@ -214,7 +214,8 @@ scenes/9/scene = ExtResource("13_tb0kt")
 scenes/10/scene = ExtResource("6_8j1nd")
 
 [resource]
-physics_layer_0/collision_layer = 1
+physics_layer_0/collision_layer = 4
+physics_layer_0/collision_mask = 7
 terrain_set_0/mode = 0
 sources/0 = SubResource("2")
 sources/1 = SubResource("TileSetAtlasSource_vupjc")

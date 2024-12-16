@@ -13,6 +13,8 @@
 size = Vector2(13, 31)
 
 [node name="boss" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 5
 script = ExtResource("1_cfjof")
 summonable_scene_1 = ExtResource("2_gfbji")
 summonable_scene_2 = ExtResource("3_s2n7w")

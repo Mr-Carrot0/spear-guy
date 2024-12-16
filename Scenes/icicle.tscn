@@ -5,6 +5,8 @@
 [ext_resource type="Script" path="res://Scenes/components/damage_comp.gd" id="3_qf04q"]
 
 [node name="icicle" type="AnimatableBody2D"]
+collision_layer = 4
+collision_mask = 5
 script = ExtResource("1_37m2t")
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
@@ -16,6 +18,8 @@ enable_node_path = NodePath("../damageComp/CollisionPolygon2D")
 texture = ExtResource("2_3g2cp")
 
 [node name="damageComp" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 5
 script = ExtResource("3_qf04q")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="damageComp"]

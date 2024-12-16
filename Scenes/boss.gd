@@ -70,7 +70,7 @@ func handle_dash_phase():
 	#	move_and_slide()
 
 func handle_underling_phase():
-	if randf() < 0.05: 
+	if randf() < 0.03: 
 		summon_underling()
 		
 func summon_underling():

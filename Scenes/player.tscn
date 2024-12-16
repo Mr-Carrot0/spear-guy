@@ -1,7 +1,8 @@
-[gd_scene load_steps=26 format=3 uid="uid://5jpo611kaau8"]
+[gd_scene load_steps=28 format=3 uid="uid://5jpo611kaau8"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/Player.gd" id="1_2d27w"]
 [ext_resource type="Texture2D" uid="uid://xps8a6xso4k4" path="res://Assets/Sprites/stolen/player.png" id="2_kly8p"]
+[ext_resource type="Script" path="res://Scenes/components/flipComp.gd" id="2_nxj56"]
 [ext_resource type="PackedScene" uid="uid://cslfpdip2qy5p" path="res://Scenes/spear-destr.tscn" id="3_qb6i6"]
 [ext_resource type="PackedScene" uid="uid://b0n2s8qmr7c7m" path="res://Scenes/components/healthBarComp.tscn" id="4_w1ag1"]
 [ext_resource type="PackedScene" uid="uid://behoknjndfrll" path="res://Scenes/components/health_comp.tscn" id="5_4a2hd"]
@@ -9,6 +10,7 @@
 [ext_resource type="Script" path="res://Scenes/components/flash.gd" id="7_ywjb7"]
 [ext_resource type="AudioStream" uid="uid://c7uio1bsvhayr" path="res://Assets/Audio/hurt.wav" id="8_8g0aj"]
 [ext_resource type="Script" path="res://Scenes/components/damageSoundComp.gd" id="9_vocl5"]
+[ext_resource type="AudioStream" uid="uid://b1ek3prmwcltw" path="res://Assets/Audio/jump.wav" id="10_0nduc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qxq2l"]
 size = Vector2(10, 26)
@@ -144,6 +146,7 @@ break_loop_at_end = true
 autorestart_delay = 0.0
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_thp2w"]
+graph_offset = Vector2(18.1468, 87.9375)
 nodes/Animation/node = SubResource("AnimationNodeAnimation_ecfws")
 nodes/Animation/position = Vector2(186.667, 160)
 "nodes/Animation 2/node" = SubResource("AnimationNodeAnimation_htqfk")
@@ -164,8 +167,13 @@ nodes/spin/position = Vector2(560, 480)
 node_connections = [&"TimeScale", 0, &"spin", &"m", 0, &"on_ground", &"m", 1, &"TimeScale", &"on_ground", 0, &"Animation", &"on_ground", 1, &"Animation 2", &"output", 0, &"m", &"spin", 0, &"Animation 3", &"spin", 1, &"Animation 4"]
 
 [node name="Player" type="CharacterBody2D"]
+collision_mask = 6
 script = ExtResource("1_2d27w")
 metadata/_edit_lock_ = true
+
+[node name="flipComp" type="Node" parent="." node_paths=PackedStringArray("body")]
+script = ExtResource("2_nxj56")
+body = NodePath("..")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-2, 9)
@@ -189,12 +197,12 @@ libraries = {
 tree_root = SubResource("AnimationNodeBlendTree_thp2w")
 anim_player = NodePath("../AnimationPlayer")
 parameters/TimeScale/scale = 1.2
-parameters/m/current_state = "ground"
+parameters/m/current_state = "air"
 parameters/m/transition_request = ""
-parameters/m/current_index = 0
-parameters/on_ground/current_state = "walk"
+parameters/m/current_index = 1
+parameters/on_ground/current_state = "idle"
 parameters/on_ground/transition_request = ""
-parameters/on_ground/current_index = 1
+parameters/on_ground/current_index = 0
 parameters/spin/active = false
 parameters/spin/internal_active = false
 parameters/spin/request = 0
@@ -206,7 +214,7 @@ metadata/_edit_lock_ = true
 
 [node name="weapon" parent="." instance=ExtResource("3_qb6i6")]
 position = Vector2(2, 10)
-rotation = 0.586431
+rotation = 0.783653
 is_indestrucable = true
 
 [node name="HealthBarComp" parent="." node_paths=PackedStringArray("hComp") instance=ExtResource("4_w1ag1")]
@@ -230,3 +238,7 @@ health = NodePath("../healthComp")
 stream = ExtResource("8_8g0aj")
 script = ExtResource("9_vocl5")
 health = NodePath("../healthComp")
+
+[node name="jumpSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_0nduc")
+volume_db = -7.647

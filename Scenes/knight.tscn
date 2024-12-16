@@ -48,6 +48,8 @@ animations = [{
 }]
 
 [node name="knight" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 5
 
 [node name="MovementComp" type="Node" parent="." node_paths=PackedStringArray("character_body")]
 script = ExtResource("1_wgi62")
@@ -84,3 +86,5 @@ hComp = NodePath("../healthComp")
 script = ExtResource("7_em6pk")
 target_node = NodePath("../AnimatedSprite2D")
 health = NodePath("../healthComp")
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]

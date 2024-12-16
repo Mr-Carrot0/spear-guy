@@ -1,10 +1,8 @@
 extends Actor
 class_name Player
 
-
 @onready var _tree: AnimationTree = $AnimationTree
-
-var is_flipped = false
+@onready var weapon: Spear = $weapon
 
 var debug = {
 	"main": 0
@@ -17,18 +15,26 @@ var debug = {
 	, "oneshot": 1
 	,
 }
-var old_flip = is_flipped
+
 
 func _ready():
-#	super()
 	_tree.active = true
 	
 func _physics_process(delta) -> void:
 
 	super(delta)
+	
+	# rotate spear
+	var spear_rotation = PI/6 * delta
+	if Input.is_action_pressed("look_up"):
+		weapon.rotate(spear_rotation)
 		
-	# Handle jump.
+	if Input.is_action_pressed("look_lown"):
+		weapon.rotate(-spear_rotation)
+		
+		
 	if Input.is_action_just_pressed("jump") and is_on_floor():
+		$jumpSound.play()
 		velocity.y = jmp_vel
 
 		_tree["parameters/m/transition_request"] = "air"
@@ -41,12 +47,8 @@ func _physics_process(delta) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, speed)
 
-	if x_dir != 0:
-		is_flipped = bool(1 - x_dir)
 	# var direction = velocity.normalized()
-	if is_flipped != old_flip:
-		flip()
-		old_flip = is_flipped
+
 	
 	## TREE
 	# animation_tree["parameters/[Transition]/transition_request"] = "[state]"

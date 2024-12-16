@@ -10,6 +10,8 @@ texture = ExtResource("1_shtik")
 
 [node name="damageComp" type="Area2D" parent="."]
 position = Vector2(0, 10)
+collision_layer = 2
+collision_mask = 5
 script = ExtResource("2_i2562")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="damageComp"]

@@ -23,6 +23,7 @@ health = NodePath("../damageComp/healthComp")
 keep_playing_on_parent_free = true
 
 [node name="damageComp" type="Area2D" parent="."]
+collision_layer = 2
 script = ExtResource("2_4s56s")
 damage_amount = 40
 
