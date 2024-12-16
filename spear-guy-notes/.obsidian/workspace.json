@@ -27,15 +27,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "misc/design-doc.md",
+                "file": "design-dokument.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "design-doc"
+              "title": "design-dokument"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -202,13 +203,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "acf39a2b5c10d496",
+  "active": "37d23546f5602439",
   "lastOpenFiles": [
     "misc/spear-guy-story-outline.md",
-    "misc/design-doc.md",
-    "misc/Background.md",
     "design-dokument.md",
+    "misc/design-doc.md",
     "chars/raven-of-the-night.md",
-    "-ignore/img/raven-boss-pattern.jpg"
+    "-ignore/img/raven-boss-pattern.jpg",
+    "misc/Background.md"
   ]
 }
