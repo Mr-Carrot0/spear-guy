@@ -56,8 +56,7 @@ fram till att man möter slutbossen.
 - Vapensystem där man kan få bättre/uppgradera vapen
 - etc
 
-- Websida
-- Itch.io
+- Hemsida
 
   
 <!-- Här ska du bryta ner syftet till några specificerade och avgränsade -->
