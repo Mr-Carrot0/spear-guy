@@ -5,4 +5,4 @@ aliases:
   - Raven Of The Night
 ---
 
-![raven-boss-pattern](raven-boss-pattern.jpg)
+![raven-boss-pattern](../-ignore/img/raven-boss-pattern.jpg)
