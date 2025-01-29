@@ -1,0 +1,49 @@
+[gd_scene load_steps=5 format=3 uid="uid://bkvjs2irjn5au"]
+
+[ext_resource type="Script" path="res://Assets/Scripts/spring.gd" id="1_c4jsr"]
+[ext_resource type="Texture2D" uid="uid://d0l3c5o0f1q2i" path="res://Assets/Sprites/terrain/spring.png" id="2_jns0h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eqw1k"]
+size = Vector2(16, 10)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v7v3f"]
+size = Vector2(8, 2)
+
+[node name="spring" type="Node2D"]
+position = Vector2(0, 1)
+script = ExtResource("1_c4jsr")
+
+[node name="Spring" type="Sprite2D" parent="."]
+position = Vector2(0, -1)
+texture = ExtResource("2_jns0h")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(0, 7)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, -5)
+shape = SubResource("RectangleShape2D_eqw1k")
+
+[node name="jumpad" type="Area2D" parent="."]
+position = Vector2(0, 7)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="jumpad"]
+position = Vector2(0, -11)
+shape = SubResource("RectangleShape2D_v7v3f")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+position = Vector2(0, -5)
+amount = 10
+preprocess = 2.0
+speed_scale = 0.3
+explosiveness = 0.03
+randomness = 1.0
+lifetime_randomness = 0.12
+fixed_fps = 12
+emission_shape = 3
+emission_rect_extents = Vector2(4, 1)
+spread = 93.65
+gravity = Vector2(0, -9)
+color = Color(0.999999, 0.983563, 0.679382, 1)
+
+[connection signal="body_entered" from="jumpad" to="." method="_on_jumpad_body_entered"]
