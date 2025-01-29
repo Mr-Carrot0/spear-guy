@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://cbamjqww2fpbm"]
+
+[ext_resource type="Script" path="res://Assets/Scripts/heal_item.gd" id="1_d47vb"]
+[ext_resource type="Script" path="res://Scenes/components/damage_comp.gd" id="2_gf77c"]
+[ext_resource type="Texture2D" uid="uid://cl8fhicpsmfxd" path="res://Assets/Sprites/items/heart.png" id="3_wf6ee"]
+[ext_resource type="AudioStream" uid="uid://b0hvhscvlvj3t" path="res://Assets/Audio/heal.wav" id="4_qysdv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mind2"]
+radius = 6.0
+
+[node name="heal_item" type="Node2D"]
+script = ExtResource("1_d47vb")
+
+[node name="damageComp" type="Area2D" parent="."]
+script = ExtResource("2_gf77c")
+damage_amount = -100
+knockback = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="damageComp"]
+shape = SubResource("CircleShape2D_mind2")
+debug_color = Color(0.929663, 3.26326e-05, 0.659844, 0.42)
+
+[node name="Heart" type="Sprite2D" parent="."]
+position = Vector2(0, 1)
+texture = ExtResource("3_wf6ee")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_qysdv")
+volume_db = 1.333
