@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bkvjs2irjn5au"]
+[gd_scene load_steps=6 format=3 uid="uid://bkvjs2irjn5au"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/spring.gd" id="1_c4jsr"]
 [ext_resource type="Texture2D" uid="uid://d0l3c5o0f1q2i" path="res://Assets/Sprites/terrain/spring.png" id="2_jns0h"]
+[ext_resource type="AudioStream" uid="uid://b1ek3prmwcltw" path="res://Assets/Audio/jump.wav" id="3_4cesv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eqw1k"]
 size = Vector2(16, 10)
@@ -12,6 +13,7 @@ size = Vector2(8, 2)
 [node name="spring" type="Node2D"]
 position = Vector2(0, 1)
 script = ExtResource("1_c4jsr")
+strength = 500
 
 [node name="Spring" type="Sprite2D" parent="."]
 position = Vector2(0, -1)
@@ -45,5 +47,10 @@ emission_rect_extents = Vector2(4, 1)
 spread = 93.65
 gravity = Vector2(0, -9)
 color = Color(0.999999, 0.983563, 0.679382, 1)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_4cesv")
+volume_db = 1.333
+pitch_scale = 1.61
 
 [connection signal="body_entered" from="jumpad" to="." method="_on_jumpad_body_entered"]

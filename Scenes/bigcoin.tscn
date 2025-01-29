@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://il1gf2va3j5d"]
+
+[ext_resource type="PackedScene" uid="uid://byvxv64c7k1w7" path="res://Scenes/coin.tscn" id="1_davv3"]
+
+[node name="bigcoin" instance=ExtResource("1_davv3")]
+score = 1000
+
+[node name="CPUParticles2D" parent="." index="0"]
+scale = Vector2(2, 2)
+
+[node name="AnimatedSprite2D" parent="." index="1"]
+scale = Vector2(2, 2)
+
+[node name="CollisionShape2D" parent="." index="2"]
+scale = Vector2(2, 2)
+
+[node name="pickupSound" parent="." index="3"]
+volume_db = 1.0
+pitch_scale = 1.14

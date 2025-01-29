@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=22 format=3 uid="uid://642tmirunb4o"]
+[gd_resource type="TileSet" load_steps=23 format=3 uid="uid://642tmirunb4o"]
 
 [ext_resource type="Texture2D" uid="uid://dvlocyd4cya2d" path="res://Assets/tilesheet/simple_16.png" id="1"]
 [ext_resource type="Material" uid="uid://bb68rhwo6mprg" path="res://Assets/shaders/water.tres" id="1_l8crw"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://yj1covomf4oh" path="res://Scenes/bottle.tscn" id="7_u0ud4"]
 [ext_resource type="PackedScene" uid="uid://cbamjqww2fpbm" path="res://Scenes/heal_item.tscn" id="8_7camm"]
 [ext_resource type="PackedScene" uid="uid://ccjhuq4jutdug" path="res://Scenes/torch.tscn" id="8_v6klp"]
+[ext_resource type="PackedScene" uid="uid://il1gf2va3j5d" path="res://Scenes/bigcoin.tscn" id="9_4xein"]
 [ext_resource type="PackedScene" uid="uid://kqesunn8tyxr" path="res://Scenes/arrow.tscn" id="9_38yqj"]
 [ext_resource type="PackedScene" uid="uid://cp65bixuy6an1" path="res://Scenes/icicle.tscn" id="11_kgyrs"]
 [ext_resource type="PackedScene" uid="uid://dnbblff7f6wsu" path="res://Scenes/platform.tscn" id="12_1u2bo"]
@@ -215,7 +216,8 @@ scenes/8/scene = ExtResource("12_1u2bo")
 scenes/9/scene = ExtResource("13_tb0kt")
 scenes/10/scene = ExtResource("6_8j1nd")
 scenes/11/scene = ExtResource("7_ddkbk")
-scenes/12/scene = ExtResource("8_7camm")
+scenes/14/scene = ExtResource("8_7camm")
+scenes/15/scene = ExtResource("9_4xein")
 
 [resource]
 physics_layer_0/collision_layer = 4
