@@ -88,3 +88,5 @@ target_node = NodePath("../AnimatedSprite2D")
 health = NodePath("../healthComp")
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
+position = Vector2(-0.499998, -4)
+scale = Vector2(3.15, 2.1)

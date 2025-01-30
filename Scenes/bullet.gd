@@ -1,7 +1,7 @@
 extends damageComp
 class_name Bullet
 
-var speed = -200
+@export var speed = -200
 
 func _ready() -> void:
 	super()
