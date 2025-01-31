@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=25 format=3 uid="uid://642tmirunb4o"]
+[gd_resource type="TileSet" load_steps=26 format=3 uid="uid://642tmirunb4o"]
 
 [ext_resource type="Texture2D" uid="uid://dvlocyd4cya2d" path="res://Assets/tilesheet/simple_16.png" id="1"]
 [ext_resource type="Material" uid="uid://bb68rhwo6mprg" path="res://Assets/shaders/water.tres" id="1_l8crw"]
@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://b30gwx17t6f0f" path="res://Scenes/canon.tscn" id="9_h7dat"]
 [ext_resource type="PackedScene" uid="uid://cp65bixuy6an1" path="res://Scenes/icicle.tscn" id="11_kgyrs"]
 [ext_resource type="PackedScene" uid="uid://dnbblff7f6wsu" path="res://Scenes/platform.tscn" id="12_1u2bo"]
+[ext_resource type="PackedScene" uid="uid://do65g263y2idg" path="res://Scenes/crumpling_block.tscn" id="12_7pqk4"]
 [ext_resource type="PackedScene" uid="uid://d2lutv8ys5fpv" path="res://Scenes/knight.tscn" id="13_tb0kt"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_ujltw"]
@@ -222,6 +223,7 @@ scenes/12/scene = ExtResource("8_mt0e3")
 scenes/13/scene = ExtResource("9_h7dat")
 scenes/14/scene = ExtResource("8_7camm")
 scenes/15/scene = ExtResource("9_4xein")
+scenes/16/scene = ExtResource("12_7pqk4")
 
 [resource]
 physics_layer_0/collision_layer = 4
