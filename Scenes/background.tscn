@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cnldcsf3q4ioy" path="res://Assets/Sprites/items/cloud.png" id="1_776tj"]
 
 [node name="background" type="Node2D"]
+z_index = -4
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = -12050.0

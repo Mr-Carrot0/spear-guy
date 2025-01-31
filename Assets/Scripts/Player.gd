@@ -4,6 +4,10 @@ class_name Player
 @onready var _tree: AnimationTree = $AnimationTree
 @onready var weapon: Spear = $weapon
 
+var jump_time = 0.0
+const max_jump_time = 0.3 # maximum time holding the jump button has effect
+const jump_accel = 500.0
+
 var debug = {
 	"main": 0
 	,
@@ -32,14 +36,25 @@ func _physics_process(delta) -> void:
 	if Input.is_action_pressed("look_lown"):
 		weapon.rotate(-spear_rotation)
 		
-		
+	# handle jump
 	if Input.is_action_just_pressed("jump") and is_on_floor():
-		$jumpSound.play()
 		velocity.y = jmp_vel
-
+		jump_time = 0.0
+		
+		# cosmetics
+		$jumpSound.play()
 		_tree["parameters/m/transition_request"] = "air"
 		# _tree["parameters/[OneShot]/request"] = AnimationNodeOneShot.ONE_SHOT_REQUEST_\request\
 		_tree["parameters/spin/request"] = AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE
+		
+	if Input.is_action_pressed("jump") and jump_time < max_jump_time:
+		jump_time += delta
+		velocity.y -= jump_accel * delta
+		
+	# if pressing the jump aftter relasing in the air	
+	if not Input.is_action_pressed("jump") and not is_on_floor():
+		jump_time = max_jump_time
+	
 	
 	var x_dir = Input.get_axis("move_left", "move_right")
 	if x_dir:
@@ -53,7 +68,7 @@ func _physics_process(delta) -> void:
 	## TREE
 	# animation_tree["parameters/[Transition]/transition_request"] = "[state]"
 	_tree["parameters/on_ground/transition_request"] = ["idle", "walk"][abs(x_dir)]
-	
+		
 	_tree["parameters/m/transition_request"] = "ground" if is_on_floor() and !Input.is_action_just_pressed("jump") else "air"
 	
 

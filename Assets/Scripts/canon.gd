@@ -23,6 +23,6 @@ func shoot():
 	smoke.emitting = true
 	
 	# spawn projectile
-	var projectile = projectile.instantiate()
-	projectile.position = spawn_point.position
-	add_child(projectile)
+	var proj = projectile.instantiate()
+	proj.position = spawn_point.position
+	add_child(proj)

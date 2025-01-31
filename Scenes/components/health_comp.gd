@@ -1,5 +1,8 @@
 # This should if better designed be responsible for applying the damaged
 # Not the damage component
+
+# take inspiration from https://github.com/cluttered-code/godot-health-hitbox-hurtbox/blob/main/addons/health_hitbox_hurtbox/health/health.gd
+
 extends Node
 class_name healthComp 
 
