@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://bl75eh4bfbxml"]
+[gd_scene load_steps=3 format=3 uid="uid://bl75eh4bfbxml"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/stats.gd" id="1_o287l"]
+[ext_resource type="Texture2D" uid="uid://cl8fhicpsmfxd" path="res://Assets/Sprites/items/heart.png" id="2_7inbl"]
 
 [node name="stats" type="CanvasLayer"]
 script = ExtResource("1_o287l")
@@ -11,3 +12,11 @@ offset_top = 8.0
 offset_right = 91.0
 offset_bottom = 35.0
 text = "Score: "
+
+[node name="hearths" type="TextureRect" parent="."]
+offset_left = 16.0
+offset_top = 37.0
+offset_right = 32.0
+offset_bottom = 53.0
+texture = ExtResource("2_7inbl")
+stretch_mode = 1

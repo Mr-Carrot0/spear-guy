@@ -21,9 +21,19 @@ func take_damage(amount: int):
 		health -= amount
 	damage_taken.emit()
 	
+	# this is bad code but it works
 	if health <= 0:
-		death.emit()	
-		die()
+		if body is not Player:
+			death.emit()
+			die()
+		else:
+			Globals.change_player_extra_life(-1)
+			if Globals._player_extra_live <= 0:
+				death.emit()	
+				die()
+			else:
+				get_tree().reload_current_scene()
+				
 		
 func die() -> void:
 	if body is Player:

@@ -1,7 +1,11 @@
 extends Node
 # should be encapsulated, pls dont set manually
 var _player_score: int = 0
-signal score_changed(score)
+signal score_changed(score: int)
+
+const INITIAL_EXTRA_LIFE_C = 3
+var _player_extra_live: int = INITIAL_EXTRA_LIFE_C
+signal extra_life_changed(life: int)
 
 func change_player_score(score: int) -> void:
 	_player_score += score
@@ -10,9 +14,18 @@ func change_player_score(score: int) -> void:
 func reset_player_score() -> void:
 	_player_score = 0
 	score_changed.emit(_player_score)
+	
+func change_player_extra_life(life: int) -> void:
+	_player_extra_live += life
+	extra_life_changed.emit(_player_extra_live)
+
+func reset_player_extra_life() -> void:
+	_player_extra_live = INITIAL_EXTRA_LIFE_C
+	extra_life_changed.emit(_player_extra_live)
 
 func reset_game():
 	reset_player_score()
+	reset_player_extra_life()
 	#var default_scene_path = ProjectSettings.get_setting("application/run/main_scene")
 	get_tree().change_scene_to_file("res://Scenes/marketplace.tscn")
 
