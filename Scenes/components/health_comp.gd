@@ -32,7 +32,7 @@ func take_damage(amount: int):
 				death.emit()	
 				die()
 			else:
-				get_tree().reload_current_scene()
+				get_tree().call_deferred("reload_current_scene")
 				
 		
 func die() -> void:
