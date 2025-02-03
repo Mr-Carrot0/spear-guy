@@ -1,8 +1,9 @@
 [gd_scene load_steps=2 format=3 uid="uid://c806261i1sywi"]
 
-[ext_resource type="Script" path="res://Assets/Scripts/deathzone.gd" id="1_ccppr"]
+[ext_resource type="Script" path="res://Scenes/components/damage_comp.gd" id="1_sp2p6"]
 
 [node name="deathzone" type="Area2D"]
-script = ExtResource("1_ccppr")
+script = ExtResource("1_sp2p6")
+damage_amount = 1000000
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
