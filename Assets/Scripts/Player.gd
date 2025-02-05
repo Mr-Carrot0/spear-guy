@@ -9,7 +9,7 @@ class_name Player
 
 @onready var wp = weapon.position
 @export var attack_range = 2
-@onready var attack_offset: Vector2 = Vector2(attack_range, 0)
+@onready var attack_offset: Vector2 = Vector2(attack_range, 0) # constant
 var can_attack: bool = true
 
 var jump_time = 0.0
@@ -28,11 +28,11 @@ var debug = {
 	,
 }
 
-
 func _ready() -> void:
 	_tree.active = true
 	att_hit.set_disabled(true)
 
+# attack timers
 func _on_attack_cooldown_timeout() -> void:
 	can_attack = true
 
@@ -40,14 +40,14 @@ func _on_attack_duration_timeout():
 	weapon.position = wp
 	att_hit.set_disabled(true)
 
-	
+
 func _physics_process(delta) -> void:
 	super(delta)
 
 	if can_attack and Input.is_action_just_pressed("attack"):
 		can_attack = false
 		# ani
-		wp = weapon.position
+		wp = weapon.position # reset
 		weapon.position = wp + attack_offset.rotated(weapon.rotation - PI / 4)
 		# actual stuff
 		att_hit.set_disabled(false)
@@ -56,12 +56,12 @@ func _physics_process(delta) -> void:
 		print("attacked!")
 	
 	# rotate spear
-	var spear_rotation = PI / 6 * delta
+	var spear_rot_off = PI / 6 * delta
 	if Input.is_action_pressed("look_up"):
-		weapon.rotate(-spear_rotation)
+		weapon.rotate(-spear_rot_off)
 		
 	if Input.is_action_pressed("look_lown"):
-		weapon.rotate(spear_rotation)
+		weapon.rotate(spear_rot_off)
 		
 	# handle jump
 	if Input.is_action_just_pressed("jump") and is_on_floor():
@@ -89,9 +89,7 @@ func _physics_process(delta) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, speed)
 
-	# var direction = velocity.normalized()
 
-	
 	## TREE
 	# animation_tree["parameters/[Transition]/transition_request"] = "[state]"
 	_tree["parameters/on_ground/transition_request"] = ["idle", "walk"][abs(x_dir)]
