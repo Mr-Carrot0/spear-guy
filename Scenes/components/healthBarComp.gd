@@ -24,8 +24,3 @@ func draw():
 		color = healthy_color
 	
 	
-	
-	
-	
-
-	
