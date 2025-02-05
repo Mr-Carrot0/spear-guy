@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://bkvjs2irjn5au"]
+[gd_scene load_steps=6 format=3 uid="uid://c6bd1unssort3"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/spring.gd" id="1_c4jsr"]
 [ext_resource type="Texture2D" uid="uid://d0l3c5o0f1q2i" path="res://Assets/Sprites/terrain/spring.png" id="2_jns0h"]

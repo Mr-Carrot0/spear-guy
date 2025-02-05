@@ -3,6 +3,14 @@ class_name Player
 
 @onready var _tree: AnimationTree = $AnimationTree
 @onready var weapon: Spear = $weapon
+@onready var att_hit: CollisionPolygon2D = $weapon/head/hitbox/CollisionPolygon2D
+@onready var att_cool: Timer = $attack_cooldown
+@onready var att_dur: Timer = $attack_duration
+
+@onready var wp = weapon.position
+@export var attack_range = 2
+@onready var attack_offset: Vector2 = Vector2(attack_range, 0)
+var can_attack: bool = true
 
 var jump_time = 0.0
 const max_jump_time = 0.3 # maximum time holding the jump button has effect
@@ -21,15 +29,34 @@ var debug = {
 }
 
 
-func _ready():
+func _ready() -> void:
 	_tree.active = true
+	att_hit.set_disabled(true)
+
+func _on_attack_cooldown_timeout() -> void:
+	can_attack = true
+
+func _on_attack_duration_timeout():
+	weapon.position = wp
+	att_hit.set_disabled(true)
+
 	
 func _physics_process(delta) -> void:
-
 	super(delta)
+
+	if can_attack and Input.is_action_just_pressed("attack"):
+		can_attack = false
+		# ani
+		wp = weapon.position
+		weapon.position = wp + attack_offset.rotated(weapon.rotation - PI / 4)
+		# actual stuff
+		att_hit.set_disabled(false)
+		att_cool.start()
+		att_dur.start()
+		print("attacked!")
 	
 	# rotate spear
-	var spear_rotation = PI/6 * delta
+	var spear_rotation = PI / 6 * delta
 	if Input.is_action_pressed("look_up"):
 		weapon.rotate(-spear_rotation)
 		
@@ -58,7 +85,7 @@ func _physics_process(delta) -> void:
 	
 	var x_dir = Input.get_axis("move_left", "move_right")
 	if x_dir:
-		velocity.x = x_dir * speed 
+		velocity.x = x_dir * speed
 	else:
 		velocity.x = move_toward(velocity.x, 0, speed)
 
@@ -85,5 +112,3 @@ func _physics_process(delta) -> void:
 				print(AnimationNodeOneShot[_tree["parameters/spin/request"]])
 	
 	move_and_slide()
-	
-	
