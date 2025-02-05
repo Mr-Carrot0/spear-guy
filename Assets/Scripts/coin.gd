@@ -5,6 +5,6 @@ extends Area2D
 
 func _on_body_entered(body: Node2D) -> void:
 	if body is Player:
-		Globals.change_player_score(score)
+		Globals.player_score += score
 		animation_player.play("pickup")
 		animation_player.animation_finished.connect(queue_free)

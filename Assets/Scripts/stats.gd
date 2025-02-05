@@ -6,11 +6,11 @@ extends CanvasLayer
 var current_score: int = 0
 
 func _ready() -> void:
-	current_score = Globals._player_score
+	current_score = Globals.player_score
 	change_text(current_score)
 	Globals.score_changed.connect(display_score)
 	
-	display_extra_life(Globals._player_extra_live)
+	display_extra_life(Globals.player_extra_live)
 	Globals.extra_life_changed.connect(display_extra_life)
 
 func display_score(score:int ):

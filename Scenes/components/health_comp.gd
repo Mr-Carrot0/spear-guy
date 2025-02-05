@@ -27,8 +27,8 @@ func take_damage(amount: int):
 			death.emit()
 			die()
 		else:
-			Globals.change_player_extra_life(-1)
-			if Globals._player_extra_live <= 0:
+			Globals.player_extra_live -= 1
+			if Globals.player_extra_live <= 0:
 				death.emit()	
 				die()
 			else:
@@ -42,10 +42,10 @@ func die() -> void:
 		Globals.game_over.call_deferred()
 	elif body is Boss:
 		# win
-		Globals.change_player_score(score_worth)
+		Globals.player_score += score_worth
 		Globals.play_sound("res://Assets/Audio/winfretless.ogg")
 		Globals.game_over.call_deferred()
 	else:
 		
-		Globals.change_player_score(score_worth)
+		Globals.player_score += score_worth
 		body.queue_free()

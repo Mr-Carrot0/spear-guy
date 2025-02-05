@@ -1,27 +1,28 @@
 extends Node
-# should be encapsulated, pls dont set manually
-var _player_score: int = 0
+
+var player_score: int = 0:
+	set(new_value):
+		player_score = new_value
+		score_changed.emit(player_score)
+	get():
+		return player_score
+
 signal score_changed(score: int)
 
 const INITIAL_EXTRA_LIFE_C = 3
-var _player_extra_live: int = INITIAL_EXTRA_LIFE_C
+var player_extra_live: int = INITIAL_EXTRA_LIFE_C:
+	set(new_value):
+		player_extra_live = new_value
+		extra_life_changed.emit(player_extra_live)
+		
 signal extra_life_changed(life: int)
 
-func change_player_score(score: int) -> void:
-	_player_score += score
-	score_changed.emit(_player_score)
-
 func reset_player_score() -> void:
-	_player_score = 0
-	score_changed.emit(_player_score)
-	
-func change_player_extra_life(life: int) -> void:
-	_player_extra_live += life
-	extra_life_changed.emit(_player_extra_live)
+	player_score = 0
 
 func reset_player_extra_life() -> void:
-	_player_extra_live = INITIAL_EXTRA_LIFE_C
-	extra_life_changed.emit(_player_extra_live)
+	player_extra_live = INITIAL_EXTRA_LIFE_C
+
 
 func reset_game():
 	reset_player_score()
