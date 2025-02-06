@@ -219,17 +219,17 @@ drag_right_margin = 0.05
 drag_bottom_margin = 0.0
 metadata/_edit_lock_ = true
 
-[node name="attack_duration" type="Timer" parent="."]
-process_callback = 0
-wait_time = 0.1
-one_shot = true
-
 [node name="weapon" parent="." instance=ExtResource("3_qb6i6")]
 position = Vector2(2, 10)
 rotation = 0.783653
 is_indestrucable = true
 
-[node name="attack_cooldown" type="Timer" parent="."]
+[node name="duration" type="Timer" parent="weapon"]
+process_callback = 0
+wait_time = 0.1
+one_shot = true
+
+[node name="cooldown" type="Timer" parent="weapon"]
 process_callback = 0
 wait_time = 0.2
 one_shot = true
@@ -260,5 +260,5 @@ health = NodePath("../healthComp")
 stream = ExtResource("10_0nduc")
 volume_db = -7.647
 
-[connection signal="timeout" from="attack_duration" to="." method="_on_attack_duration_timeout"]
-[connection signal="timeout" from="attack_cooldown" to="." method="_on_attack_cooldown_timeout"]
+[connection signal="timeout" from="weapon/duration" to="." method="_on_attack_duration_timeout"]
+[connection signal="timeout" from="weapon/cooldown" to="." method="_on_attack_cooldown_timeout"]

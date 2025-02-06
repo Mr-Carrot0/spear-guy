@@ -14,7 +14,7 @@ func _ready() -> void:
 func draw():
 	var health = hComp.health
 	var ratio_damaged = 1 - health / max_h
-	#print(ratio_damaged)
+	# print(ratio_damaged)
 	if ratio_damaged != 0:
 		var index = round(ratio_damaged * dlen)
 		texture = damageds[index]

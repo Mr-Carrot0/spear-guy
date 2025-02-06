@@ -4,19 +4,19 @@ class_name Player
 @onready var _tree: AnimationTree = $AnimationTree
 @onready var weapon: Spear = $weapon
 @onready var att_hit: CollisionPolygon2D = $weapon/head/hitbox/CollisionPolygon2D
-@onready var att_cool: Timer = $attack_cooldown
-@onready var att_dur: Timer = $attack_duration
+@onready var att_cool: Timer = $weapon/duration
+@onready var att_dur: Timer = $weapon/cooldown
 
 @onready var wp = weapon.position
-@export var attack_range = 2
-@onready var attack_offset: Vector2 = Vector2(attack_range, 0) # constant
+@export var att_range = 2
+@onready var att_offset: Vector2 = Vector2(att_range, 0) # constant
 var can_attack: bool = true
 
 var jump_time = 0.0
 const max_jump_time = 0.3 # maximum time holding the jump button has effect
 const jump_accel = 500.0
 
-var debug = {
+const debug = {
 	"main": 0
 	,
 	"phy": 0
@@ -36,7 +36,7 @@ func _ready() -> void:
 func _on_attack_cooldown_timeout() -> void:
 	can_attack = true
 
-func _on_attack_duration_timeout():
+func _on_attack_duration_timeout() -> void:
 	weapon.position = wp
 	att_hit.set_disabled(true)
 
@@ -47,16 +47,16 @@ func _physics_process(delta) -> void:
 	if can_attack and Input.is_action_just_pressed("attack"):
 		can_attack = false
 		# ani
-		wp = weapon.position # reset
-		weapon.position = wp + attack_offset.rotated(weapon.rotation - PI / 4)
+		wp = weapon.position # _reset pos
+		weapon.position = wp + att_offset.rotated(weapon.rotation - PI / 4)
 		# actual stuff
 		att_hit.set_disabled(false)
 		att_cool.start()
 		att_dur.start()
-		print("attacked!")
+		# print("attacked!")
 	
 	# rotate spear
-	var spear_rot_off = PI / 6 * delta
+	var spear_rot_off = PI / 3 * delta
 	if Input.is_action_pressed("look_up"):
 		weapon.rotate(-spear_rot_off)
 		

@@ -26,7 +26,7 @@ func reset_player_extra_life() -> void:
 func reset_game():
 	reset_player_score()
 	reset_player_extra_life()
-	#var default_scene_path = ProjectSettings.get_setting("application/run/main_scene")
+	# var default_scene_path = ProjectSettings.get_setting("application/run/main_scene")
 	get_tree().change_scene_to_file("res://Scenes/marketplace.tscn")
 
 var marketplace: PackedScene
