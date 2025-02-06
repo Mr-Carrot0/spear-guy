@@ -5,3 +5,4 @@ func _ready() -> void:
 	$c/quit.pressed.connect(get_tree().quit)
 	$c/play.pressed.connect(Globals.reset_game)
  
+	

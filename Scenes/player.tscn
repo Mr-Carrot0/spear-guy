@@ -172,6 +172,9 @@ script = ExtResource("1_2d27w")
 jmp_vel = -200.0
 metadata/_edit_lock_ = true
 
+[node name="coyoteTimer" type="Timer" parent="."]
+one_shot = true
+
 [node name="flipComp" type="Node" parent="." node_paths=PackedStringArray("body")]
 script = ExtResource("2_nxj56")
 body = NodePath("..")
