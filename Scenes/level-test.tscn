@@ -56,14 +56,3 @@ position = Vector2(489, 442)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="deathzone"]
 shape = SubResource("WorldBoundaryShape2D_5730w")
-
-[connection signal="body_entered" from="tilemap/coin" to="tilemap/coin" method="_on_body_entered"]
-[connection signal="body_entered" from="tilemap/@Area2D@27723" to="tilemap/@Area2D@27723" method="_on_body_entered"]
-[connection signal="body_entered" from="tilemap/@Area2D@27724" to="tilemap/@Area2D@27724" method="_on_body_entered"]
-[connection signal="body_entered" from="tilemap/@Area2D@27725" to="tilemap/@Area2D@27725" method="_on_body_entered"]
-[connection signal="body_entered" from="tilemap/@Area2D@27726" to="tilemap/@Area2D@27726" method="_on_body_entered"]
-[connection signal="body_entered" from="tilemap/@Area2D@27727" to="tilemap/@Area2D@27727" method="_on_body_entered"]
-[connection signal="body_entered" from="tilemap/@Area2D@27728" to="tilemap/@Area2D@27728" method="_on_body_entered"]
-[connection signal="body_entered" from="tilemap/@Area2D@27729" to="tilemap/@Area2D@27729" method="_on_body_entered"]
-[connection signal="body_entered" from="tilemap/@Area2D@27730" to="tilemap/@Area2D@27730" method="_on_body_entered"]
-[connection signal="body_entered" from="tilemap/@Area2D@27731" to="tilemap/@Area2D@27731" method="_on_body_entered"]
