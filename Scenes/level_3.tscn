@@ -30,26 +30,3 @@ scene = "leveltest_2"
 stream = ExtResource("5_wwtjx")
 volume_db = -7.145
 autoplay = true
-
-[connection signal="body_entered" from="tilemap/coin" to="tilemap/coin" method="_on_body_entered"]
-[connection signal="body_entered" from="tilemap/@Area2D@28819" to="tilemap/@Area2D@28819" method="_on_body_entered"]
-[connection signal="body_entered" from="tilemap/@Area2D@28820" to="tilemap/@Area2D@28820" method="_on_body_entered"]
-[connection signal="body_entered" from="tilemap/@Area2D@28821" to="tilemap/@Area2D@28821" method="_on_body_entered"]
-[connection signal="body_entered" from="tilemap/@Area2D@28822" to="tilemap/@Area2D@28822" method="_on_body_entered"]
-[connection signal="body_entered" from="tilemap/@Area2D@28823" to="tilemap/@Area2D@28823" method="_on_body_entered"]
-[connection signal="body_entered" from="tilemap/@Area2D@28824" to="tilemap/@Area2D@28824" method="_on_body_entered"]
-[connection signal="body_entered" from="tilemap/@Area2D@28825" to="tilemap/@Area2D@28825" method="_on_body_entered"]
-[connection signal="body_entered" from="tilemap/@Area2D@28826" to="tilemap/@Area2D@28826" method="_on_body_entered"]
-[connection signal="body_entered" from="tilemap/@Area2D@28827" to="tilemap/@Area2D@28827" method="_on_body_entered"]
-[connection signal="body_entered" from="tilemap/@Area2D@28828" to="tilemap/@Area2D@28828" method="_on_body_entered"]
-[connection signal="body_entered" from="tilemap/@Area2D@28829" to="tilemap/@Area2D@28829" method="_on_body_entered"]
-[connection signal="body_entered" from="tilemap/@Area2D@28830" to="tilemap/@Area2D@28830" method="_on_body_entered"]
-[connection signal="body_entered" from="tilemap/@Area2D@28831" to="tilemap/@Area2D@28831" method="_on_body_entered"]
-[connection signal="body_entered" from="tilemap/@Area2D@28832" to="tilemap/@Area2D@28832" method="_on_body_entered"]
-[connection signal="body_entered" from="tilemap/@Area2D@28833" to="tilemap/@Area2D@28833" method="_on_body_entered"]
-[connection signal="body_entered" from="tilemap/@Area2D@28834" to="tilemap/@Area2D@28834" method="_on_body_entered"]
-[connection signal="body_entered" from="tilemap/@Area2D@28835" to="tilemap/@Area2D@28835" method="_on_body_entered"]
-[connection signal="body_entered" from="tilemap/@Area2D@28836" to="tilemap/@Area2D@28836" method="_on_body_entered"]
-[connection signal="body_entered" from="tilemap/@Area2D@28837" to="tilemap/@Area2D@28837" method="_on_body_entered"]
-[connection signal="body_entered" from="tilemap/@Area2D@28838" to="tilemap/@Area2D@28838" method="_on_body_entered"]
-[connection signal="body_entered" from="tilemap/@Area2D@28839" to="tilemap/@Area2D@28839" method="_on_body_entered"]
