@@ -10,7 +10,7 @@ offset_left = -12050.0
 offset_top = -927.0
 offset_right = 11450.0
 offset_bottom = 1295.0
-color = Color(4.62055e-06, 0.702529, 0.756016, 1)
+color = Color(0.388235, 0.607843, 1, 1)
 
 [node name="Parallax2D" type="Parallax2D" parent="."]
 scroll_scale = Vector2(0.02, 0.3)

@@ -1,10 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://cp65bixuy6an1"]
+[gd_scene load_steps=6 format=3 uid="uid://cp65bixuy6an1"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/icicle.gd" id="1_37m2t"]
+[ext_resource type="Shader" path="res://Assets/shaders/flash.gdshader" id="1_rh0km"]
 [ext_resource type="Texture2D" uid="uid://cbws0766dhaat" path="res://Assets/Sprites/terrain/icicle.png" id="2_3g2cp"]
 [ext_resource type="Script" path="res://Scenes/components/damage_comp.gd" id="3_qf04q"]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fu1wy"]
+shader = ExtResource("1_rh0km")
+shader_parameter/flash_color = null
+
 [node name="icicle" type="AnimatableBody2D"]
+material = SubResource("ShaderMaterial_fu1wy")
 collision_layer = 4
 collision_mask = 5
 script = ExtResource("1_37m2t")

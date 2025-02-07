@@ -3,8 +3,8 @@ class_name healthBarComp
 
 @export var hComp: healthComp
 @onready var max_width = hComp.MAX_HEALTH
-var healthy_color: Color = Color.GREEN
-var damaged_color: Color = Color.DARK_RED
+var healthy_color: Color = Color.hex(0x99e550ff)
+var damaged_color: Color = Color.hex(0xac3232ff)
 
 
 func _ready() -> void:
