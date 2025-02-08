@@ -10,7 +10,7 @@ func _ready() -> void:
 
 func give_player_life(_body: Node2D) -> void:
 	
-	Globals.change_player_extra_life(1)
+	Globals.player_extra_live += 1
 
 	animation_player.animation_finished.connect(func(_name: String): queue_free())
 	audio_stream_player_2d.play()

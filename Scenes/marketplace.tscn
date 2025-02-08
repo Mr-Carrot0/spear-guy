@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cqqt88gjkqajj"]
+[gd_scene load_steps=13 format=3 uid="uid://cqqt88gjkqajj"]
 
 [ext_resource type="PackedScene" uid="uid://dqspfudujoajn" path="res://Scenes/wanted_poster.tscn" id="1_1gsai"]
 [ext_resource type="PackedScene" uid="uid://80exdd8628dh" path="res://Scenes/boss_fight_level.tscn" id="2_4vm7d"]
@@ -10,7 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://b4hc7iiog03da" path="res://Assets/Sprites/terrain/tree.png" id="7_c1hf0"]
 [ext_resource type="PackedScene" uid="uid://cd1ci8phk4nmd" path="res://Scenes/level-test.tscn" id="8_hf2k1"]
 [ext_resource type="Texture2D" uid="uid://edjox1x07bh3" path="res://Assets/Sprites/terrain/spike.png" id="9_7jbyj"]
-[ext_resource type="Texture2D" uid="uid://vt3vj0fkjcsl" path="res://Assets/Sprites/items/baxe.png" id="10_g03sc"]
+[ext_resource type="PackedScene" uid="uid://b6afl7iiiif4c" path="res://Scenes/obstackle_course.tscn" id="10_x6t4q"]
+[ext_resource type="Texture2D" uid="uid://bo8y6ekalhkxk" path="res://Assets/Sprites/items/canon_ball.png" id="11_315k7"]
 
 [node name="marketplace" type="Control"]
 layout_mode = 3
@@ -107,6 +108,7 @@ offset_right = 1077.0
 offset_bottom = 282.0
 grow_horizontal = 1
 grow_vertical = 1
-texture = ExtResource("10_g03sc")
+to_scene = ExtResource("10_x6t4q")
+texture = ExtResource("11_315k7")
 
 [node name="stats" parent="." instance=ExtResource("6_7hthj")]
