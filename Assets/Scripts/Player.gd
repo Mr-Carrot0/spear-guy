@@ -22,11 +22,12 @@ func _physics_process(delta) -> void:
 	super(delta)
 	
 	# rotate spear
-	var spear_rotation = PI/6 * delta
+	var spear_rot_off = PI / 3 * delta
 	if Input.is_action_pressed("look_up"):
-		weapon.rotate(-spear_rotation)
+		weapon.rotate(-spear_rot_off)
+		
 	if Input.is_action_pressed("look_lown"):
-		weapon.rotate(spear_rotation)
+		weapon.rotate(spear_rot_off)
 		
 	# handle jump
 	if Input.is_action_just_pressed("jump") and (is_on_floor() or coyote):
