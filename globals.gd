@@ -34,9 +34,10 @@ var marketplace: PackedScene
 func game_over():
 	get_tree().change_scene_to_file("res://Scenes/game_ower.tscn")
 
-func play_sound(sound: String):
+func play_sound(sound: String, volume_db:float=0):
 	var player = AudioStreamPlayer.new()
 	player.stream = load(sound)
+	player.volume_db = volume_db
 	player.finished.connect(player.queue_free)
 	add_child(player)
 	player.play()

@@ -38,12 +38,12 @@ func take_damage(amount: int):
 func die() -> void:
 	if body is Player:
 		# lose
-		Globals.play_sound("res://Assets/Audio/losetrumpet.mp3")
+		Globals.play_sound("res://Assets/Audio/losetrumpet.mp3", 10.0)
 		Globals.game_over.call_deferred()
 	elif body is Boss:
 		# win
 		Globals.player_score += score_worth
-		Globals.play_sound("res://Assets/Audio/winfretless.ogg")
+		Globals.play_sound("res://Assets/Audio/winfretless.ogg", 10.0)
 		Globals.game_over.call_deferred()
 	else:
 		
