@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://fqwmbk4mekdv"]
+
+[ext_resource type="Texture2D" uid="uid://cmkj2macyhvea" path="res://Assets/Sprites/terrain/mountain_p.png" id="1_tmbf3"]
+
+[node name="mountain_bg" type="Node2D"]
+scale = Vector2(100, 100)
+metadata/_edit_horizontal_guides_ = [-1872.0]
+
+[node name="Parallax2D" type="Parallax2D" parent="."]
+repeat_size = Vector2(640, 0)
+
+[node name="MountainP" type="Sprite2D" parent="Parallax2D"]
+position = Vector2(-217.6, -149.76)
+scale = Vector2(10, 10)
+texture = ExtResource("1_tmbf3")
