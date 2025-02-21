@@ -38,6 +38,7 @@ debug_color = Color(0.973281, 0, 0.435105, 0.42)
 position = Vector2(-2042, -53)
 
 [node name="lantern" parent="." instance=ExtResource("10_8xgs1")]
+visible = false
 position = Vector2(-294, 151)
 scale = Vector2(6.4375, 5.6875)
 energy = 5.72

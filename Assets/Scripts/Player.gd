@@ -5,6 +5,7 @@ class_name Player
 @onready var weapon: Spear = $weapon
 @onready var coyote_timer: Timer = $coyoteTimer
 
+@export var speed := 90.0
 var jump_time = 0.0
 const max_jump_time = 0.3 # maximum time holding the jump button has effect
 const jump_accel = 500.0
@@ -51,10 +52,14 @@ func _physics_process(delta) -> void:
 	# if pressing the jump aftter relasing in the air	
 	if not Input.is_action_pressed("jump") and not is_on_floor():
 		jump_time = max_jump_time
+		
+	var sprint_modifier = 1.0
+	if Input.is_action_pressed("sprint"):
+		sprint_modifier = 2.0
 	
 	var x_dir = Input.get_axis("move_left", "move_right")
 	if x_dir:
-		velocity.x = x_dir * speed 
+		velocity.x = x_dir * speed * sprint_modifier
 	else:
 		velocity.x = move_toward(velocity.x, 0, speed)
 

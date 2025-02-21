@@ -21,7 +21,7 @@ func _physics_process(delta: float) -> void:
 		
 		if is_on_wall(): 
 			reverse_dir()
-			print("wall ", dir)
+			#print("wall ", dir)
 			
 		
 func  reverse_dir() -> void:

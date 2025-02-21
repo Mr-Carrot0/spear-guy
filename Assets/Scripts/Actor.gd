@@ -3,7 +3,6 @@ class_name Actor
 
 @onready var sprite = $Sprite2D
    
-@export var speed := 140.0
 @export var jmp_vel := -320.0
 
 @export var armour = 0
