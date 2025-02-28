@@ -77,7 +77,7 @@ func _physics_process(delta) -> void:
 	move_and_slide()
 	
 	if !is_on_floor() and last_floor:
-		print("couote!!")
+		#print("couote!!")
 		coyote = true
 		coyote_timer.start()
 	

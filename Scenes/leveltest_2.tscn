@@ -57,3 +57,7 @@ scene = "boss_fight_level"
 stream = ExtResource("11_l6vye")
 volume_db = -4.763
 autoplay = true
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+energy = 0.8
+blend_mode = 1
