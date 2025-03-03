@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://7ev2qty26xf8"]
+[gd_scene load_steps=10 format=3 uid="uid://7ev2qty26xf8"]
 
 [ext_resource type="Texture2D" uid="uid://duap72yrgyblo" path="res://Assets/Sprites/items/box.png" id="1_voamq"]
 [ext_resource type="Script" path="res://Scenes/components/health_comp.gd" id="2_jub5q"]
@@ -8,6 +8,9 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_68oec"]
 size = Vector2(16, 16)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_jsyk1"]
+polygon = PackedVector2Array(-8, -8, -8, 8, 8, 8, 8, -8)
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_718sg"]
 lifetime_randomness = 0.4
@@ -48,6 +51,9 @@ texture = ExtResource("1_voamq")
 script = ExtResource("3_mxc7w")
 hComp = NodePath("../healthComp")
 damageds = Array[Texture2D]([ExtResource("4_wsp6f"), ExtResource("5_wey57")])
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="DamageGrade"]
+occluder = SubResource("OccluderPolygon2D_jsyk1")
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
 emitting = false

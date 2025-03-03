@@ -59,5 +59,10 @@ volume_db = -4.763
 autoplay = true
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
-energy = 0.8
-blend_mode = 1
+rotation = 0.466003
+color = Color(0.103159, 0.0829007, 0.0505634, 1)
+energy = 7.14
+shadow_enabled = true
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0.712262, 0.749018, 0.919082, 1)

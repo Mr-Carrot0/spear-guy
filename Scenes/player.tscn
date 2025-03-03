@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://5jpo611kaau8"]
+[gd_scene load_steps=29 format=3 uid="uid://5jpo611kaau8"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/Player.gd" id="1_2d27w"]
 [ext_resource type="Texture2D" uid="uid://xps8a6xso4k4" path="res://Assets/Sprites/stolen/player.png" id="2_kly8p"]
@@ -14,6 +14,9 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qxq2l"]
 size = Vector2(10, 26)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_krtio"]
+polygon = PackedVector2Array(-7, -4, 3, -4, 3, 22, -7, 22)
 
 [sub_resource type="Animation" id="Animation_2te2c"]
 length = 0.001
@@ -146,7 +149,7 @@ break_loop_at_end = true
 autorestart_delay = 0.0
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_thp2w"]
-graph_offset = Vector2(18.1468, 87.9375)
+graph_offset = Vector2(326.419, 138.789)
 nodes/Animation/node = SubResource("AnimationNodeAnimation_ecfws")
 nodes/Animation/position = Vector2(186.667, 160)
 "nodes/Animation 2/node" = SubResource("AnimationNodeAnimation_htqfk")
@@ -191,6 +194,13 @@ texture = ExtResource("2_kly8p")
 hframes = 16
 vframes = 16
 metadata/_edit_lock_ = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Sprite2D"]
+visible = false
+show_behind_parent = true
+visibility_layer = 0
+z_index = -1
+occluder = SubResource("OccluderPolygon2D_krtio")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
