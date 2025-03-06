@@ -27,5 +27,6 @@ func shoot():
 	
 	# spawn projectile
 	var proj = projectile.instantiate()
-	proj.position = spawn_point.position
-	add_child(proj)
+	proj.global_position = spawn_point.global_position
+	get_tree().get_root().add_child(proj) 
+	
