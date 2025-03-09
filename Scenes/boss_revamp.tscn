@@ -1,0 +1,38 @@
+[gd_scene load_steps=7 format=3 uid="uid://bcxayb3mgkfcx"]
+
+[ext_resource type="Script" path="res://Assets/Scripts/boss_revamp.gd" id="1_mrwiy"]
+[ext_resource type="Texture2D" uid="uid://ydlxocwd65mq" path="res://Assets/Sprites/characters/rawen.png" id="1_yi8at"]
+[ext_resource type="Script" path="res://Scenes/components/health_comp.gd" id="3_18h84"]
+[ext_resource type="Script" path="res://Scenes/components/flipComp.gd" id="3_oqnhj"]
+[ext_resource type="PackedScene" uid="uid://b0n2s8qmr7c7m" path="res://Scenes/components/healthBarComp.tscn" id="4_lxev0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r2h4y"]
+size = Vector2(13, 29)
+
+[node name="Raven" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 5
+script = ExtResource("1_mrwiy")
+desired_distance = 120.0
+speed = 100.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_yi8at")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(4.5, 1.5)
+shape = SubResource("RectangleShape2D_r2h4y")
+
+[node name="healthComp" type="Node" parent="." node_paths=PackedStringArray("body")]
+script = ExtResource("3_18h84")
+body = NodePath("..")
+MAX_HEALTH = 5000.0
+score_worth = 1000
+
+[node name="HealthBarComp" parent="." node_paths=PackedStringArray("hComp") instance=ExtResource("4_lxev0")]
+position = Vector2(3, -18)
+hComp = NodePath("../healthComp")
+
+[node name="flipComp" type="Node" parent="." node_paths=PackedStringArray("body")]
+script = ExtResource("3_oqnhj")
+body = NodePath("..")

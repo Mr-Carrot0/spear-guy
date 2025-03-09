@@ -40,7 +40,10 @@ func play_sound(sound: String):
 	add_child(player)
 	player.play()
 	
-	
+# Utilities
+func bool_to_i8(b: bool) -> int:
+	return 1 if b else -1
+
 # https://www.reddit.com/r/godot/comments/17h3o1g/switching_between_scenes_but_keep_the_state/
 # https://docs.godotengine.org/en/stable/tutorials/scripting/singletons_autoload.html
 # https://docs.godotengine.org/en/stable/classes/class_scenetree.html#class-scenetree-method-change-scene-to-file

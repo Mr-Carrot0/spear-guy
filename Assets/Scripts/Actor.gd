@@ -10,7 +10,7 @@ class_name Actor
 	
 		
 func knockback():
-	if velocity.y == 0: 
+	if velocity.y == 0:
 		velocity.y += 200
 	velocity *= -1
 		
