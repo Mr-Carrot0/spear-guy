@@ -1,7 +1,7 @@
 extends Node2D
 
 @export var delay: int = 5
-@export var projectile: PackedScene
+@export var projectile: PackedScene  # needs to be bullet
 
 @export var random_delay_strength: int = 1
 
@@ -28,5 +28,7 @@ func shoot():
 	# spawn projectile
 	var proj = projectile.instantiate()
 	proj.global_position = spawn_point.global_position
+	var direction = Vector2(cos(rotation), sin(rotation))  # if the canon is rotated  (eg in big guy)
+	proj.direction = direction
 	get_tree().get_root().add_child(proj) 
 	

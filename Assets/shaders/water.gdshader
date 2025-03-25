@@ -23,6 +23,6 @@ vec2 st = vec2(UV.x/(SCREEN_PIXEL_SIZE.y/SCREEN_PIXEL_SIZE.x),UV.y);
   st = tile(st,8.0);
 color += texture(bg,st).rgb;
 color += 0.5* texture(wave1,vec2(st.x + TIME * 0.02,st.y +0.2 + sin(TIME*1.5) * 0.06)).rgb / 0.5 * texture(noise,vec2(st.x + cos(TIME * 0.5),st.y)).rgb;
-color += 0.5* texture(wave2,vec2(st.x – TIME * 0.08,st.y)).rgb / 0.5 * texture(noise,vec2(st.x ,st.y – sin(TIME * 0.5))).rgb;
+color += 0.5* texture(wave2,vec2(st.x - TIME * 0.08,st.y)).rgb / 0.5 * texture(noise,vec2(st.x ,st.y - sin(TIME * 0.5))).rgb;
 COLOR = vec4(color,1.0);
 }

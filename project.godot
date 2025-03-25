@@ -12,9 +12,9 @@ config_version=5
 
 config/name="spear guy"
 run/main_scene="res://Scenes/start.tscn"
-config/features=PackedStringArray("4.3", "GL Compatibility")
-boot_splash/image="res://Assets/Sprites/items/small_e.png"
+config/features=PackedStringArray("4.4", "GL Compatibility")
 boot_splash/use_filter=false
+boot_splash/image="res://Assets/Sprites/items/small_e.png"
 config/icon="res://Assets/Sprites/items/mspear.png"
 
 [autoload]
@@ -23,8 +23,8 @@ Globals="*res://globals.gd"
 
 [display]
 
-window/size/viewport_width=640
-window/size/viewport_height=360
+window/size/viewport_width=740
+window/size/viewport_height=400
 
 [editor_plugins]
 

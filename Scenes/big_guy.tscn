@@ -1,8 +1,8 @@
-[gd_scene load_steps=20 format=3 uid="uid://3n8j51p0xipe"]
+[gd_scene load_steps=21 format=3 uid="uid://3n8j51p0xipe"]
 
-[ext_resource type="Script" path="res://Scenes/big_guy_temp.gd" id="1_mw7wa"]
+[ext_resource type="Script" uid="uid://b2mefcfqnbpqt" path="res://Scenes/big_guy_temp.gd" id="1_mw7wa"]
 [ext_resource type="Texture2D" uid="uid://di31drfrdlbvo" path="res://Assets/Sprites/big_guy/hip.png" id="1_x1h1l"]
-[ext_resource type="Script" path="res://Scenes/components/health_comp.gd" id="2_wjdtc"]
+[ext_resource type="Script" uid="uid://kjguqheyu3cu" path="res://Scenes/components/health_comp.gd" id="2_wjdtc"]
 [ext_resource type="Texture2D" uid="uid://bw7m13c1a7mkb" path="res://Assets/Sprites/big_guy/leg.png" id="2_wnka2"]
 [ext_resource type="Texture2D" uid="uid://coo2qhy0kw1on" path="res://Assets/Sprites/big_guy/torso.png" id="3_wliay"]
 [ext_resource type="Texture2D" uid="uid://ddai8wa0v4ois" path="res://Assets/Sprites/big_guy/arm.png" id="4_qlbmv"]
@@ -10,8 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://cnin4dtv05faf" path="res://Assets/Sprites/big_guy/rhand.png" id="5_yg7vf"]
 [ext_resource type="PackedScene" uid="uid://b30gwx17t6f0f" path="res://Scenes/canon.tscn" id="6_5mtjo"]
 [ext_resource type="Texture2D" uid="uid://q5m7nto4l0d2" path="res://Assets/Sprites/big_guy/helmet.png" id="6_of0xo"]
-[ext_resource type="Script" path="res://Scenes/components/damage_comp.gd" id="7_trise"]
-[ext_resource type="Script" path="res://Scenes/components/flash.gd" id="12_w4sn5"]
+[ext_resource type="Script" uid="uid://c7ljp3ef0vgv7" path="res://Scenes/components/damage_comp.gd" id="7_trise"]
+[ext_resource type="Script" uid="uid://bua0d8md2sq7n" path="res://Scenes/components/flash.gd" id="12_w4sn5"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_baqn6"]
 radius = 19.0263
@@ -120,26 +120,26 @@ tracks/7/keys = {
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("../../../Leg2:position")
+tracks/8/path = NodePath("../../..:position")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(8, 28)]
+"values": [Vector2(0, 0)]
 }
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("../../../Leg2:rotation")
+tracks/9/path = NodePath("../../..:rotation")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [-0.00848268]
+"values": [0.0]
 }
 
 [sub_resource type="Animation" id="Animation_d58vh"]
@@ -216,6 +216,35 @@ tracks/5/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [0.0, 0.0, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_rsjk3"]
+resource_name = "die"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../..:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.27495),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-2, 56)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../../..:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.27495),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.52248]
 }
 
 [sub_resource type="Animation" id="Animation_8d5s6"]
@@ -394,139 +423,116 @@ tracks/7/keys = {
 "update": 0,
 "values": [-0.771664, -0.19056]
 }
-tracks/8/type = "value"
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/path = NodePath("../../../Leg2:position")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = {
-"times": PackedFloat32Array(0, 1.93333),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(8, 28), Vector2(7, 29)]
-}
-tracks/9/type = "value"
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/path = NodePath("../../../Leg2:rotation")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = {
-"times": PackedFloat32Array(0, 1.93333),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [-0.00848268, -0.00848268]
-}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_yvawq"]
 _data = {
-"RESET": SubResource("Animation_fr2c1"),
-"attack": SubResource("Animation_d58vh"),
-"double_attack": SubResource("Animation_8d5s6"),
-"idle": SubResource("Animation_km82f")
+&"RESET": SubResource("Animation_fr2c1"),
+&"attack": SubResource("Animation_d58vh"),
+&"die": SubResource("Animation_rsjk3"),
+&"double_attack": SubResource("Animation_8d5s6"),
+&"idle": SubResource("Animation_km82f")
 }
 
 [node name="big_guy" type="Node2D"]
 position = Vector2(16, -84)
 script = ExtResource("1_mw7wa")
 
-[node name="Hip" type="Sprite2D" parent="."]
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Leg2" type="Sprite2D" parent="Node2D"]
+position = Vector2(7.45431, 28.5457)
+rotation = -0.00848268
+texture = ExtResource("2_wnka2")
+offset = Vector2(-7, 23)
+
+[node name="Hip" type="Sprite2D" parent="Node2D"]
 position = Vector2(-10, 23)
 texture = ExtResource("1_x1h1l")
 offset = Vector2(8, -31)
 
-[node name="Leg" type="Sprite2D" parent="."]
+[node name="Leg" type="Sprite2D" parent="Node2D"]
 z_index = -1
 position = Vector2(-26, 28)
 texture = ExtResource("2_wnka2")
 offset = Vector2(-7, 23)
 
-[node name="Leg2" type="Sprite2D" parent="."]
-position = Vector2(8, 28)
-rotation = -0.00848268
-texture = ExtResource("2_wnka2")
-offset = Vector2(-7, 23)
-
-[node name="Torso" type="Sprite2D" parent="."]
+[node name="Torso" type="Sprite2D" parent="Node2D"]
 z_index = 1
 position = Vector2(-5, 6)
 texture = ExtResource("3_wliay")
 offset = Vector2(3, -16)
 
-[node name="Arm" type="Sprite2D" parent="Torso"]
+[node name="Arm" type="Sprite2D" parent="Node2D/Torso"]
 z_index = -1
 position = Vector2(-15.0408, -41.119)
 rotation = -0.259002
 texture = ExtResource("4_qlbmv")
 offset = Vector2(-21.9691, 11.9087)
 
-[node name="Hand" type="Sprite2D" parent="Torso/Arm"]
+[node name="Hand" type="Sprite2D" parent="Node2D/Torso/Arm"]
 position = Vector2(-60.303, 28.6293)
 texture = ExtResource("5_yg7vf")
 
-[node name="damageComp2" type="Area2D" parent="Torso/Arm/Hand"]
+[node name="damageComp2" type="Area2D" parent="Node2D/Torso/Arm/Hand"]
 position = Vector2(-0.0329475, 19.6469)
 rotation = 0.259002
-scale = Vector2(1, 1)
 script = ExtResource("7_trise")
 damage_amount = 200
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torso/Arm/Hand/damageComp2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Torso/Arm/Hand/damageComp2"]
 position = Vector2(-30, -35)
 shape = SubResource("CircleShape2D_baqn6")
 
-[node name="canon" parent="Torso/Arm" instance=ExtResource("6_5mtjo")]
+[node name="canon" parent="Node2D/Torso/Arm" instance=ExtResource("6_5mtjo")]
 z_index = 3
 position = Vector2(4.48092, -20.488)
 rotation = 0.354673
 
-[node name="Arm2" type="Sprite2D" parent="Torso"]
+[node name="Arm2" type="Sprite2D" parent="Node2D/Torso"]
 z_index = 5
 position = Vector2(19, -37)
 rotation = -0.771664
 texture = ExtResource("4_qlbmv")
 offset = Vector2(-37.9123, 17.7436)
 
-[node name="Hand" type="Sprite2D" parent="Torso/Arm2"]
+[node name="Hand" type="Sprite2D" parent="Node2D/Torso/Arm2"]
 position = Vector2(-80.8185, 37.4173)
 texture = ExtResource("5_udogo")
 metadata/_edit_lock_ = true
 
-[node name="damageComp" type="Area2D" parent="Torso/Arm2/Hand"]
+[node name="damageComp" type="Area2D" parent="Node2D/Torso/Arm2/Hand"]
 position = Vector2(-20.8769, 24.0892)
 rotation = 0.771664
 script = ExtResource("7_trise")
 damage_amount = 200
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torso/Arm2/Hand/damageComp"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Torso/Arm2/Hand/damageComp"]
 position = Vector2(-30, -35)
 shape = SubResource("CircleShape2D_baqn6")
 
-[node name="canon2" parent="Torso/Arm2" instance=ExtResource("6_5mtjo")]
+[node name="canon2" parent="Node2D/Torso/Arm2" instance=ExtResource("6_5mtjo")]
 z_index = 3
 position = Vector2(4.74743, 4.17876)
 rotation = 0.633032
 
-[node name="Helmet" type="Sprite2D" parent="Torso"]
+[node name="Helmet" type="Sprite2D" parent="Node2D/Torso"]
 z_index = 3
 position = Vector2(2, -49)
 rotation = 0.0372298
 texture = ExtResource("6_of0xo")
 
-[node name="hitpoint" type="Area2D" parent="Torso/Helmet"]
+[node name="hitpoint" type="Area2D" parent="Node2D/Torso/Helmet"]
 position = Vector2(-8.2639, 127.396)
 rotation = -0.0372298
-scale = Vector2(1, 1)
 collision_layer = 2
 
-[node name="healthComp" type="Node" parent="Torso/Helmet/hitpoint" node_paths=PackedStringArray("body")]
+[node name="healthComp" type="Node" parent="Node2D/Torso/Helmet/hitpoint" node_paths=PackedStringArray("body")]
 script = ExtResource("2_wjdtc")
-body = NodePath("../../../..")
+body = NodePath("../../../../..")
 MAX_HEALTH = 200.0
 score_worth = 1000
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Torso/Helmet/hitpoint"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Torso/Helmet/hitpoint"]
 position = Vector2(9, -143)
 shape = SubResource("CircleShape2D_pafjg")
 
@@ -536,13 +542,13 @@ shape = SubResource("CircleShape2D_pafjg")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 deterministic = true
-root_node = NodePath("../Torso/Arm/Hand")
+root_node = NodePath("../Node2D/Torso/Arm/Hand")
 libraries = {
-"": SubResource("AnimationLibrary_yvawq")
+&"": SubResource("AnimationLibrary_yvawq")
 }
-autoplay = "idle"
+autoplay = "die"
 
 [node name="Flash" type="Node" parent="." node_paths=PackedStringArray("target_node", "health")]
 script = ExtResource("12_w4sn5")
-target_node = NodePath("../Torso/Helmet")
-health = NodePath("../Torso/Helmet/hitpoint/healthComp")
+target_node = NodePath("../Node2D/Torso/Helmet")
+health = NodePath("../Node2D/Torso/Helmet/hitpoint/healthComp")

@@ -13,10 +13,12 @@ func start_attack_timer():
 	timer.start()
 
 func _ready():
-	anim.play("idle")
-	timer.wait_time = randf_range(2.0, 5.0)  
-	timer.timeout.connect(_on_timer_timeout)
-	start_attack_timer()
+	
+	pass
+	#anim.play("idle")
+	#timer.wait_time = randf_range(2.0, 5.0)  
+	#timer.timeout.connect(_on_timer_timeout)
+	#start_attack_timer()
 
 func _on_timer_timeout():
 	anim.play(attack_animations.pick_random())
