@@ -44,7 +44,7 @@ shape = SubResource("RectangleShape2D_68oec")
 [node name="healthComp" type="Node" parent="." node_paths=PackedStringArray("body")]
 script = ExtResource("2_jub5q")
 body = NodePath("..")
-MAX_HEALTH = 200.0
+MAX_HEALTH = 900.0
 
 [node name="DamageGrade" type="Sprite2D" parent="." node_paths=PackedStringArray("hComp")]
 texture = ExtResource("1_voamq")

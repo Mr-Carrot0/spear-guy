@@ -1,6 +1,7 @@
-[gd_scene load_steps=10 format=4 uid="uid://b6afl7iiiif4c"]
+[gd_scene load_steps=11 format=4 uid="uid://b6afl7iiiif4c"]
 
 [ext_resource type="PackedScene" uid="uid://5jpo611kaau8" path="res://Scenes/player.tscn" id="1_7lysl"]
+[ext_resource type="PackedScene" uid="uid://ccwiisr78lifd" path="res://Scenes/background.tscn" id="1_47s5r"]
 [ext_resource type="PackedScene" uid="uid://bboov152741w7" path="res://Scenes/tilemap.tscn" id="2_44s0g"]
 [ext_resource type="PackedScene" uid="uid://c806261i1sywi" path="res://Scenes/deathzone.tscn" id="3_yirbv"]
 [ext_resource type="PackedScene" uid="uid://dnbblff7f6wsu" path="res://Scenes/platform.tscn" id="4_awpr6"]
@@ -46,6 +47,9 @@ _data = {
 }
 
 [node name="obstackle_course" type="Node2D"]
+
+[node name="background" parent="." instance=ExtResource("1_47s5r")]
+position = Vector2(2537, -170)
 
 [node name="Player" parent="." instance=ExtResource("1_7lysl")]
 position = Vector2(-863, -128)

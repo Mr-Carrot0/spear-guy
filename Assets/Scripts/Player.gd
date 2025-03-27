@@ -2,7 +2,10 @@ extends Actor
 class_name Player
 
 @onready var _tree: AnimationTree = $AnimationTree
-@onready var weapon: Spear = $weapon
+#@onready var weapon: Spear = $weapon
+@onready var weapon: Sprite2D = $CollisionShape2D/Bspear
+
+
 @onready var coyote_timer: Timer = $coyoteTimer
 
 @export var speed := 90.0
