@@ -28,7 +28,7 @@ func shoot():
 	# spawn projectile
 	var proj = projectile.instantiate()
 	proj.global_position = spawn_point.global_position
-	var direction = Vector2(cos(rotation), sin(rotation))  # if the canon is rotated  (eg in big guy)
-	proj.direction = direction
+	var current_direction = Vector2(cos(rotation), sin(rotation))  # if the canon is rotated  (eg in big guy)
+	proj.direction = current_direction
 	get_tree().get_root().add_child(proj) 
 	

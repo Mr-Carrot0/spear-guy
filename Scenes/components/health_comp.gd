@@ -6,7 +6,7 @@
 extends Node
 class_name healthComp 
 
-@export var body: Node2D
+@export var body: Node
 signal damage_taken
 signal death
 @export var MAX_HEALTH := 100.0
@@ -45,6 +45,9 @@ func die() -> void:
 		Globals.player_score += score_worth
 		Globals.play_sound("res://Assets/Audio/winfretless.ogg", 10.0)
 		Globals.game_over.call_deferred()
+	elif body is BigGuy:
+		Globals.player_score += 200
+		
 	else:
 		
 		Globals.player_score += score_worth
