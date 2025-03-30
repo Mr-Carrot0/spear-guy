@@ -13,7 +13,6 @@ signal death
 @onready var health := MAX_HEALTH
 @export var score_worth: int = 100
 
-
 func take_damage(amount: int):
 	if health < amount:
 		health = 0
