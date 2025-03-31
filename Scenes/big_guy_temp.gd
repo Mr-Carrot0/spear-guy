@@ -19,10 +19,19 @@ func start_attack_timer():
 	timer.wait_time = randf_range(2.0, 5.0)
 	timer.start()
 
+func disable_all_collision(node: Node):
+	if node is CollisionShape2D:
+		node.call_deferred("set_disabled", true)
+	for child in node.get_children():
+		disable_all_collision(child)
+
 func _on_die():
 	dead = true
-	defeat.emit()
 	anim.play("die")
+	disable_all_collision(self)
+	await anim.animation_finished
+	defeat.emit()
+	queue_free()
 
 func _ready():
 	health_comp.death.connect(_on_die)
