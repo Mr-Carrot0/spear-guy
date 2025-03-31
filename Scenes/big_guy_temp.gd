@@ -11,6 +11,8 @@ class_name BigGuy
 
 var attack_animations = ["attack", "double_attack"]
 
+signal defeat
+
 var dead = false
 
 func start_attack_timer():
@@ -19,6 +21,7 @@ func start_attack_timer():
 
 func _on_die():
 	dead = true
+	defeat.emit()
 	anim.play("die")
 
 func _ready():

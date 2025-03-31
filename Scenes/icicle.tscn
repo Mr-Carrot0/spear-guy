@@ -1,13 +1,13 @@
 [gd_scene load_steps=6 format=3 uid="uid://cp65bixuy6an1"]
 
-[ext_resource type="Script" path="res://Assets/Scripts/icicle.gd" id="1_37m2t"]
-[ext_resource type="Shader" path="res://Assets/shaders/flash.gdshader" id="1_rh0km"]
+[ext_resource type="Script" uid="uid://ckh20bjcteo0k" path="res://Assets/Scripts/icicle.gd" id="1_37m2t"]
+[ext_resource type="Shader" uid="uid://wapmr3ekfmq4" path="res://Assets/shaders/flash.gdshader" id="1_rh0km"]
 [ext_resource type="Texture2D" uid="uid://cbws0766dhaat" path="res://Assets/Sprites/terrain/icicle.png" id="2_3g2cp"]
-[ext_resource type="Script" path="res://Scenes/components/damage_comp.gd" id="3_qf04q"]
+[ext_resource type="Script" uid="uid://c7ljp3ef0vgv7" path="res://Scenes/components/damage_comp.gd" id="3_qf04q"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_fu1wy"]
 shader = ExtResource("1_rh0km")
-shader_parameter/flash_color = null
+shader_parameter/flash_color = Vector4(0, 0, 0, 0)
 
 [node name="icicle" type="AnimatableBody2D"]
 material = SubResource("ShaderMaterial_fu1wy")
@@ -16,7 +16,7 @@ collision_mask = 5
 script = ExtResource("1_37m2t")
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
-position = Vector2(-1, -8.5)
+position = Vector2(-1, -6)
 scale = Vector2(0.5, 0.15)
 enable_node_path = NodePath("../damageComp/CollisionPolygon2D")
 
@@ -29,4 +29,4 @@ collision_mask = 5
 script = ExtResource("3_qf04q")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="damageComp"]
-polygon = PackedVector2Array(-6, -8, 0, 6, 4, -8)
+polygon = PackedVector2Array(-3, -1, 0, 6, 2, -1)
