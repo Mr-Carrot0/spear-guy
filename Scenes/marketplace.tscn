@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cqqt88gjkqajj"]
+[gd_scene load_steps=15 format=3 uid="uid://cqqt88gjkqajj"]
 
 [ext_resource type="PackedScene" uid="uid://dqspfudujoajn" path="res://Scenes/wanted_poster.tscn" id="1_1gsai"]
 [ext_resource type="PackedScene" uid="uid://80exdd8628dh" path="res://Scenes/boss_fight_level.tscn" id="2_4vm7d"]
@@ -12,6 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://edjox1x07bh3" path="res://Assets/Sprites/terrain/spike.png" id="9_7jbyj"]
 [ext_resource type="PackedScene" uid="uid://b6afl7iiiif4c" path="res://Scenes/obstackle_course.tscn" id="10_x6t4q"]
 [ext_resource type="Texture2D" uid="uid://bo8y6ekalhkxk" path="res://Assets/Sprites/items/canon_ball.png" id="11_315k7"]
+[ext_resource type="PackedScene" uid="uid://dm4de37iim5d7" path="res://Scenes/castle.tscn" id="12_gvsco"]
+[ext_resource type="Texture2D" uid="uid://c34iginhwyolh" path="res://Assets/Sprites/items/torch.png" id="13_gvsco"]
 
 [node name="marketplace" type="Control"]
 layout_mode = 3
@@ -110,5 +112,21 @@ grow_horizontal = 1
 grow_vertical = 1
 to_scene = ExtResource("10_x6t4q")
 texture = ExtResource("11_315k7")
+
+[node name="wanted_poster6" parent="." instance=ExtResource("1_1gsai")]
+layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 1097.0
+offset_top = 299.0
+offset_right = 1311.0
+offset_bottom = 516.0
+grow_horizontal = 1
+grow_vertical = 1
+to_scene = ExtResource("12_gvsco")
+texture = ExtResource("13_gvsco")
 
 [node name="stats" parent="." instance=ExtResource("6_7hthj")]

@@ -23,7 +23,7 @@ func change_text(score: int):
 	
 
 func display_extra_life(life:int ):
-	print(life)
+	#print(life)
 	const hearth_width = 16
 	hearths.size.x = hearth_width * life
 	
