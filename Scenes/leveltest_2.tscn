@@ -51,7 +51,7 @@ position = Vector2(-341, 103)
 
 [node name="portal2" parent="." instance=ExtResource("7_54fq0")]
 position = Vector2(7261, 422)
-scene = "boss_fight_level"
+scene = "obstackle_course"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("11_l6vye")
@@ -60,9 +60,9 @@ autoplay = true
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
 rotation = 0.466003
-color = Color(0.103159, 0.0829007, 0.0505634, 1)
+color = Color(0.0567099, 0.0423751, 0.0223101, 1)
 energy = 7.14
 shadow_enabled = true
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-color = Color(0.712262, 0.749018, 0.919082, 1)
+color = Color(0.587413, 0.577047, 0.57687, 1)

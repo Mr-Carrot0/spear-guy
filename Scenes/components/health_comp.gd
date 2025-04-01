@@ -27,6 +27,7 @@ func take_damage(amount: int):
 			die()
 		else:
 			Globals.player_extra_live -= 1
+			Globals.player_score *= 0.5 # loose half the score
 			if Globals.player_extra_live <= 0:
 				death.emit()	
 				die()

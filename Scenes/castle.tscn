@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://dm4de37iim5d7"]
+[gd_scene load_steps=16 format=4 uid="uid://dm4de37iim5d7"]
 
 [ext_resource type="PackedScene" uid="uid://bboov152741w7" path="res://Scenes/tilemap.tscn" id="1_hiajy"]
 [ext_resource type="PackedScene" uid="uid://c806261i1sywi" path="res://Scenes/deathzone.tscn" id="2_7fjx4"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://c33p0xxlmjpyi" path="res://Scenes/portal.tscn" id="4_dimnu"]
 [ext_resource type="AudioStream" uid="uid://lhtm2mcpcb2v" path="res://Assets/Audio/Chiptune-AnTone/An_Tone_Chiptune1/An_Tone - The Explorers code full loop.wav" id="5_aqgvn"]
 [ext_resource type="PackedScene" uid="uid://3n8j51p0xipe" path="res://Scenes/big_guy.tscn" id="6_40qkc"]
+[ext_resource type="AudioStream" uid="uid://cntpmo7cp3yb5" path="res://Assets/Audio/Breezy's Castle Quest - 2 Rebirth of Darkness.wav" id="8_1n63a"]
 
 [sub_resource type="Gradient" id="Gradient_fptms"]
 colors = PackedColorArray(1, 0.494118, 1, 1, 0, 0, 0, 1)
@@ -28,14 +29,15 @@ script/source = "extends \"res://Assets/Scripts/portal.gd\"
 
 func _ready() -> void:
 	monitoring = false
-	visible = false
 	big_guy.defeat.connect(_show)
 
 func _show() -> void:
 	monitoring = true
-	visible = true
 	animation_player.play(\"appear\")
 "
+
+[sub_resource type="Animation" id="Animation_1n63a"]
+length = 0.001
 
 [sub_resource type="Animation" id="Animation_m627o"]
 resource_name = "appear"
@@ -62,33 +64,6 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [0.0, 0.0]
-}
-
-[sub_resource type="Animation" id="Animation_1n63a"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(6136, -12)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_nsfh2"]
@@ -128,7 +103,7 @@ shape = SubResource("WorldBoundaryShape2D_jlt55")
 debug_color = Color(0.973281, 0, 0.435105, 0.42)
 
 [node name="Player" parent="." instance=ExtResource("3_uvpi5")]
-position = Vector2(5563, -163)
+position = Vector2(8, 54)
 
 [node name="portal2" parent="." instance=ExtResource("4_dimnu")]
 visible = false
@@ -151,7 +126,7 @@ color = Color(0.202723, 0.202723, 0.202723, 1)
 position = Vector2(5960, -82)
 
 [node name="portal" parent="." instance=ExtResource("4_dimnu")]
-position = Vector2(6136, -12)
+position = Vector2(6134, 55)
 script = SubResource("GDScript_tircj")
 scene = "obstackle_course"
 
@@ -171,3 +146,57 @@ position = Vector2(3037, 32)
 
 [node name="spikedropper4" parent="." instance=ExtResource("2_m627o")]
 position = Vector2(3544, -32)
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_1n63a")
+volume_db = -15.0
+autoplay = true
+
+[connection signal="body_entered" from="tilemap/coin" to="tilemap/coin" method="_on_body_entered"]
+[connection signal="body_entered" from="tilemap/@Area2D@26924" to="tilemap/@Area2D@26924" method="_on_body_entered"]
+[connection signal="body_entered" from="tilemap/@Area2D@26925" to="tilemap/@Area2D@26925" method="_on_body_entered"]
+[connection signal="body_entered" from="tilemap/@Area2D@26926" to="tilemap/@Area2D@26926" method="_on_body_entered"]
+[connection signal="body_entered" from="tilemap/@Area2D@26937" to="tilemap/@Area2D@26937" method="_on_body_entered"]
+[connection signal="body_entered" from="tilemap/@Area2D@26938" to="tilemap/@Area2D@26938" method="_on_body_entered"]
+[connection signal="body_entered" from="tilemap/@Area2D@26939" to="tilemap/@Area2D@26939" method="_on_body_entered"]
+[connection signal="body_entered" from="tilemap/@Area2D@26979" to="tilemap/@Area2D@26979" method="_on_body_entered"]
+[connection signal="body_entered" from="tilemap/@Area2D@26980" to="tilemap/@Area2D@26980" method="_on_body_entered"]
+[connection signal="body_entered" from="tilemap/@Area2D@26981" to="tilemap/@Area2D@26981" method="_on_body_entered"]
+[connection signal="body_entered" from="tilemap/@Area2D@26982" to="tilemap/@Area2D@26982" method="_on_body_entered"]
+[connection signal="body_entered" from="tilemap/@Area2D@26983" to="tilemap/@Area2D@26983" method="_on_body_entered"]
+[connection signal="body_entered" from="tilemap/@Area2D@26984" to="tilemap/@Area2D@26984" method="_on_body_entered"]
+[connection signal="body_entered" from="tilemap/@Area2D@26985" to="tilemap/@Area2D@26985" method="_on_body_entered"]
+[connection signal="body_entered" from="tilemap/@Area2D@26986" to="tilemap/@Area2D@26986" method="_on_body_entered"]
+[connection signal="body_entered" from="tilemap/@Area2D@26987" to="tilemap/@Area2D@26987" method="_on_body_entered"]
+[connection signal="body_entered" from="tilemap/@Area2D@26988" to="tilemap/@Area2D@26988" method="_on_body_entered"]
+[connection signal="body_entered" from="tilemap/@Area2D@26989" to="tilemap/@Area2D@26989" method="_on_body_entered"]
+[connection signal="body_entered" from="tilemap/@Area2D@26990" to="tilemap/@Area2D@26990" method="_on_body_entered"]
+[connection signal="body_entered" from="tilemap/@Area2D@26991" to="tilemap/@Area2D@26991" method="_on_body_entered"]
+[connection signal="body_entered" from="tilemap/@Area2D@26992" to="tilemap/@Area2D@26992" method="_on_body_entered"]
+[connection signal="body_entered" from="tilemap/@Area2D@26993" to="tilemap/@Area2D@26993" method="_on_body_entered"]
+[connection signal="body_entered" from="tilemap/@Area2D@26994" to="tilemap/@Area2D@26994" method="_on_body_entered"]
+[connection signal="body_entered" from="tilemap/@Area2D@26995" to="tilemap/@Area2D@26995" method="_on_body_entered"]
+[connection signal="body_entered" from="tilemap/@Area2D@26996" to="tilemap/@Area2D@26996" method="_on_body_entered"]
+[connection signal="body_entered" from="tilemap/@Area2D@26997" to="tilemap/@Area2D@26997" method="_on_body_entered"]
+[connection signal="body_entered" from="tilemap/@Area2D@26998" to="tilemap/@Area2D@26998" method="_on_body_entered"]
+[connection signal="body_entered" from="tilemap/@Area2D@26999" to="tilemap/@Area2D@26999" method="_on_body_entered"]
+[connection signal="body_entered" from="tilemap/@Area2D@27000" to="tilemap/@Area2D@27000" method="_on_body_entered"]
+[connection signal="body_entered" from="tilemap/@Area2D@27001" to="tilemap/@Area2D@27001" method="_on_body_entered"]
+[connection signal="body_entered" from="tilemap/@Area2D@27002" to="tilemap/@Area2D@27002" method="_on_body_entered"]
+[connection signal="body_entered" from="tilemap/@Area2D@27003" to="tilemap/@Area2D@27003" method="_on_body_entered"]
+[connection signal="body_entered" from="tilemap/@Area2D@27004" to="tilemap/@Area2D@27004" method="_on_body_entered"]
+[connection signal="body_entered" from="tilemap/@Area2D@27005" to="tilemap/@Area2D@27005" method="_on_body_entered"]
+[connection signal="body_entered" from="tilemap/@Area2D@27006" to="tilemap/@Area2D@27006" method="_on_body_entered"]
+[connection signal="body_entered" from="tilemap/@Area2D@27007" to="tilemap/@Area2D@27007" method="_on_body_entered"]
+[connection signal="body_entered" from="tilemap/@Area2D@27008" to="tilemap/@Area2D@27008" method="_on_body_entered"]
+[connection signal="body_entered" from="tilemap/@Area2D@27009" to="tilemap/@Area2D@27009" method="_on_body_entered"]
+[connection signal="body_entered" from="tilemap/@Area2D@27010" to="tilemap/@Area2D@27010" method="_on_body_entered"]
+[connection signal="body_entered" from="tilemap/@Area2D@27011" to="tilemap/@Area2D@27011" method="_on_body_entered"]
+[connection signal="body_entered" from="tilemap/@Area2D@27012" to="tilemap/@Area2D@27012" method="_on_body_entered"]
+[connection signal="body_entered" from="tilemap/@Area2D@27013" to="tilemap/@Area2D@27013" method="_on_body_entered"]
+[connection signal="body_entered" from="tilemap/bigcoin" to="tilemap/bigcoin" method="_on_body_entered"]
+[connection signal="body_entered" from="tilemap/@Area2D@27049" to="tilemap/@Area2D@27049" method="_on_body_entered"]
+[connection signal="body_entered" from="tilemap/@Area2D@27050" to="tilemap/@Area2D@27050" method="_on_body_entered"]
+[connection signal="body_entered" from="tilemap/@Area2D@27051" to="tilemap/@Area2D@27051" method="_on_body_entered"]
+[connection signal="body_entered" from="tilemap/@Area2D@27052" to="tilemap/@Area2D@27052" method="_on_body_entered"]
+[connection signal="body_entered" from="tilemap/@Area2D@27053" to="tilemap/@Area2D@27053" method="_on_body_entered"]
