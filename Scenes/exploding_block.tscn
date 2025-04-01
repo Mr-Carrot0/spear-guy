@@ -1,0 +1,177 @@
+[gd_scene load_steps=15 format=3 uid="uid://sqyd27r0s124"]
+
+[ext_resource type="Texture2D" uid="uid://b6khbfh0hbath" path="res://Assets/Sprites/generated/generated_16.png" id="1_x2shp"]
+[ext_resource type="Script" uid="uid://kjguqheyu3cu" path="res://Scenes/components/health_comp.gd" id="2_k5cdo"]
+[ext_resource type="Shader" uid="uid://6uln3y4r54hx" path="res://Assets/shaders/explosion.gdshader" id="3_c5m8b"]
+[ext_resource type="Script" uid="uid://c7ljp3ef0vgv7" path="res://Scenes/components/damage_comp.gd" id="4_cvcbb"]
+[ext_resource type="AudioStream" uid="uid://bwau41jn1oxjd" path="res://Assets/Audio/explosion.wav" id="5_k0gox"]
+
+[sub_resource type="GDScript" id="GDScript_k8s5i"]
+script/source = "extends StaticBody2D
+
+# maybe the explosion should be moved to sepparate node
+@onready var animation_player: AnimationPlayer = $explosion/AnimationPlayer
+
+func _on_health_comp_death() -> void:
+	
+	animation_player.play(\"explosion\")
+	await animation_player.animation_finished
+	queue_free()
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s4p7h"]
+size = Vector2(17, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0v617"]
+atlas = ExtResource("1_x2shp")
+region = Rect2(208, 16, 24, 24)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dwoup"]
+resource_local_to_scene = true
+shader = ExtResource("3_c5m8b")
+shader_parameter/progress = 0.0
+shader_parameter/time_scale = 1.0
+shader_parameter/pixel_size = 16.0
+shader_parameter/inner_color = Color(0.984314, 0.94902, 0.211765, 1)
+shader_parameter/outer_color = Color(0.67451, 0.196078, 0.196078, 1)
+shader_parameter/explosion_size = 1.0
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_o2v03"]
+
+[sub_resource type="Animation" id="Animation_bvnfy"]
+resource_name = "explosion"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:shader_parameter/progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.433333, 0.966667),
+"transitions": PackedFloat32Array(0.0980731, 1, 1),
+"update": 0,
+"values": [0.0, 0.5, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("damageComp:monitoring")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.166667, 0.633333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AudioStreamPlayer2D:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.02),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_61lnk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:shader_parameter/progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("damageComp:monitoring")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AudioStreamPlayer2D:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_14ogo"]
+_data = {
+&"RESET": SubResource("Animation_61lnk"),
+&"explosion": SubResource("Animation_bvnfy")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xyfxw"]
+radius = 8.06226
+
+[node name="exploding_block" type="StaticBody2D"]
+collision_layer = 6
+collision_mask = 7
+script = SubResource("GDScript_k8s5i")
+
+[node name="healthComp" type="Node" parent="." node_paths=PackedStringArray("body")]
+script = ExtResource("2_k5cdo")
+body = NodePath("../CollisionShape2D")
+metadata/_custom_type_script = "uid://kjguqheyu3cu"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_s4p7h")
+
+[node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D"]
+position = Vector2(1.5, 0)
+texture = SubResource("AtlasTexture_0v617")
+
+[node name="explosion" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_dwoup")
+position = Vector2(-1.5, -8.5)
+scale = Vector2(43, 43)
+texture = SubResource("CanvasTexture_o2v03")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="explosion"]
+libraries = {
+&"": SubResource("AnimationLibrary_14ogo")
+}
+autoplay = "RESET"
+
+[node name="damageComp" type="Area2D" parent="explosion"]
+position = Vector2(0.535714, 0.607143)
+scale = Vector2(0.0555556, 0.0555556)
+collision_mask = 3
+monitoring = false
+monitorable = false
+script = ExtResource("4_cvcbb")
+damage_amount = 400
+metadata/_custom_type_script = "uid://c7ljp3ef0vgv7"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="explosion/damageComp"]
+position = Vector2(-9, -10.9286)
+shape = SubResource("CircleShape2D_xyfxw")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="explosion"]
+scale = Vector2(0.0555556, 0.0555556)
+stream = ExtResource("5_k0gox")
+volume_db = 10.23
+
+[connection signal="death" from="healthComp" to="." method="_on_health_comp_death"]
