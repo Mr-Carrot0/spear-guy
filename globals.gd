@@ -41,6 +41,10 @@ func play_sound(sound: String):
 	player.play()
 	
 # Utilities
+
+# useful for direction deternimation. 
+# Move it back to res://Assets/Scripts/boss_revamp.gd 
+# if it goes unused elsewhere.
 func bool_to_i8(b: bool) -> int:
 	return 1 if b else -1
 

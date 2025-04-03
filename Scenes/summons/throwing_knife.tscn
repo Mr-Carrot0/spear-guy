@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://7qg4soaib162"]
+
+[ext_resource type="Script" path="res://Scenes/bullet.gd" id="1_2kmgc"]
+[ext_resource type="Texture2D" uid="uid://dax5iont2h4n6" path="res://Assets/Sprites/items/knife.png" id="2_re1jq"]
+[ext_resource type="Script" path="res://Scenes/components/health_comp.gd" id="4_don1v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jnrwx"]
+size = Vector2(1.45926, 11.4882)
+
+[node name="Knife" type="Area2D"]
+position = Vector2(83.459, 66.4308)
+script = ExtResource("1_2kmgc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.490463, -0.0406036)
+rotation = -1.5708
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_jnrwx")
+
+[node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D"]
+position = Vector2(0.490456, 0.0406036)
+scale = Vector2(0.999999, 0.999999)
+texture = ExtResource("2_re1jq")
+metadata/_edit_lock_ = true
+
+[node name="healthComp" type="Node" parent="." node_paths=PackedStringArray("body")]
+script = ExtResource("4_don1v")
+body = NodePath("")
+MAX_HEALTH = 1.0

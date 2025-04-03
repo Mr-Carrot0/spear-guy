@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://bg422nd4vmhl5"]
+[gd_scene load_steps=4 format=3 uid="uid://l8pn5ya3p0ik"]
 
 [ext_resource type="Script" path="res://Scenes/bullet.gd" id="1_p6cm3"]
 [ext_resource type="Texture2D" uid="uid://bo8y6ekalhkxk" path="res://Assets/Sprites/items/canon_ball.png" id="2_5lx0i"]

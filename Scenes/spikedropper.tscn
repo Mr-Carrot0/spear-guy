@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://qbsk55moy4jr"]
+[gd_scene load_steps=4 format=3 uid="uid://dusyxge1gugl"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/spikedropper.gd" id="1_lb3pj"]
 [ext_resource type="PackedScene" uid="uid://cp65bixuy6an1" path="res://Scenes/icicle.tscn" id="2_dhiup"]

@@ -15,9 +15,9 @@ var phase_timer = 0.0
 @export var summonable_scene_2: PackedScene
 @export var underling_scene: PackedScene
 
-@export var summon_area: Shape2D 
+@export var summon_area: Shape2D
 @export var dash_speed: float = 400.0
-@export var phase_duration: float = 5.0  
+@export var phase_duration: float = 5.0
 
 func get_spawn_points() -> Array:
 	return $SpawnArea.get_children()
@@ -44,12 +44,12 @@ func _physics_process(delta: float) -> void:
 	if phase_timer <= 0.0:
 		switch_phase()
 
-func handle_jump_phase()-> void:
+func handle_jump_phase() -> void:
 	pass
 
 func handle_summon_phase():
 
-	if randf() < 0.1:  
+	if randf() < 0.1:
 		summon_random_object()
 
 
@@ -70,7 +70,7 @@ func handle_dash_phase():
 	#	move_and_slide()
 
 func handle_underling_phase():
-	if randf() < 0.03: 
+	if randf() < 0.03:
 		summon_underling()
 		
 func summon_underling():
@@ -88,4 +88,3 @@ func switch_phase():
 	current_state = state as State
 	#if health <= 0:
 	#	current_state = State.DEFEATED
-	

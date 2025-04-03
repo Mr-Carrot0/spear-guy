@@ -42,7 +42,6 @@ func _on_attack_duration_timeout() -> void:
 
 
 func _physics_process(delta) -> void:
-	super(delta)
 
 	if can_attack and Input.is_action_just_pressed("attack"):
 		can_attack = false
@@ -71,7 +70,7 @@ func _physics_process(delta) -> void:
 		# cosmetics
 		$jumpSound.play()
 		_tree["parameters/m/transition_request"] = "air"
-		# _tree["parameters/[OneShot]/request"] = AnimationNodeOneShot.ONE_SHOT_REQUEST_\request\
+		# _tree["parameters/[OneShot]/request"] = AnimationNodeOneShot.ONE_SHOT_REQUEST_[request]
 		_tree["parameters/spin/request"] = AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE
 		
 	if Input.is_action_pressed("jump") and jump_time < max_jump_time:
@@ -109,4 +108,4 @@ func _physics_process(delta) -> void:
 			if debug.oneshot:
 				print(AnimationNodeOneShot[_tree["parameters/spin/request"]])
 	
-	move_and_slide()
+	super(delta)

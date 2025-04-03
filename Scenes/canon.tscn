@@ -1,8 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://b30gwx17t6f0f"]
+[gd_scene load_steps=7 format=3 uid="uid://b6n65vayr0nt8"]
 
 [ext_resource type="Texture2D" uid="uid://c3g4n0re1lwdb" path="res://Assets/Sprites/terrain/canon.png" id="1_a0fao"]
 [ext_resource type="Script" path="res://Assets/Scripts/canon.gd" id="1_y2sxx"]
-[ext_resource type="PackedScene" uid="uid://bg422nd4vmhl5" path="res://Scenes/canon_ball.tscn" id="2_ntq0y"]
+[ext_resource type="PackedScene" uid="uid://l8pn5ya3p0ik" path="res://Scenes/canon_ball.tscn" id="2_ntq0y"]
 [ext_resource type="AudioStream" uid="uid://dp1iwaj50yj8u" path="res://Assets/Audio/explosion(2).wav" id="3_14jb1"]
 
 [sub_resource type="Gradient" id="Gradient_4l7dx"]
