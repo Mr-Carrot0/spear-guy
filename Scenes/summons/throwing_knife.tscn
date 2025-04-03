@@ -14,7 +14,6 @@ script = ExtResource("1_2kmgc")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.490463, -0.0406036)
 rotation = -1.5708
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_jnrwx")
 
 [node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D"]
@@ -23,7 +22,6 @@ scale = Vector2(0.999999, 0.999999)
 texture = ExtResource("2_re1jq")
 metadata/_edit_lock_ = true
 
-[node name="healthComp" type="Node" parent="." node_paths=PackedStringArray("body")]
+[node name="healthComp" type="Node" parent="."]
 script = ExtResource("4_don1v")
-body = NodePath("")
 MAX_HEALTH = 1.0
