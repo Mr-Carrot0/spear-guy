@@ -112,7 +112,8 @@ func summon_proj(key: StringName, marker: Marker2D):
 		proj.global_rotation = marker.global_rotation
 		proj.global_position = marker.global_position
 
-		get_tree().root.add_child(proj)
+		get_tree().root.get_child(1)
+		# .add_child(proj)
 	else: print_debug("could not summon proj")
 
 	# if _bypass or key in summonDict.keys():
