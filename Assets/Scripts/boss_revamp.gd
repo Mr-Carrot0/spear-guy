@@ -39,17 +39,21 @@ walls:
 enum {
 	MOVE,
 	JUMP,
-	ATTACK,
+	HANG,
+	ATTACK_KNIFE,
 	DEFEATED,
 }
 
 @onready var knife_holder: Node2D = $summons/knife
+@onready var timer_jump_knife:Timer = $summons/timer_jump_knife
 
 var current_state := MOVE
 var desired_vel: float
 
 var p_dir: int
 var old_p_dir: int
+
+var compute_physics := true
 
 @export var desired_distance: float = 100
 
@@ -87,10 +91,19 @@ func _physics_process(delta):
 				velocity.x = move_toward(velocity.x, (speed * x_dir if (acepted_distance > 1) else 0.0), speed)
 			JUMP:
 				# jump
+				velocity.y += 200
+				current_state = HANG
+			HANG:
+				if timer_jump_knife.is_stopped():
+					timer_jump_knife.start()
+			ATTACK_KNIFE:
+				velocity.y = 0
+				compute_physics=false
 				summon_projs(&"knife", $summons/knife)
 			DEFEATED:
 				pass
-	super(delta)
+	if compute_physics:
+		super(delta)
 
 
 func knockback(): pass
@@ -112,8 +125,7 @@ func summon_proj(key: StringName, marker: Marker2D):
 		proj.global_rotation = marker.global_rotation
 		proj.global_position = marker.global_position
 
-		get_tree().root.get_child(1)
-		# .add_child(proj)
+		get_tree().root.get_current_scene().add_child(proj)
 	else: print_debug("could not summon proj")
 
 	# if _bypass or key in summonDict.keys():
