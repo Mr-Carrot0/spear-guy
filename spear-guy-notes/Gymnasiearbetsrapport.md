@@ -6,10 +6,10 @@ Credits:
 ---
 
 ## syfte 
-Jag (Johan) ska skapa ett spel tillsammans med Vide i Godot. Vi kommer använda oss av Git/Github för att kunna samarbeta på ett bra och smidigt sätt
+Jag (Johan) ska skapa ett spel tillsammans med Vide i Godot. Vi kommer använda oss av Git/Github för att kunna samarbeta på ett bra och smidigt sätt. 
 
 ## mål / frågeställningar    
-
+Skapa ett fungerande spel i Godot och sätta upp det på [itch](https://itch.io) 
 
 ## genomförande / metod / källor  
 
