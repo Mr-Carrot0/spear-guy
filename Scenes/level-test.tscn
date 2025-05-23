@@ -37,8 +37,8 @@ offset_right = 367.0
 offset_bottom = 1.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 13
-text = "Move using [a]/[d] or [left/right arrow]
-Move spear using w/s or up and down arrow
+text = "Move using [A/D] or [left/right arrow keys]
+Move spear using [W/S] or up and down arrow
 jump using [spacebar] or [X]
 attack with your spear with [C] or [,]"
 
@@ -58,12 +58,12 @@ position = Vector2(489, 442)
 shape = SubResource("WorldBoundaryShape2D_5730w")
 
 [connection signal="body_entered" from="tilemap/coin" to="tilemap/coin" method="_on_body_entered"]
-[connection signal="body_entered" from="tilemap/@Area2D@20950" to="tilemap/@Area2D@20950" method="_on_body_entered"]
-[connection signal="body_entered" from="tilemap/@Area2D@20951" to="tilemap/@Area2D@20951" method="_on_body_entered"]
-[connection signal="body_entered" from="tilemap/@Area2D@20952" to="tilemap/@Area2D@20952" method="_on_body_entered"]
-[connection signal="body_entered" from="tilemap/@Area2D@20953" to="tilemap/@Area2D@20953" method="_on_body_entered"]
-[connection signal="body_entered" from="tilemap/@Area2D@20954" to="tilemap/@Area2D@20954" method="_on_body_entered"]
-[connection signal="body_entered" from="tilemap/@Area2D@20955" to="tilemap/@Area2D@20955" method="_on_body_entered"]
-[connection signal="body_entered" from="tilemap/@Area2D@20956" to="tilemap/@Area2D@20956" method="_on_body_entered"]
-[connection signal="body_entered" from="tilemap/@Area2D@20957" to="tilemap/@Area2D@20957" method="_on_body_entered"]
-[connection signal="body_entered" from="tilemap/@Area2D@20958" to="tilemap/@Area2D@20958" method="_on_body_entered"]
+[connection signal="body_entered" from="tilemap/@Area2D@24689" to="tilemap/@Area2D@24689" method="_on_body_entered"]
+[connection signal="body_entered" from="tilemap/@Area2D@24690" to="tilemap/@Area2D@24690" method="_on_body_entered"]
+[connection signal="body_entered" from="tilemap/@Area2D@24691" to="tilemap/@Area2D@24691" method="_on_body_entered"]
+[connection signal="body_entered" from="tilemap/@Area2D@24692" to="tilemap/@Area2D@24692" method="_on_body_entered"]
+[connection signal="body_entered" from="tilemap/@Area2D@24693" to="tilemap/@Area2D@24693" method="_on_body_entered"]
+[connection signal="body_entered" from="tilemap/@Area2D@24694" to="tilemap/@Area2D@24694" method="_on_body_entered"]
+[connection signal="body_entered" from="tilemap/@Area2D@24695" to="tilemap/@Area2D@24695" method="_on_body_entered"]
+[connection signal="body_entered" from="tilemap/@Area2D@24696" to="tilemap/@Area2D@24696" method="_on_body_entered"]
+[connection signal="body_entered" from="tilemap/@Area2D@24697" to="tilemap/@Area2D@24697" method="_on_body_entered"]

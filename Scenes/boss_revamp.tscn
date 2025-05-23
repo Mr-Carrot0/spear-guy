@@ -59,3 +59,8 @@ rotation = -0.829785
 [node name="Marker2D4" type="Marker2D" parent="summons/knife"]
 position = Vector2(-1.78304, 26.7194)
 rotation = -1.05587
+
+[node name="timer_jump_knife" type="Timer" parent="summons"]
+one_shot = true
+
+[connection signal="timeout" from="summons/timer_jump_knife" to="." method="_on_timer_jump_knife_timeout"]

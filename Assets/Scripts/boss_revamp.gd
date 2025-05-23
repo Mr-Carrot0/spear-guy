@@ -15,10 +15,6 @@ chains:
 cc		  c       cc
   cc	 c     cc
 	c P c  cc       R
-
-walls:
-
-
 """
 
 
@@ -41,11 +37,13 @@ enum {
 	JUMP,
 	HANG,
 	ATTACK_KNIFE,
+	ATTACK_ICE,
+	ATTACK_CHAIN,
 	DEFEATED,
 }
 
 @onready var knife_holder: Node2D = $summons/knife
-@onready var timer_jump_knife:Timer = $summons/timer_jump_knife
+@onready var timer_jump_knife: Timer = $summons/timer_jump_knife
 
 var current_state := MOVE
 var desired_vel: float
@@ -64,11 +62,15 @@ func _ready():
 		p_dir = Globals.bool_to_i8(position.x - player.position.x < 0)
 		old_p_dir = p_dir
 
+func _on_timer_jump_knife_timeout():
+	current_state = ATTACK_KNIFE
+
 
 func _physics_process(delta):
 
 	# Testing
-	
+	if Input.is_key_pressed(KEY_1):
+		current_state = JUMP
 	# Testing
 
 	# movement
@@ -98,7 +100,7 @@ func _physics_process(delta):
 					timer_jump_knife.start()
 			ATTACK_KNIFE:
 				velocity.y = 0
-				compute_physics=false
+				compute_physics = false
 				summon_projs(&"knife", $summons/knife)
 			DEFEATED:
 				pass
