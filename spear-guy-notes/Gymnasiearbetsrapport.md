@@ -1,9 +1,12 @@
 ---
-aliases:
+aliases: 
+Credits:
+  - Johan Andersson
+  - Vide Jakobsson
 ---
 
 ## syfte 
-Jag ska skapa ett spel i Godot med 
+Jag (Johan) ska skapa ett spel tillsammans med Vide i Godot. Vi kommer använda oss av Git/Github för att kunna samarbeta på ett bra och smidigt sätt
 
 ## mål / frågeställningar    
 
