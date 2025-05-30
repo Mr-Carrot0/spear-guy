@@ -14,7 +14,7 @@ Skapa ett fungerande spel i Godot och lägga upp det på [itch](https://mr-carro
 ## genomförande / metod  
 Vi kommer använda oss spelmotorn Godot i kombination med Git/Github för att kunna samarbeta på ett bra och smidigt sätt. 
 
-## tidsplan / aktiviteter  
+## tidsplan / aktiviteter
 
 
 ## dokumentation  
