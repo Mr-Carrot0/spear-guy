@@ -17,7 +17,7 @@ Vi kommer använda oss spelmotorn Godot i kombination med Git/Github för att ku
 ## tidsplan / aktiviteter
 
 
-## dokumentation  
+## dokumentation 
 
 
 ## redovisning / presentation
