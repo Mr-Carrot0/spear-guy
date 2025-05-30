@@ -9,10 +9,10 @@ Credits:
 Jag (Johan) ska skapa ett spel tillsammans med Vide i Godot. Vi kommer använda oss av Git/Github för att kunna samarbeta på ett bra och smidigt sätt. 
 
 ## mål / frågeställningar    
-Skapa ett fungerande spel i Godot och sätta upp det på [itch](https://mr-carrot0.itch.io/).
+Skapa ett fungerande spel i Godot och sätta upp det på [itch](https://mr-carrot0.itch.io/spear-guy-alfa).
 
 ## genomförande / metod / källor  
-
+ 
 
 ## tidsplan / aktiviteter  
 
