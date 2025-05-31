@@ -42,10 +42,10 @@ För att göra det tydligt och överskådligt struktureras resultatet upp i fler
 Här ska du resonera om ditt resultat. Varför blev det som det blev? Nåddes målen? Fick frågeställningarna svar? Lärdomar?  
 (Ingen ny information om projektet får ges här).
 
-## **Källförteckning  
+## Källförteckning  
 **Här sorteras och listas dina källor. Kolla upp hur du ska göra.
 
-## **Figur- och tabellförteckning  
+## Figur- och tabellförteckning
 **Här sorteras och listas dina figurer(bilder) och tabeller
 
 /**
