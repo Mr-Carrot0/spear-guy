@@ -7,9 +7,7 @@ Use items that I create using inheritance
 they should alter the players stats.
 
 - forever
-
 - for a while
-
 - when touching
 
 
