@@ -12,19 +12,43 @@ cssclasses:
 Gymnasiearbete 100 p  
 Teknikprogrammet 23/24  
 Baldergymnasiet  
-Handledare: [Hens Namn] ![](TE-logo.png)
+Handledare: Mattias Vinevall
+![](TE-logo.png)
 # Spear guy - ett plattformsspel i Godot
 
-
-
-
-
-## syfte 
+## Sammanfattning
+### syfte 
 Jag (Johan) ska skapa ett spel tillsammans med Vide. 
 
-## mål / frågeställningar    
+## Abstract
+## Innehållsförteckning
+## 1. Inledning
+### 1.2 mål
 Skapa ett fungerande spel i Godot och lägga upp det på [itch](https://mr-carrot0.itch.io/spear-guy-alfa). 
 
+### 1.3 Metod / källor
+### 1.4 Bakgrund
+
+## 2. Resultat
+
+### 2.1 Underrubrik  
+Här görs en sakligt beskrivning av hur arbetet fortlöpt. Det kan vara att beskriva olika arbetsmoment såsom t ex skisser, tester, ritningar eller montage. Det kan också vara  att redovisa resultat från kunskapsinhämtning från olika källor, t ex  från litteratur, atriklar, praktiska försök, enkäter, Youtube-kanaler m m.
+
+### 2.2 Underrubrik  
+För att göra det tydligt och överskådligt struktureras resultatet upp i flera underrubriker så det blir lättläst och begripligt.
+
+## 3. Diskussion
+**3.1 Underrubrik  
+Här ska du resonera om ditt resultat. Varför blev det som det blev? Nåddes målen? Fick frågeställningarna svar? Lärdomar?  
+(Ingen ny information om projektet får ges här).
+
+## **Källförteckning  
+**Här sorteras och listas dina källor. Kolla upp hur du ska göra.
+
+## **Figur- och tabellförteckning  
+**Här sorteras och listas dina figurer(bilder) och tabeller
+
+/**
 ## genomförande / metod  
 Vi kommer använda oss spelmotorn Godot i kombination med Git/Github för att kunna samarbeta på ett bra och smidigt sätt. 
 
