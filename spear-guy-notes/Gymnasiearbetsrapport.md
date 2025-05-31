@@ -3,7 +3,21 @@ aliases:
 Credits:
   - Johan Andersson
   - Vide Jakobsson
+cssclasses:
+  - gyarb
 ---
+
+**Johan Andersson**  
+  
+Gymnasiearbete 100 p  
+Teknikprogrammet 23/24  
+Baldergymnasiet  
+Handledare: [Hens Namn] ![](TE-logo.png)
+# Spear guy - ett plattformsspel i Godot
+
+
+
+
 
 ## syfte 
 Jag (Johan) ska skapa ett spel tillsammans med Vide. 
