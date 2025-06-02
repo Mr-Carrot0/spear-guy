@@ -27,7 +27,7 @@ Jag (Johan) ska skapa ett spel tillsammans med Vide.
 ### 1.1 Syfte och Avgränsningar
 Jag är intresserad av programmering och att skapa ett spel är en intressant utmaning. 
 
-
+Jag trodde att det skulle vara utmanade att se till att spelaren kändes bra att kontrollera och att hålla fysikmotorn i schack. 
 
 vad jag trodde skulle bli problem:
 - fysikmotor
