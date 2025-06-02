@@ -4,6 +4,7 @@ aliases:
   - Design Document
 tags:
   - meta
+classes:
 ---
 [Spear guy](chars/spear-guy.md) will be a combat platformer, with the twist that your goal is to disarm your opponent, by either by straight destroying the weapon or remove it from their hands, rather than killing them. 
 
