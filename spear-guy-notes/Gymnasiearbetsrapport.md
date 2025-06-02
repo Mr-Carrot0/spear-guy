@@ -26,6 +26,16 @@ Jag (Johan) ska skapa ett spel tillsammans med Vide.
 
 ### 1.1 Syfte och Avgränsningar
 Jag är intresserad av programmering och att skapa ett spel är en intressant utmaning. 
+
+
+
+vad jag trodde skulle bli problem:
+- fysikmotor
+- spelarkontroller
+verkliga problem: 
+- git merge conflicts
+- filstrukturer (eller avsaknaden av)
+- olika visioner
 ### 1.2 mål
 
 Skapa ett fungerande spel i Godot och lägga upp det på [itch](https://mr-carrot0.itch.io/spear-guy-alfa). 
