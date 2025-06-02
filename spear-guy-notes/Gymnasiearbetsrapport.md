@@ -23,7 +23,11 @@ Jag (Johan) ska skapa ett spel tillsammans med Vide.
 ## Abstract
 ## Innehållsförteckning
 ## 1. Inledning
+
+### 1.1 Syfte och Avgränsningar
+Jag är intresserad av programmering och att skapa ett spel är en intressant utmaning. 
 ### 1.2 mål
+
 Skapa ett fungerande spel i Godot och lägga upp det på [itch](https://mr-carrot0.itch.io/spear-guy-alfa). 
 
 ### 1.3 Metod / källor
