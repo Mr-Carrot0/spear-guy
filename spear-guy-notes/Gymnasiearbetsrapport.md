@@ -36,9 +36,12 @@ verkliga problem:
 - git merge conflicts
 - filstrukturer (eller avsaknaden av)
 - olika visioner
-### 1.2 mål
+### 1.2 frågor mål
+Är det rimligt att göra ett spel i en obekant spelmotor och kodsynkningsprogram under 100 timmar?
+Hur ser det ut att göra ett spel i Godot?
+Vilka utmaningar kommer jag möta under programmeringens gång?
 
-Skapa ett fungerande spel i Godot och lägga upp det på [itch](https://mr-carrot0.itch.io/spear-guy-alfa). 
+Mitt mål är skapa ett fungerande spel i Godot och lägga upp det på [itch](https://mr-carrot0.itch.io/spear-guy-alfa). 
 
 ### 1.3 Metod / källor
 ### 1.4 Bakgrund
