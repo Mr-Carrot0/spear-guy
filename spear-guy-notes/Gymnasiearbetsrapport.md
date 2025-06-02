@@ -44,11 +44,12 @@ Vilka utmaningar kommer jag möta under programmeringens gång?
 Mitt mål är skapa ett fungerande spel i Godot och lägga upp det på [itch](https://mr-carrot0.itch.io/spear-guy-alfa). 
 
 ### 1.3 Metod / källor
-Jag planerade vad spelet ska gå ut på, skapat karaktärer miljö 
+Jag planerade vad spelet ska gå ut på, skapat en berättelse och karaktärer.
 
 för att lära mig Godot (och gdscript) använde jag mig av kursen Tillämpad Programmering, [Godots dokumentation](https://docs.godotengine.org/en/stable/) och frågor som tidigare ställts på [Stack Overflow](https://stackoverflow.com/). 
 
-### 1.4 Bakgrund
+###   1.4 Bakgrund
+
 
 ## 2. Resultat
 
