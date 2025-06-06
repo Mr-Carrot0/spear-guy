@@ -39,7 +39,7 @@ func play_sound(sound: String, volume_db:float=0):
 	player.stream = load(sound)
 	player.volume_db = volume_db
 	player.finished.connect(player.queue_free)
-	add_child(player)
+	add_child(player) 
 	player.play()
 	
 	

@@ -1,12 +1,12 @@
 [gd_scene load_steps=14 format=3 uid="uid://d2lutv8ys5fpv"]
 
 [ext_resource type="Texture2D" uid="uid://bqssgg700sxw2" path="res://Assets/Sprites/characters/higher_knight.png" id="1_cytgw"]
-[ext_resource type="Script" path="res://Scenes/components/health_comp.gd" id="1_ik1io"]
-[ext_resource type="Script" path="res://Scenes/components/movementComp.gd" id="1_wgi62"]
+[ext_resource type="Script" uid="uid://kjguqheyu3cu" path="res://Scenes/components/health_comp.gd" id="1_ik1io"]
+[ext_resource type="Script" uid="uid://583b3gioh65e" path="res://Scenes/components/movementComp.gd" id="1_wgi62"]
 [ext_resource type="PackedScene" uid="uid://cm3or5tm6xkib" path="res://Scenes/short_sword.tscn" id="2_gv0lk"]
-[ext_resource type="Script" path="res://Scenes/components/flipComp.gd" id="5_h5abr"]
+[ext_resource type="Script" uid="uid://5hrm0jf4lu" path="res://Scenes/components/flipComp.gd" id="5_h5abr"]
 [ext_resource type="PackedScene" uid="uid://b0n2s8qmr7c7m" path="res://Scenes/components/healthBarComp.tscn" id="6_8jb2b"]
-[ext_resource type="Script" path="res://Scenes/components/flash.gd" id="7_em6pk"]
+[ext_resource type="Script" uid="uid://bua0d8md2sq7n" path="res://Scenes/components/flash.gd" id="7_em6pk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sbig2"]
 size = Vector2(10, 24)
@@ -58,7 +58,7 @@ character_body = NodePath("..")
 [node name="healthComp" type="Node" parent="." node_paths=PackedStringArray("body")]
 script = ExtResource("1_ik1io")
 body = NodePath("..")
-MAX_HEALTH = 800.0
+MAX_HEALTH = 1000.0
 score_worth = 0
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]

@@ -7,7 +7,8 @@
 [ext_resource type="AudioStream" uid="uid://hjncdeym50vx" path="res://Assets/Audio/Chiptune-AnTone/An_Tone_Chiptune4/An_Tone - funventure full loop.wav" id="5_wwtjx"]
 
 [sub_resource type="Gradient" id="Gradient_yog6p"]
-colors = PackedColorArray(0, 0, 0, 1, 0.388235, 0.607843, 1, 1)
+interpolation_mode = 2
+colors = PackedColorArray(0.0329609, 0.0771839, 0.0727923, 1, 0.388235, 0.607843, 1, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_h32an"]
 gradient = SubResource("Gradient_yog6p")
@@ -18,7 +19,7 @@ fill_to = Vector2(0.585366, 0.0447154)
 
 [node name="level3" type="Node2D"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="bg" type="Sprite2D" parent="."]
 position = Vector2(988.5, 191.5)
 scale = Vector2(100.234, 34.7031)
 texture = SubResource("GradientTexture2D_h32an")
@@ -49,6 +50,30 @@ color = Color(0.790655, 0.475304, 0.483627, 1)
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
 rotation = -5.81718
+energy = 0.58
 shadow_enabled = true
 shadow_filter = 1
 shadow_filter_smooth = 0.2
+
+[connection signal="body_entered" from="tilemap/coin" to="tilemap/coin" method="_on_body_entered"]
+[connection signal="body_entered" from="tilemap/@Area2D@43505" to="tilemap/@Area2D@43505" method="_on_body_entered"]
+[connection signal="body_entered" from="tilemap/@Area2D@43506" to="tilemap/@Area2D@43506" method="_on_body_entered"]
+[connection signal="body_entered" from="tilemap/@Area2D@43507" to="tilemap/@Area2D@43507" method="_on_body_entered"]
+[connection signal="body_entered" from="tilemap/@Area2D@43508" to="tilemap/@Area2D@43508" method="_on_body_entered"]
+[connection signal="body_entered" from="tilemap/@Area2D@43509" to="tilemap/@Area2D@43509" method="_on_body_entered"]
+[connection signal="body_entered" from="tilemap/@Area2D@43510" to="tilemap/@Area2D@43510" method="_on_body_entered"]
+[connection signal="body_entered" from="tilemap/@Area2D@43511" to="tilemap/@Area2D@43511" method="_on_body_entered"]
+[connection signal="body_entered" from="tilemap/@Area2D@43512" to="tilemap/@Area2D@43512" method="_on_body_entered"]
+[connection signal="body_entered" from="tilemap/@Area2D@43513" to="tilemap/@Area2D@43513" method="_on_body_entered"]
+[connection signal="body_entered" from="tilemap/@Area2D@43514" to="tilemap/@Area2D@43514" method="_on_body_entered"]
+[connection signal="body_entered" from="tilemap/@Area2D@43515" to="tilemap/@Area2D@43515" method="_on_body_entered"]
+[connection signal="body_entered" from="tilemap/@Area2D@43516" to="tilemap/@Area2D@43516" method="_on_body_entered"]
+[connection signal="body_entered" from="tilemap/@Area2D@43517" to="tilemap/@Area2D@43517" method="_on_body_entered"]
+[connection signal="body_entered" from="tilemap/@Area2D@43518" to="tilemap/@Area2D@43518" method="_on_body_entered"]
+[connection signal="body_entered" from="tilemap/@Area2D@43519" to="tilemap/@Area2D@43519" method="_on_body_entered"]
+[connection signal="body_entered" from="tilemap/@Area2D@43520" to="tilemap/@Area2D@43520" method="_on_body_entered"]
+[connection signal="body_entered" from="tilemap/@Area2D@43521" to="tilemap/@Area2D@43521" method="_on_body_entered"]
+[connection signal="body_entered" from="tilemap/@Area2D@43522" to="tilemap/@Area2D@43522" method="_on_body_entered"]
+[connection signal="body_entered" from="tilemap/@Area2D@43523" to="tilemap/@Area2D@43523" method="_on_body_entered"]
+[connection signal="body_entered" from="tilemap/@Area2D@43524" to="tilemap/@Area2D@43524" method="_on_body_entered"]
+[connection signal="body_entered" from="tilemap/@Area2D@43525" to="tilemap/@Area2D@43525" method="_on_body_entered"]

@@ -25,11 +25,11 @@ func _process(delta: float) -> void:
 		
 		if current_char == '\n':
 			delay *= 5
-		elif (prev_char in [',','.',':']):
+		elif (prev_char in [',' ,'.' ,':']):
 			delay *= 3
 		
 		if time_elapsed > delay:
-			label.text += current_char
+			label.text += current_char # should probably use set_visible_characters()  instead and use a timer
 			time_elapsed = 0
 			current_content_index += 1
 		prev_char = current_char

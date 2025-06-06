@@ -1,3 +1,7 @@
+# Not used, have to understand animation tree first
+# See big_guy_temp.gd 
+# for the script in use
+
 extends AnimationTree
 
 func set_condition(condition_name, value):

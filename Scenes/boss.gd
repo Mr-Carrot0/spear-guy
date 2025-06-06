@@ -59,7 +59,8 @@ func summon_random_object():
 		var random_point = spawn_points[randi() % spawn_points.size()]
 		var summon_scene = summonable_scene_1 if randf() < 0.3 else summonable_scene_2
 		var summon_instance = summon_scene.instantiate()
-		summon_instance.position = random_point.global_position
+		summon_instance.position = random_point.global_position 
+		summon_instance.position.x += randi() % 400
 		get_parent().add_child(summon_instance)
 
 func handle_dash_phase():

@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=65 format=3 uid="uid://642tmirunb4o"]
+[gd_resource type="TileSet" load_steps=66 format=3 uid="uid://642tmirunb4o"]
 
 [ext_resource type="Texture2D" uid="uid://dvlocyd4cya2d" path="res://Assets/tilesheet/simple_16.png" id="1"]
 [ext_resource type="Material" uid="uid://bb68rhwo6mprg" path="res://Assets/shaders/water.tres" id="1_l8crw"]
@@ -21,6 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://do65g263y2idg" path="res://Scenes/crumpling_block.tscn" id="12_7pqk4"]
 [ext_resource type="PackedScene" uid="uid://kh1ku5o87hot" path="res://Scenes/extra_life.tscn" id="13_200nv"]
 [ext_resource type="PackedScene" uid="uid://d2lutv8ys5fpv" path="res://Scenes/knight.tscn" id="13_tb0kt"]
+[ext_resource type="PackedScene" uid="uid://sqyd27r0s124" path="res://Scenes/exploding_block.tscn" id="14_c542a"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_ujltw"]
 tile_data = PackedInt32Array(0, 196610, 0, 65536, 262146, 0, 131072, 262146, 0, 196608, 262146, 0, 262144, 196610, 1, 327680, 262146, 1, 393216, 262146, 1, 458752, 262146, 1, 524288, 262146, 1, 589824, 262146, 1, 655360, 262146, 1, 720896, 262146, 1)
@@ -418,6 +419,7 @@ scenes/14/scene = ExtResource("8_7camm")
 scenes/15/scene = ExtResource("9_4xein")
 scenes/16/scene = ExtResource("12_7pqk4")
 scenes/17/scene = ExtResource("13_200nv")
+scenes/18/scene = ExtResource("14_c542a")
 
 [resource]
 occlusion_layer_0/light_mask = 1

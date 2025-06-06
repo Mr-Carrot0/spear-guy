@@ -1,14 +1,14 @@
 [gd_scene load_steps=11 format=3 uid="uid://dkrbcfo4ck83x"]
 
-[ext_resource type="Script" path="res://Assets/Scripts/smart_enemy_movement.gd" id="1_4aakr"]
-[ext_resource type="Script" path="res://Scenes/components/flipComp.gd" id="1_odrcn"]
+[ext_resource type="Script" uid="uid://b7328grs66bil" path="res://Assets/Scripts/smart_enemy_movement.gd" id="1_4aakr"]
+[ext_resource type="Script" uid="uid://5hrm0jf4lu" path="res://Scenes/components/flipComp.gd" id="1_odrcn"]
 [ext_resource type="Texture2D" uid="uid://honudsoswswb" path="res://Assets/Sprites/items/small_e.png" id="2_4ve6c"]
-[ext_resource type="Script" path="res://Scenes/components/movementComp.gd" id="3_s5xwm"]
+[ext_resource type="Script" uid="uid://583b3gioh65e" path="res://Scenes/components/movementComp.gd" id="3_s5xwm"]
 [ext_resource type="Texture2D" uid="uid://xbrb7s7jbc0i" path="res://Assets/Sprites/items/hat.png" id="4_4qwrj"]
 [ext_resource type="PackedScene" uid="uid://bgsq7b0um0iak" path="res://Scenes/blade.tscn" id="4_mo83i"]
-[ext_resource type="Script" path="res://Scenes/components/health_comp.gd" id="5_tpk5u"]
+[ext_resource type="Script" uid="uid://kjguqheyu3cu" path="res://Scenes/components/health_comp.gd" id="5_tpk5u"]
 [ext_resource type="PackedScene" uid="uid://b0n2s8qmr7c7m" path="res://Scenes/components/healthBarComp.tscn" id="6_sisqy"]
-[ext_resource type="Script" path="res://Scenes/components/flash.gd" id="9_ji7bn"]
+[ext_resource type="Script" uid="uid://bua0d8md2sq7n" path="res://Scenes/components/flash.gd" id="9_ji7bn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_trr20"]
 size = Vector2(13, 23)
@@ -48,7 +48,7 @@ position = Vector2(-4, 12)
 [node name="healthComp" type="Node" parent="." node_paths=PackedStringArray("body")]
 script = ExtResource("5_tpk5u")
 body = NodePath("..")
-MAX_HEALTH = 500.0
+MAX_HEALTH = 800.0
 score_worth = 0
 
 [node name="HealthBarComp" parent="." node_paths=PackedStringArray("hComp") instance=ExtResource("6_sisqy")]

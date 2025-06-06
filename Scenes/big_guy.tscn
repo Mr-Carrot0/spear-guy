@@ -529,7 +529,7 @@ collision_layer = 2
 unique_name_in_owner = true
 script = ExtResource("2_wjdtc")
 body = NodePath("../../../../..")
-MAX_HEALTH = 200.0
+MAX_HEALTH = 400.0
 score_worth = 1000
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Torso/Helmet/hitpoint"]

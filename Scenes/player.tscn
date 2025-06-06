@@ -1,15 +1,15 @@
 [gd_scene load_steps=29 format=3 uid="uid://5jpo611kaau8"]
 
-[ext_resource type="Script" path="res://Assets/Scripts/Player.gd" id="1_2d27w"]
+[ext_resource type="Script" uid="uid://pcoj4fmohq6x" path="res://Assets/Scripts/Player.gd" id="1_2d27w"]
 [ext_resource type="Texture2D" uid="uid://xps8a6xso4k4" path="res://Assets/Sprites/stolen/player.png" id="2_kly8p"]
-[ext_resource type="Script" path="res://Scenes/components/flipComp.gd" id="2_nxj56"]
+[ext_resource type="Script" uid="uid://5hrm0jf4lu" path="res://Scenes/components/flipComp.gd" id="2_nxj56"]
 [ext_resource type="PackedScene" uid="uid://bm6hkj273rydw" path="res://Scenes/bspear.tscn" id="4_vwg0a"]
 [ext_resource type="PackedScene" uid="uid://b0n2s8qmr7c7m" path="res://Scenes/components/healthBarComp.tscn" id="4_w1ag1"]
 [ext_resource type="PackedScene" uid="uid://behoknjndfrll" path="res://Scenes/components/health_comp.tscn" id="5_4a2hd"]
 [ext_resource type="PackedScene" uid="uid://bl75eh4bfbxml" path="res://Scenes/stats.tscn" id="6_5b7ks"]
-[ext_resource type="Script" path="res://Scenes/components/flash.gd" id="7_ywjb7"]
+[ext_resource type="Script" uid="uid://bua0d8md2sq7n" path="res://Scenes/components/flash.gd" id="7_ywjb7"]
 [ext_resource type="AudioStream" uid="uid://c7uio1bsvhayr" path="res://Assets/Audio/hurt.wav" id="8_8g0aj"]
-[ext_resource type="Script" path="res://Scenes/components/damageSoundComp.gd" id="9_vocl5"]
+[ext_resource type="Script" uid="uid://cjstwauxuvk13" path="res://Scenes/components/damageSoundComp.gd" id="9_vocl5"]
 [ext_resource type="AudioStream" uid="uid://b1ek3prmwcltw" path="res://Assets/Audio/jump.wav" id="10_0nduc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qxq2l"]
@@ -102,11 +102,11 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_jxlcx"]
 _data = {
-"RESET": SubResource("Animation_2te2c"),
-"fall": SubResource("Animation_0yhjq"),
-"idle": SubResource("Animation_m0a4k"),
-"jump": SubResource("Animation_o7ct5"),
-"walk": SubResource("Animation_cxaxq")
+&"RESET": SubResource("Animation_2te2c"),
+&"fall": SubResource("Animation_0yhjq"),
+&"idle": SubResource("Animation_m0a4k"),
+&"jump": SubResource("Animation_o7ct5"),
+&"walk": SubResource("Animation_cxaxq")
 }
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_htqfk"]
@@ -207,7 +207,7 @@ occluder = SubResource("OccluderPolygon2D_krtio")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_jxlcx")
+&"": SubResource("AnimationLibrary_jxlcx")
 }
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
@@ -225,7 +225,7 @@ parameters/spin/internal_active = false
 parameters/spin/request = 0
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(3, 3)
+zoom = Vector2(2, 2)
 position_smoothing_enabled = true
 drag_horizontal_enabled = true
 drag_vertical_enabled = true

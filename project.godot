@@ -23,8 +23,9 @@ Globals="*res://globals.gd"
 
 [display]
 
-window/size/viewport_width=740
-window/size/viewport_height=400
+window/size/resizable=false
+window/size/borderless=true
+window/stretch/mode="viewport"
 
 [editor_plugins]
 

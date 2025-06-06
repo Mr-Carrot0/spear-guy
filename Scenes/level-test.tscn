@@ -39,16 +39,17 @@ theme_override_font_sizes/font_size = 13
 text = "Destroy the enemys weapon !"
 
 [node name="movement" type="Label" parent="."]
-offset_left = 113.0
-offset_top = -55.0
-offset_right = 589.0
-offset_bottom = 32.0
+offset_left = 120.0
+offset_top = -83.0
+offset_right = 596.0
+offset_bottom = 16.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 13
 text = "Move using a/d or left/right arrow
 Move spear using up and down arrow
 jump using spacebar or w or x
 attack using c
+hold down shift to sprint
 "
 
 [node name="deathzone" parent="." instance=ExtResource("5_fk7ap")]
